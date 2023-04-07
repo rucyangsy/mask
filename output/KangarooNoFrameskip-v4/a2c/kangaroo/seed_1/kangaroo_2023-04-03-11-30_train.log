@@ -1,0 +1,1917 @@
+2023-04-03 11:30:36,339 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/kangaroo.yaml', eval_only=False, render=False, seed=1)
+2023-04-03 11:30:36,341 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '0',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': [256, 256],
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': False,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.11,
+                       'HEATMAP_SPARSITY_LOSS': False,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.0,
+                       'KEYPOINTER_CLS_AGNOSTIC': False,
+                       'NUM_KEYPOINTS': 10,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': True},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': True,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'KangarooNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': False,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': False,
+ 'feat_mul_selfsup_attention_mask_residual': True,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 16,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 1,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': False,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': True,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': False,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'train_selfsup_attention': False,
+ 'train_selfsup_attention_buffer_size': 60,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-03 11:31:08,467 Updates 250, num timesteps 20080, FPS 815 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:31:37,501 Updates 500, num timesteps 40080, FPS 747 
+Last 10 training episodes: mean/median reward 140.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:32:06,045 Updates 750, num timesteps 60080, FPS 731 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:32:35,654 Updates 1000, num timesteps 80080, FPS 716 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:33:04,707 Updates 1250, num timesteps 100080, FPS 710 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:33:35,144 TEST: 100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:33:35,149 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:34:00,173 Updates 1500, num timesteps 120080, FPS 611 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:34:27,056 Updates 1750, num timesteps 140080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:34:54,677 Updates 2000, num timesteps 160080, FPS 638 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:35:24,601 Updates 2250, num timesteps 180080, FPS 641 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:35:52,884 Updates 2500, num timesteps 200080, FPS 647 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:36:23,724 TEST: 200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:36:23,725 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:36:48,813 Updates 2750, num timesteps 220080, FPS 603 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:37:12,405 Updates 3000, num timesteps 240080, FPS 617 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:37:34,505 Updates 3250, num timesteps 260080, FPS 633 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:37:57,346 Updates 3500, num timesteps 280080, FPS 646 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:38:21,794 Updates 3750, num timesteps 300080, FPS 655 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:38:50,420 TEST: 300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:38:50,421 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:39:16,735 Updates 4000, num timesteps 320080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:39:44,025 Updates 4250, num timesteps 340080, FPS 629 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:40:11,143 Updates 4500, num timesteps 360080, FPS 634 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:40:39,212 Updates 4750, num timesteps 380080, FPS 638 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:41:05,096 Updates 5000, num timesteps 400080, FPS 644 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:41:37,099 TEST: 400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:41:37,100 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:42:05,365 Updates 5250, num timesteps 420080, FPS 616 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:42:34,087 Updates 5500, num timesteps 440080, FPS 619 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:43:00,577 Updates 5750, num timesteps 460080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:43:26,299 Updates 6000, num timesteps 480080, FPS 629 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:43:52,797 Updates 6250, num timesteps 500080, FPS 633 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:44:23,073 TEST: 500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:44:23,073 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:44:48,213 Updates 6500, num timesteps 520080, FPS 615 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:45:13,950 Updates 6750, num timesteps 540080, FPS 620 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:45:38,424 Updates 7000, num timesteps 560080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:46:02,743 Updates 7250, num timesteps 580080, FPS 631 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:46:27,695 Updates 7500, num timesteps 600080, FPS 635 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:47:11,848 TEST: 600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:47:11,850 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:47:37,839 Updates 7750, num timesteps 620080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:48:03,358 Updates 8000, num timesteps 640080, FPS 615 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.1, action loss 0.2
+
+2023-04-03 11:48:28,104 Updates 8250, num timesteps 660080, FPS 620 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:48:50,596 Updates 8500, num timesteps 680080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:49:17,159 Updates 8750, num timesteps 700080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:49:48,768 TEST: 700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:49:48,769 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:50:14,523 Updates 9000, num timesteps 720080, FPS 615 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:50:40,359 Updates 9250, num timesteps 740080, FPS 618 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:51:06,101 Updates 9500, num timesteps 760080, FPS 621 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:51:31,758 Updates 9750, num timesteps 780080, FPS 625 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:51:54,418 Updates 10000, num timesteps 800080, FPS 629 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:52:28,163 TEST: 800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:52:28,165 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:52:51,012 Updates 10250, num timesteps 820080, FPS 617 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:53:15,754 Updates 10500, num timesteps 840080, FPS 621 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:53:42,373 Updates 10750, num timesteps 860080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:54:13,680 Updates 11000, num timesteps 880080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:54:46,308 Updates 11250, num timesteps 900080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:55:34,340 TEST: 900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:55:34,342 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:56:03,639 Updates 11500, num timesteps 920080, FPS 605 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:56:31,400 Updates 11750, num timesteps 940080, FPS 607 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:56:58,692 Updates 12000, num timesteps 960080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:57:21,517 Updates 12250, num timesteps 980080, FPS 613 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:57:45,713 Updates 12500, num timesteps 1000080, FPS 616 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:58:14,236 TEST: 1000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 11:58:14,236 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 11:58:39,941 Updates 12750, num timesteps 1020080, FPS 608 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:59:05,542 Updates 13000, num timesteps 1040080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 11:59:29,784 Updates 13250, num timesteps 1060080, FPS 614 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 11:59:55,967 Updates 13500, num timesteps 1080080, FPS 616 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:00:22,222 Updates 13750, num timesteps 1100080, FPS 618 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:01:02,667 TEST: 1100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:01:02,668 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:01:29,546 Updates 14000, num timesteps 1120080, FPS 606 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:01:56,733 Updates 14250, num timesteps 1140080, FPS 608 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:02:25,577 Updates 14500, num timesteps 1160080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:02:52,459 Updates 14750, num timesteps 1180080, FPS 611 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:03:17,244 Updates 15000, num timesteps 1200080, FPS 614 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:03:47,555 TEST: 1200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:03:47,557 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:04:14,811 Updates 15250, num timesteps 1220080, FPS 606 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:04:39,475 Updates 15500, num timesteps 1240080, FPS 609 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:05:04,168 Updates 15750, num timesteps 1260080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:05:29,867 Updates 16000, num timesteps 1280080, FPS 613 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:05:56,022 Updates 16250, num timesteps 1300080, FPS 615 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:06:27,394 TEST: 1300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:06:27,396 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:06:50,761 Updates 16500, num timesteps 1320080, FPS 609 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:07:11,982 Updates 16750, num timesteps 1340080, FPS 612 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 12:07:35,035 Updates 17000, num timesteps 1360080, FPS 615 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:07:57,115 Updates 17250, num timesteps 1380080, FPS 617 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:08:24,443 Updates 17500, num timesteps 1400080, FPS 619 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:09:07,981 TEST: 1400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:09:07,982 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:09:37,835 Updates 17750, num timesteps 1420080, FPS 608 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:10:09,361 Updates 18000, num timesteps 1440080, FPS 608 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:10:39,346 Updates 18250, num timesteps 1460080, FPS 609 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:11:08,315 Updates 18500, num timesteps 1480080, FPS 610 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:11:37,101 Updates 18750, num timesteps 1500080, FPS 611 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:12:19,348 TEST: 1500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:12:19,349 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:12:42,983 Updates 19000, num timesteps 1520080, FPS 603 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:13:05,910 Updates 19250, num timesteps 1540080, FPS 605 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 12:13:28,114 Updates 19500, num timesteps 1560080, FPS 608 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:13:49,970 Updates 19750, num timesteps 1580080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:14:15,191 Updates 20000, num timesteps 1600080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:14:44,426 TEST: 1600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:14:44,426 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:15:11,244 Updates 20250, num timesteps 1620080, FPS 607 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:15:40,623 Updates 20500, num timesteps 1640080, FPS 608 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:16:09,554 Updates 20750, num timesteps 1660080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:16:36,785 Updates 21000, num timesteps 1680080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 12:17:01,455 Updates 21250, num timesteps 1700080, FPS 612 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:17:31,151 TEST: 1700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:17:31,153 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:17:56,061 Updates 21500, num timesteps 1720080, FPS 607 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:18:20,398 Updates 21750, num timesteps 1740080, FPS 609 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:18:46,263 Updates 22000, num timesteps 1760080, FPS 610 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:19:13,438 Updates 22250, num timesteps 1780080, FPS 611 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:19:41,114 Updates 22500, num timesteps 1800080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:20:13,861 TEST: 1800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:20:13,862 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:20:42,354 Updates 22750, num timesteps 1820080, FPS 606 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:21:10,449 Updates 23000, num timesteps 1840080, FPS 607 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:21:35,858 Updates 23250, num timesteps 1860080, FPS 609 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:21:59,010 Updates 23500, num timesteps 1880080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:22:23,845 Updates 23750, num timesteps 1900080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:22:55,368 TEST: 1900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:22:55,369 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:23:24,236 Updates 24000, num timesteps 1920080, FPS 607 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:23:54,178 Updates 24250, num timesteps 1940080, FPS 608 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 12:24:23,330 Updates 24500, num timesteps 1960080, FPS 608 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:24:51,495 Updates 24750, num timesteps 1980080, FPS 609 
+Last 10 training episodes: mean/median reward 120.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 12:25:19,438 Updates 25000, num timesteps 2000080, FPS 610 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:25:48,085 TEST: 2000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:25:48,086 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:26:07,773 Updates 25250, num timesteps 2020080, FPS 607 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 12:26:31,046 Updates 25500, num timesteps 2040080, FPS 609 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:26:55,398 Updates 25750, num timesteps 2060080, FPS 611 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:27:22,006 Updates 26000, num timesteps 2080080, FPS 612 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:27:48,991 Updates 26250, num timesteps 2100080, FPS 613 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:28:19,182 TEST: 2100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:28:19,183 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:28:43,701 Updates 26500, num timesteps 2120080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:29:07,727 Updates 26750, num timesteps 2140080, FPS 610 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:29:29,970 Updates 27000, num timesteps 2160080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:29:53,975 Updates 27250, num timesteps 2180080, FPS 614 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:30:20,001 Updates 27500, num timesteps 2200080, FPS 615 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:30:52,703 TEST: 2200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:30:52,704 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:31:22,621 Updates 27750, num timesteps 2220080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:31:51,569 Updates 28000, num timesteps 2240080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:32:22,856 Updates 28250, num timesteps 2260080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:32:53,567 Updates 28500, num timesteps 2280080, FPS 611 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:33:21,199 Updates 28750, num timesteps 2300080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:33:52,485 TEST: 2300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:33:52,486 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:34:17,737 Updates 29000, num timesteps 2320080, FPS 608 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:34:43,948 Updates 29250, num timesteps 2340080, FPS 609 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:35:07,543 Updates 29500, num timesteps 2360080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:35:31,154 Updates 29750, num timesteps 2380080, FPS 612 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:35:55,737 Updates 30000, num timesteps 2400080, FPS 613 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:36:24,903 TEST: 2400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:36:24,904 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:36:48,802 Updates 30250, num timesteps 2420080, FPS 610 
+Last 10 training episodes: mean/median reward 140.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:37:14,387 Updates 30500, num timesteps 2440080, FPS 611 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:37:40,167 Updates 30750, num timesteps 2460080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:38:09,020 Updates 31000, num timesteps 2480080, FPS 613 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:38:38,306 Updates 31250, num timesteps 2500080, FPS 613 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:39:24,188 TEST: 2500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:39:24,188 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:39:52,239 Updates 31500, num timesteps 2520080, FPS 607 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:40:16,246 Updates 31750, num timesteps 2540080, FPS 608 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:40:38,859 Updates 32000, num timesteps 2560080, FPS 610 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:40:58,061 Updates 32250, num timesteps 2580080, FPS 612 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:41:19,413 Updates 32500, num timesteps 2600080, FPS 613 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:41:51,252 TEST: 2600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:41:51,253 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:42:21,299 Updates 32750, num timesteps 2620080, FPS 609 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:42:51,334 Updates 33000, num timesteps 2640080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:43:20,646 Updates 33250, num timesteps 2660080, FPS 610 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:43:48,839 Updates 33500, num timesteps 2680080, FPS 611 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:44:17,243 Updates 33750, num timesteps 2700080, FPS 611 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:44:49,130 TEST: 2700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:44:49,131 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:45:13,501 Updates 34000, num timesteps 2720080, FPS 608 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:45:39,203 Updates 34250, num timesteps 2740080, FPS 609 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:46:05,637 Updates 34500, num timesteps 2760080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:46:33,159 Updates 34750, num timesteps 2780080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:47:01,739 Updates 35000, num timesteps 2800080, FPS 611 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:47:33,006 TEST: 2800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:47:33,007 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:47:59,917 Updates 35250, num timesteps 2820080, FPS 608 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:48:23,387 Updates 35500, num timesteps 2840080, FPS 609 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:48:47,492 Updates 35750, num timesteps 2860080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:49:13,470 Updates 36000, num timesteps 2880080, FPS 611 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:49:37,829 Updates 36250, num timesteps 2900080, FPS 612 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:50:14,996 TEST: 2900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:50:14,996 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:50:39,014 Updates 36500, num timesteps 2920080, FPS 608 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:51:03,469 Updates 36750, num timesteps 2940080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:51:32,201 Updates 37000, num timesteps 2960080, FPS 610 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:51:59,223 Updates 37250, num timesteps 2980080, FPS 611 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:52:26,170 Updates 37500, num timesteps 3000080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:52:59,289 TEST: 3000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:52:59,290 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:53:29,779 Updates 37750, num timesteps 3020080, FPS 608 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:54:00,871 Updates 38000, num timesteps 3040080, FPS 608 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:54:29,272 Updates 38250, num timesteps 3060080, FPS 608 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:54:55,782 Updates 38500, num timesteps 3080080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:55:22,600 Updates 38750, num timesteps 3100080, FPS 610 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:55:52,835 TEST: 3100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:55:52,836 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:56:17,015 Updates 39000, num timesteps 3120080, FPS 607 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:56:43,169 Updates 39250, num timesteps 3140080, FPS 608 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:57:09,208 Updates 39500, num timesteps 3160080, FPS 609 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:57:35,003 Updates 39750, num timesteps 3180080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:58:00,756 Updates 40000, num timesteps 3200080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:58:43,803 TEST: 3200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 12:58:43,804 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 12:59:09,768 Updates 40250, num timesteps 3220080, FPS 606 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:59:33,751 Updates 40500, num timesteps 3240080, FPS 607 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 12:59:58,775 Updates 40750, num timesteps 3260080, FPS 608 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:00:28,632 Updates 41000, num timesteps 3280080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:00:57,100 Updates 41250, num timesteps 3300080, FPS 609 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:01:41,762 TEST: 3300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:01:41,763 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:02:04,710 Updates 41500, num timesteps 3320080, FPS 605 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:02:28,235 Updates 41750, num timesteps 3340080, FPS 606 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:02:52,113 Updates 42000, num timesteps 3360080, FPS 607 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:03:11,353 Updates 42250, num timesteps 3380080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:03:30,933 Updates 42500, num timesteps 3400080, FPS 610 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:03:57,432 TEST: 3400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:03:57,433 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:04:20,367 Updates 42750, num timesteps 3420080, FPS 608 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:04:45,732 Updates 43000, num timesteps 3440080, FPS 609 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:05:11,879 Updates 43250, num timesteps 3460080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:05:38,290 Updates 43500, num timesteps 3480080, FPS 611 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:06:04,326 Updates 43750, num timesteps 3500080, FPS 611 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:06:44,571 TEST: 3500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:06:44,573 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:07:07,795 Updates 44000, num timesteps 3520080, FPS 608 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:07:29,421 Updates 44250, num timesteps 3540080, FPS 609 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:07:51,232 Updates 44500, num timesteps 3560080, FPS 610 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 13:08:13,109 Updates 44750, num timesteps 3580080, FPS 612 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 13:08:33,765 Updates 45000, num timesteps 3600080, FPS 613 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:09:13,848 TEST: 3600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:09:13,849 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:09:37,249 Updates 45250, num timesteps 3620080, FPS 610 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 13:09:58,932 Updates 45500, num timesteps 3640080, FPS 611 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:10:22,662 Updates 45750, num timesteps 3660080, FPS 612 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:10:45,346 Updates 46000, num timesteps 3680080, FPS 613 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:11:09,165 Updates 46250, num timesteps 3700080, FPS 614 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:11:36,990 TEST: 3700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:11:36,991 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:11:59,840 Updates 46500, num timesteps 3720080, FPS 612 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:12:22,934 Updates 46750, num timesteps 3740080, FPS 613 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:12:45,665 Updates 47000, num timesteps 3760080, FPS 614 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:13:06,142 Updates 47250, num timesteps 3780080, FPS 615 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:13:27,993 Updates 47500, num timesteps 3800080, FPS 616 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:13:55,898 TEST: 3800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:13:55,900 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:14:20,683 Updates 47750, num timesteps 3820080, FPS 614 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:14:48,605 Updates 48000, num timesteps 3840080, FPS 614 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:15:17,339 Updates 48250, num timesteps 3860080, FPS 615 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:15:44,499 Updates 48500, num timesteps 3880080, FPS 615 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:16:09,796 Updates 48750, num timesteps 3900080, FPS 616 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:16:37,120 TEST: 3900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:16:37,120 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:17:01,528 Updates 49000, num timesteps 3920080, FPS 614 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 13:17:25,860 Updates 49250, num timesteps 3940080, FPS 615 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:17:49,657 Updates 49500, num timesteps 3960080, FPS 616 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:18:13,595 Updates 49750, num timesteps 3980080, FPS 617 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:18:37,443 Updates 50000, num timesteps 4000080, FPS 617 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:19:17,707 TEST: 4000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:19:17,708 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:19:39,891 Updates 50250, num timesteps 4020080, FPS 615 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:20:00,200 Updates 50500, num timesteps 4040080, FPS 616 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:20:21,381 Updates 50750, num timesteps 4060080, FPS 617 
+Last 10 training episodes: mean/median reward 120.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:20:44,509 Updates 51000, num timesteps 4080080, FPS 618 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:21:08,610 Updates 51250, num timesteps 4100080, FPS 618 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:21:47,480 TEST: 4100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:21:47,481 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:22:10,225 Updates 51500, num timesteps 4120080, FPS 616 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:22:34,041 Updates 51750, num timesteps 4140080, FPS 616 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:22:57,950 Updates 52000, num timesteps 4160080, FPS 617 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:23:19,017 Updates 52250, num timesteps 4180080, FPS 618 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:23:39,740 Updates 52500, num timesteps 4200080, FPS 619 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:24:22,946 TEST: 4200080, 400.0, 400.0, ['400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0']
+
+2023-04-03 13:24:22,947 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:24:48,450 Updates 52750, num timesteps 4220080, FPS 616 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:25:15,464 Updates 53000, num timesteps 4240080, FPS 617 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:25:42,537 Updates 53250, num timesteps 4260080, FPS 617 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:26:09,779 Updates 53500, num timesteps 4280080, FPS 617 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:26:36,135 Updates 53750, num timesteps 4300080, FPS 618 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:27:15,727 TEST: 4300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:27:15,728 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:27:38,594 Updates 54000, num timesteps 4320080, FPS 615 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:28:01,042 Updates 54250, num timesteps 4340080, FPS 616 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:28:24,064 Updates 54500, num timesteps 4360080, FPS 617 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:28:49,730 Updates 54750, num timesteps 4380080, FPS 618 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:29:14,573 Updates 55000, num timesteps 4400080, FPS 618 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:29:43,505 TEST: 4400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:29:43,506 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:30:04,434 Updates 55250, num timesteps 4420080, FPS 617 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:30:25,730 Updates 55500, num timesteps 4440080, FPS 618 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:30:49,722 Updates 55750, num timesteps 4460080, FPS 618 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:31:13,126 Updates 56000, num timesteps 4480080, FPS 619 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:31:36,034 Updates 56250, num timesteps 4500080, FPS 620 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:32:04,391 TEST: 4500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:32:04,392 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:32:27,528 Updates 56500, num timesteps 4520080, FPS 618 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:32:50,939 Updates 56750, num timesteps 4540080, FPS 619 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:33:12,420 Updates 57000, num timesteps 4560080, FPS 620 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:33:33,973 Updates 57250, num timesteps 4580080, FPS 621 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:33:57,042 Updates 57500, num timesteps 4600080, FPS 622 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:34:27,427 TEST: 4600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:34:27,428 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:34:52,622 Updates 57750, num timesteps 4620080, FPS 620 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:35:16,057 Updates 58000, num timesteps 4640080, FPS 620 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:35:40,718 Updates 58250, num timesteps 4660080, FPS 621 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:36:06,546 Updates 58500, num timesteps 4680080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:36:33,256 Updates 58750, num timesteps 4700080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:37:03,674 TEST: 4700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:37:03,675 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:37:28,492 Updates 59000, num timesteps 4720080, FPS 620 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:37:55,942 Updates 59250, num timesteps 4740080, FPS 621 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:38:20,084 Updates 59500, num timesteps 4760080, FPS 621 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:38:44,983 Updates 59750, num timesteps 4780080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:39:10,630 Updates 60000, num timesteps 4800080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:39:50,107 TEST: 4800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:39:50,108 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:40:11,940 Updates 60250, num timesteps 4820080, FPS 620 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:40:32,136 Updates 60500, num timesteps 4840080, FPS 621 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:40:52,876 Updates 60750, num timesteps 4860080, FPS 622 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:41:16,103 Updates 61000, num timesteps 4880080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:41:41,561 Updates 61250, num timesteps 4900080, FPS 623 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:42:13,063 TEST: 4900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:42:13,064 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:42:39,236 Updates 61500, num timesteps 4920080, FPS 621 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:43:04,835 Updates 61750, num timesteps 4940080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:43:26,864 Updates 62000, num timesteps 4960080, FPS 622 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:43:46,700 Updates 62250, num timesteps 4980080, FPS 623 
+Last 10 training episodes: mean/median reward 120.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.1, action loss 0.2
+
+2023-04-03 13:44:04,922 Updates 62500, num timesteps 5000080, FPS 624 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:44:34,093 TEST: 5000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:44:34,094 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:44:59,694 Updates 62750, num timesteps 5020080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:45:25,758 Updates 63000, num timesteps 5040080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:45:52,555 Updates 63250, num timesteps 5060080, FPS 624 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:46:21,306 Updates 63500, num timesteps 5080080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:46:48,871 Updates 63750, num timesteps 5100080, FPS 624 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 13:47:18,496 TEST: 5100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:47:18,497 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:47:40,781 Updates 64000, num timesteps 5120080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:48:04,954 Updates 64250, num timesteps 5140080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:48:30,831 Updates 64500, num timesteps 5160080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:48:55,108 Updates 64750, num timesteps 5180080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:49:19,974 Updates 65000, num timesteps 5200080, FPS 625 
+Last 10 training episodes: mean/median reward 140.0/100.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:49:52,215 TEST: 5200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:49:52,216 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:50:20,512 Updates 65250, num timesteps 5220080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:50:48,492 Updates 65500, num timesteps 5240080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:51:12,974 Updates 65750, num timesteps 5260080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:51:36,565 Updates 66000, num timesteps 5280080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:52:00,916 Updates 66250, num timesteps 5300080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 13:52:29,957 TEST: 5300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:52:29,957 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:52:53,159 Updates 66500, num timesteps 5320080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:53:17,535 Updates 66750, num timesteps 5340080, FPS 624 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 13:53:45,667 Updates 67000, num timesteps 5360080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:54:14,228 Updates 67250, num timesteps 5380080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:54:40,444 Updates 67500, num timesteps 5400080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:55:12,196 TEST: 5400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:55:12,197 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:55:35,872 Updates 67750, num timesteps 5420080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:55:58,936 Updates 68000, num timesteps 5440080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:56:22,902 Updates 68250, num timesteps 5460080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:56:47,322 Updates 68500, num timesteps 5480080, FPS 625 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:57:12,338 Updates 68750, num timesteps 5500080, FPS 625 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:57:45,491 TEST: 5500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 13:57:45,492 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 13:58:11,945 Updates 69000, num timesteps 5520080, FPS 623 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:58:36,986 Updates 69250, num timesteps 5540080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:59:04,704 Updates 69500, num timesteps 5560080, FPS 624 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 13:59:30,202 Updates 69750, num timesteps 5580080, FPS 625 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 13:59:54,484 Updates 70000, num timesteps 5600080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:00:23,163 TEST: 5600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:00:23,164 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:00:46,890 Updates 70250, num timesteps 5620080, FPS 624 
+Last 10 training episodes: mean/median reward 140.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:01:11,607 Updates 70500, num timesteps 5640080, FPS 624 
+Last 10 training episodes: mean/median reward 120.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:01:37,647 Updates 70750, num timesteps 5660080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 14:02:03,769 Updates 71000, num timesteps 5680080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:02:32,291 Updates 71250, num timesteps 5700080, FPS 625 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:03:21,408 TEST: 5700080, 200.0, 200.0, ['200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0']
+
+2023-04-03 14:03:21,409 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:03:46,048 Updates 71500, num timesteps 5720080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:04:08,528 Updates 71750, num timesteps 5740080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:04:30,013 Updates 72000, num timesteps 5760080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:04:53,779 Updates 72250, num timesteps 5780080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 14:05:19,087 Updates 72500, num timesteps 5800080, FPS 625 
+Last 10 training episodes: mean/median reward 120.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:06:10,927 TEST: 5800080, 200.0, 200.0, ['200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0']
+
+2023-04-03 14:06:10,929 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:06:38,604 Updates 72750, num timesteps 5820080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:07:04,473 Updates 73000, num timesteps 5840080, FPS 622 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:07:30,231 Updates 73250, num timesteps 5860080, FPS 622 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:07:53,981 Updates 73500, num timesteps 5880080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:08:17,057 Updates 73750, num timesteps 5900080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:08:44,260 TEST: 5900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:08:44,262 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:09:10,525 Updates 74000, num timesteps 5920080, FPS 622 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:09:39,078 Updates 74250, num timesteps 5940080, FPS 622 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:10:06,074 Updates 74500, num timesteps 5960080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:10:32,421 Updates 74750, num timesteps 5980080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:10:59,992 Updates 75000, num timesteps 6000080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:11:32,562 TEST: 6000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:11:32,563 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:11:56,396 Updates 75250, num timesteps 6020080, FPS 622 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:12:17,259 Updates 75500, num timesteps 6040080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:12:37,821 Updates 75750, num timesteps 6060080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:13:03,792 Updates 76000, num timesteps 6080080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:13:31,968 Updates 76250, num timesteps 6100080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:14:04,529 TEST: 6100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:14:04,530 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:14:31,672 Updates 76500, num timesteps 6120080, FPS 622 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:14:58,894 Updates 76750, num timesteps 6140080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:15:25,915 Updates 77000, num timesteps 6160080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:15:49,450 Updates 77250, num timesteps 6180080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:16:08,711 Updates 77500, num timesteps 6200080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:16:36,990 TEST: 6200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:16:36,991 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:17:02,993 Updates 77750, num timesteps 6220080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:17:31,054 Updates 78000, num timesteps 6240080, FPS 623 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:17:58,251 Updates 78250, num timesteps 6260080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:18:25,911 Updates 78500, num timesteps 6280080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:18:52,207 Updates 78750, num timesteps 6300080, FPS 624 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 14:19:38,999 TEST: 6300080, 400.0, 400.0, ['400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0', '400.0']
+
+2023-04-03 14:19:39,000 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:20:02,401 Updates 79000, num timesteps 6320080, FPS 622 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:20:25,711 Updates 79250, num timesteps 6340080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:20:49,035 Updates 79500, num timesteps 6360080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:21:12,419 Updates 79750, num timesteps 6380080, FPS 623 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:21:35,896 Updates 80000, num timesteps 6400080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:22:16,821 TEST: 6400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:22:16,822 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:22:40,085 Updates 80250, num timesteps 6420080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:23:03,349 Updates 80500, num timesteps 6440080, FPS 622 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:23:29,710 Updates 80750, num timesteps 6460080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:23:54,437 Updates 81000, num timesteps 6480080, FPS 623 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:24:17,106 Updates 81250, num timesteps 6500080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:24:44,360 TEST: 6500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:24:44,361 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:25:07,245 Updates 81500, num timesteps 6520080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:25:31,594 Updates 81750, num timesteps 6540080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:25:54,754 Updates 82000, num timesteps 6560080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:26:17,846 Updates 82250, num timesteps 6580080, FPS 624 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:26:42,819 Updates 82500, num timesteps 6600080, FPS 625 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:27:25,483 TEST: 6600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:27:25,484 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:27:51,624 Updates 82750, num timesteps 6620080, FPS 622 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:28:16,827 Updates 83000, num timesteps 6640080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:28:41,805 Updates 83250, num timesteps 6660080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:29:08,328 Updates 83500, num timesteps 6680080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:29:34,554 Updates 83750, num timesteps 6700080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:30:24,608 TEST: 6700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:30:24,609 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:30:50,047 Updates 84000, num timesteps 6720080, FPS 621 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:31:15,850 Updates 84250, num timesteps 6740080, FPS 622 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 14:31:40,419 Updates 84500, num timesteps 6760080, FPS 622 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:32:02,957 Updates 84750, num timesteps 6780080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:32:24,147 Updates 85000, num timesteps 6800080, FPS 623 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:32:59,463 TEST: 6800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:32:59,464 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:33:20,776 Updates 85250, num timesteps 6820080, FPS 622 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:33:45,340 Updates 85500, num timesteps 6840080, FPS 622 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:34:10,349 Updates 85750, num timesteps 6860080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:34:36,438 Updates 86000, num timesteps 6880080, FPS 623 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:35:02,438 Updates 86250, num timesteps 6900080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:35:33,116 TEST: 6900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:35:33,117 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:35:55,308 Updates 86500, num timesteps 6920080, FPS 622 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:36:15,261 Updates 86750, num timesteps 6940080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:36:35,024 Updates 87000, num timesteps 6960080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:36:58,448 Updates 87250, num timesteps 6980080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:37:23,786 Updates 87500, num timesteps 7000080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:37:55,861 TEST: 7000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:37:55,862 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:38:24,048 Updates 87750, num timesteps 7020080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:38:51,664 Updates 88000, num timesteps 7040080, FPS 623 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:39:20,171 Updates 88250, num timesteps 7060080, FPS 623 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:39:45,329 Updates 88500, num timesteps 7080080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:40:08,021 Updates 88750, num timesteps 7100080, FPS 624 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:40:36,883 TEST: 7100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:40:36,884 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:40:58,534 Updates 89000, num timesteps 7120080, FPS 623 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:41:21,205 Updates 89250, num timesteps 7140080, FPS 624 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:41:45,974 Updates 89500, num timesteps 7160080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:42:11,044 Updates 89750, num timesteps 7180080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 14:42:36,212 Updates 90000, num timesteps 7200080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:43:07,044 TEST: 7200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:43:07,046 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:43:29,279 Updates 90250, num timesteps 7220080, FPS 624 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:43:48,432 Updates 90500, num timesteps 7240080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:44:08,068 Updates 90750, num timesteps 7260080, FPS 625 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:44:28,694 Updates 91000, num timesteps 7280080, FPS 626 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:44:49,060 Updates 91250, num timesteps 7300080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:45:32,346 TEST: 7300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:45:32,347 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:45:57,525 Updates 91500, num timesteps 7320080, FPS 624 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:46:22,349 Updates 91750, num timesteps 7340080, FPS 625 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:46:45,857 Updates 92000, num timesteps 7360080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:47:06,784 Updates 92250, num timesteps 7380080, FPS 626 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:47:29,366 Updates 92500, num timesteps 7400080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:48:08,406 TEST: 7400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:48:08,407 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:48:32,446 Updates 92750, num timesteps 7420080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:49:01,417 Updates 93000, num timesteps 7440080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:49:30,375 Updates 93250, num timesteps 7460080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:49:59,033 Updates 93500, num timesteps 7480080, FPS 625 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:50:23,239 Updates 93750, num timesteps 7500080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 14:51:07,878 TEST: 7500080, 200.0, 200.0, ['200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0']
+
+2023-04-03 14:51:07,879 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:51:31,459 Updates 94000, num timesteps 7520080, FPS 624 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:51:53,254 Updates 94250, num timesteps 7540080, FPS 624 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:52:15,170 Updates 94500, num timesteps 7560080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:52:37,114 Updates 94750, num timesteps 7580080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:52:57,934 Updates 95000, num timesteps 7600080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:53:29,231 TEST: 7600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:53:29,232 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:53:52,247 Updates 95250, num timesteps 7620080, FPS 625 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:54:15,684 Updates 95500, num timesteps 7640080, FPS 625 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:54:41,419 Updates 95750, num timesteps 7660080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:55:06,679 Updates 96000, num timesteps 7680080, FPS 626 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:55:31,246 Updates 96250, num timesteps 7700080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:56:12,496 TEST: 7700080, 200.0, 200.0, ['200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0']
+
+2023-04-03 14:56:12,497 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:56:33,461 Updates 96500, num timesteps 7720080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:56:55,532 Updates 96750, num timesteps 7740080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:57:16,363 Updates 97000, num timesteps 7760080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:57:38,620 Updates 97250, num timesteps 7780080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:58:03,090 Updates 97500, num timesteps 7800080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:58:45,052 TEST: 7800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 14:58:45,053 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 14:59:09,684 Updates 97750, num timesteps 7820080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:59:33,290 Updates 98000, num timesteps 7840080, FPS 625 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 14:59:57,090 Updates 98250, num timesteps 7860080, FPS 626 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:00:20,558 Updates 98500, num timesteps 7880080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:00:43,177 Updates 98750, num timesteps 7900080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:01:13,314 TEST: 7900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:01:13,316 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:01:41,107 Updates 99000, num timesteps 7920080, FPS 625 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:02:06,887 Updates 99250, num timesteps 7940080, FPS 626 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:02:31,428 Updates 99500, num timesteps 7960080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:02:56,356 Updates 99750, num timesteps 7980080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:03:20,397 Updates 100000, num timesteps 8000080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:03:57,165 TEST: 8000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:03:57,165 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:04:15,463 Updates 100250, num timesteps 8020080, FPS 626 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:04:36,623 Updates 100500, num timesteps 8040080, FPS 626 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:05:01,270 Updates 100750, num timesteps 8060080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:05:26,723 Updates 101000, num timesteps 8080080, FPS 627 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:05:52,892 Updates 101250, num timesteps 8100080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:06:23,993 TEST: 8100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:06:23,994 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:06:49,211 Updates 101500, num timesteps 8120080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:07:12,615 Updates 101750, num timesteps 8140080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:07:32,217 Updates 102000, num timesteps 8160080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:07:50,843 Updates 102250, num timesteps 8180080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:08:11,628 Updates 102500, num timesteps 8200080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:08:42,460 TEST: 8200080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:08:42,461 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:09:08,516 Updates 102750, num timesteps 8220080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:09:35,601 Updates 103000, num timesteps 8240080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:10:04,198 Updates 103250, num timesteps 8260080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:10:32,172 Updates 103500, num timesteps 8280080, FPS 627 
+Last 10 training episodes: mean/median reward 120.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:10:57,889 Updates 103750, num timesteps 8300080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:11:25,411 TEST: 8300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:11:25,412 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:11:48,033 Updates 104000, num timesteps 8320080, FPS 627 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:12:12,891 Updates 104250, num timesteps 8340080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:12:37,884 Updates 104500, num timesteps 8360080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:13:03,480 Updates 104750, num timesteps 8380080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:13:30,530 Updates 105000, num timesteps 8400080, FPS 628 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:14:04,009 TEST: 8400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:14:04,011 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:14:33,075 Updates 105250, num timesteps 8420080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:14:58,689 Updates 105500, num timesteps 8440080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:15:20,746 Updates 105750, num timesteps 8460080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 15:15:45,319 Updates 106000, num timesteps 8480080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:16:08,516 Updates 106250, num timesteps 8500080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:16:49,004 TEST: 8500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:16:49,005 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:17:16,363 Updates 106500, num timesteps 8520080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:17:45,773 Updates 106750, num timesteps 8540080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:18:14,811 Updates 107000, num timesteps 8560080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:18:40,994 Updates 107250, num timesteps 8580080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:19:06,338 Updates 107500, num timesteps 8600080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:19:35,594 TEST: 8600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:19:35,595 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:19:58,440 Updates 107750, num timesteps 8620080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:20:20,659 Updates 108000, num timesteps 8640080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:20:46,263 Updates 108250, num timesteps 8660080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:21:14,175 Updates 108500, num timesteps 8680080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:21:42,840 Updates 108750, num timesteps 8700080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:22:12,809 TEST: 8700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:22:12,810 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:22:37,069 Updates 109000, num timesteps 8720080, FPS 626 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:23:02,741 Updates 109250, num timesteps 8740080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:23:26,695 Updates 109500, num timesteps 8760080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:23:50,033 Updates 109750, num timesteps 8780080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:24:11,415 Updates 110000, num timesteps 8800080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:24:52,855 TEST: 8800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:24:52,855 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:25:19,348 Updates 110250, num timesteps 8820080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:25:43,793 Updates 110500, num timesteps 8840080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:26:09,600 Updates 110750, num timesteps 8860080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:26:38,494 Updates 111000, num timesteps 8880080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:27:06,997 Updates 111250, num timesteps 8900080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:27:43,911 TEST: 8900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:27:43,912 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:28:04,960 Updates 111500, num timesteps 8920080, FPS 626 
+Last 10 training episodes: mean/median reward 120.0/0.0 min/max reward 0.0/800.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:28:25,778 Updates 111750, num timesteps 8940080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:28:49,638 Updates 112000, num timesteps 8960080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:29:13,792 Updates 112250, num timesteps 8980080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:29:37,435 Updates 112500, num timesteps 9000080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/600.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:30:08,321 TEST: 9000080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:30:08,322 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:30:33,890 Updates 112750, num timesteps 9020080, FPS 626 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:30:57,435 Updates 113000, num timesteps 9040080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:31:19,168 Updates 113250, num timesteps 9060080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:31:40,415 Updates 113500, num timesteps 9080080, FPS 628 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:32:02,704 Updates 113750, num timesteps 9100080, FPS 628 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:32:39,928 TEST: 9100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:32:39,930 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:33:03,374 Updates 114000, num timesteps 9120080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:33:28,815 Updates 114250, num timesteps 9140080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:33:53,803 Updates 114500, num timesteps 9160080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:34:19,278 Updates 114750, num timesteps 9180080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:34:45,346 Updates 115000, num timesteps 9200080, FPS 628 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:35:28,403 TEST: 9200080, 200.0, 200.0, ['200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0', '200.0']
+
+2023-04-03 15:35:28,404 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:35:51,949 Updates 115250, num timesteps 9220080, FPS 626 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 15:36:15,540 Updates 115500, num timesteps 9240080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:36:40,744 Updates 115750, num timesteps 9260080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:37:08,004 Updates 116000, num timesteps 9280080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:37:35,949 Updates 116250, num timesteps 9300080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:38:08,402 TEST: 9300080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:38:08,403 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:38:34,488 Updates 116500, num timesteps 9320080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:38:58,151 Updates 116750, num timesteps 9340080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:39:21,632 Updates 117000, num timesteps 9360080, FPS 627 
+Last 10 training episodes: mean/median reward 100.0/100.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 15:39:43,977 Updates 117250, num timesteps 9380080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:40:10,498 Updates 117500, num timesteps 9400080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:40:49,419 TEST: 9400080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:40:49,421 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:41:17,938 Updates 117750, num timesteps 9420080, FPS 626 
+Last 10 training episodes: mean/median reward 100.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:41:46,179 Updates 118000, num timesteps 9440080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:42:10,659 Updates 118250, num timesteps 9460080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:42:35,850 Updates 118500, num timesteps 9480080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:42:57,635 Updates 118750, num timesteps 9500080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:43:22,988 TEST: 9500080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:43:22,989 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:43:46,540 Updates 119000, num timesteps 9520080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:44:14,279 Updates 119250, num timesteps 9540080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:44:41,971 Updates 119500, num timesteps 9560080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:45:08,843 Updates 119750, num timesteps 9580080, FPS 627 
+Last 10 training episodes: mean/median reward 80.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:45:36,388 Updates 120000, num timesteps 9600080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:46:10,556 TEST: 9600080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:46:10,558 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:46:37,722 Updates 120250, num timesteps 9620080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:47:00,530 Updates 120500, num timesteps 9640080, FPS 626 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:47:24,145 Updates 120750, num timesteps 9660080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:47:45,971 Updates 121000, num timesteps 9680080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:48:09,722 Updates 121250, num timesteps 9700080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:48:41,371 TEST: 9700080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:48:41,372 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:49:06,561 Updates 121500, num timesteps 9720080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:49:31,597 Updates 121750, num timesteps 9740080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:49:55,892 Updates 122000, num timesteps 9760080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:50:18,278 Updates 122250, num timesteps 9780080, FPS 627 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:50:40,525 Updates 122500, num timesteps 9800080, FPS 628 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:51:27,785 TEST: 9800080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:51:27,787 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:51:52,586 Updates 122750, num timesteps 9820080, FPS 626 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:52:17,626 Updates 123000, num timesteps 9840080, FPS 627 
+Last 10 training episodes: mean/median reward 120.0/100.0 min/max reward 0.0/400.0 dist entropy 2.9, value loss 0.0, action loss 0.1
+
+2023-04-03 15:52:42,509 Updates 123250, num timesteps 9860080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:53:05,692 Updates 123500, num timesteps 9880080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:53:28,243 Updates 123750, num timesteps 9900080, FPS 628 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:53:59,053 TEST: 9900080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
+
+2023-04-03 15:53:59,056 => saving checkpoint to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1
+2023-04-03 15:54:23,157 Updates 124000, num timesteps 9920080, FPS 627 
+Last 10 training episodes: mean/median reward 40.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss -0.0
+
+2023-04-03 15:54:47,275 Updates 124250, num timesteps 9940080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:55:12,356 Updates 124500, num timesteps 9960080, FPS 627 
+Last 10 training episodes: mean/median reward 20.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:55:39,443 Updates 124750, num timesteps 9980080, FPS 627 
+Last 10 training episodes: mean/median reward 60.0/0.0 min/max reward 0.0/200.0 dist entropy 2.9, value loss 0.0, action loss 0.0
+
+2023-04-03 15:56:05,821 => saving final model state to output/KangarooNoFrameskip-v4/a2c/kangaroo/seed_1/final_state.pth
