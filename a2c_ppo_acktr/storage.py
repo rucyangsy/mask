@@ -93,6 +93,11 @@ class RolloutStorage(object):
                 return self.buffer_obs[indices[0]][:, -1:], self.buffer_obs[indices[1]][:, -1:]'''
 
     def generate_pair_image(self, resized_size, train_selfsup_attention_batch_size):
+        '''for i in range(9999):
+            print(torch.equal(self.buffer_obs[i][:, -1:], self.buffer_obs[i+1][:, -1:]))'''
+        '''print(self.buffer_obs.shape) #torch.Size([10001, 1, 4, 84, 84])torch.Size([1, 4, 84, 84])torch.Size([1, 1, 84, 84])
+        print(self.buffer_obs[0].shape)
+        print('111',self.buffer_obs[0][:, -1:].shape)'''
         indices = np.random.choice(self.buffer_size, train_selfsup_attention_batch_size, replace=False)
         image_group_A = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
         image_group_B = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])

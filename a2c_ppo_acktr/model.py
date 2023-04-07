@@ -69,7 +69,7 @@ class Policy(nn.Module):
         value, actor_features, rnn_hxs = self.base(inputs, rnn_hxs, masks, output_mask=output_mask,
                                                    output_feat=output_feat)
 
-        dist = self.dist(actor_features)
+        '''dist = self.dist(actor_features)
 
         if deterministic:
             action = dist.mode()
@@ -77,9 +77,9 @@ class Policy(nn.Module):
             action = dist.sample()
 
         action_log_probs = dist.log_probs(action)
-        dist_entropy = dist.entropy().mean()
+        dist_entropy = dist.entropy().mean()'''
 
-        return value, action, action_log_probs, rnn_hxs
+        return 0,0,0,0
 
     def get_value(self, inputs, rnn_hxs, masks):
         value, _, _ = self.base(inputs, rnn_hxs, masks)
@@ -336,8 +336,10 @@ class CNNBase(NNBase):
                 output_feat=False,
                 ):
         inputs_normalized = inputs / 255.0
-
-        meta = {}
+        keypoints_centers, keypoints_maps = self._keypointer(inputs_frame)
+        print(keypoints_maps)
+        
+        '''meta = {}
         original_inputs_normalized = inputs_normalized
         meta['input'] = inputs_normalized[:, -1:]
 
@@ -353,7 +355,7 @@ class CNNBase(NNBase):
             if self.selfsup_attention_keyp_maps_pool:
                 keypoints_maps = keypoints_maps.max(dim=1, keepdim=True)[0]
             meta['keypoints_maps'] = keypoints_maps
-
+        print(keypoints_maps)
         if not self.feat_from_selfsup_attention:
             x = self.convs_1(inputs_normalized)
             x = self.convs_2(x)
@@ -389,8 +391,8 @@ class CNNBase(NNBase):
             else:
                 rnn_hxs = [rnn_hxs, saliency_map]
         else:
-            rnn_hxs = [rnn_hxs, meta]
-        return self.critic_linear(x), x, rnn_hxs
+            rnn_hxs = [rnn_hxs, meta]'''
+        return 0, 0, 0
 
     def _get_keypoints_feat(self, image_feat, kpts_mask):
         feats = []
@@ -536,6 +538,10 @@ class CNNBase(NNBase):
         features = images_keypoints_maps.view(images_keypoints_maps.shape[0], -1)
         logits, labels = self.info_nce_loss(features)
         loss = self.criterion(logits, labels)
+        #heatmap_loss = images_keypoints_maps.mean()
+        
+        #print(heatmap_loss)
+        #loss = loss + heatmap_loss * 10
         return loss, images_keypoints_maps
     
 

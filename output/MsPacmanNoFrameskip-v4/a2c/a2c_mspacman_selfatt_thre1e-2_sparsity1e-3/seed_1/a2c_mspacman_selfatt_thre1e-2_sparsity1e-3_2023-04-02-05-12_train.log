@@ -1,0 +1,2627 @@
+2023-04-02 05:12:12,675 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/a2c_mspacman_selfatt_thre1e-2_sparsity1e-3.yaml', eval_only=False, render=False, seed=1)
+2023-04-02 05:12:12,676 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '0',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'MsPacmanNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 1,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 1,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': False,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': True,
+ 'train_selfsup_attention_batch_size': 256,
+ 'train_selfsup_attention_buffer_size': 10000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-02 05:12:51,492 Updates 2250, num timesteps 11255
+selfsup attention loss 6.23639
+
+2023-04-02 05:13:16,927 Updates 2500, num timesteps 12505
+selfsup attention loss 6.23649
+
+2023-04-02 05:13:42,353 Updates 2750, num timesteps 13755
+selfsup attention loss 6.23571
+
+2023-04-02 05:14:07,803 Updates 3000, num timesteps 15005
+selfsup attention loss 6.12033
+
+2023-04-02 05:14:33,242 Updates 3250, num timesteps 16255
+selfsup attention loss 5.86812
+
+2023-04-02 05:14:58,669 Updates 3500, num timesteps 17505
+selfsup attention loss 5.77164
+
+2023-04-02 05:15:24,133 Updates 3750, num timesteps 18755
+selfsup attention loss 5.61400
+
+2023-04-02 05:15:49,565 Updates 4000, num timesteps 20005
+selfsup attention loss 5.58781
+
+2023-04-02 05:16:15,031 Updates 4250, num timesteps 21255
+selfsup attention loss 5.49406
+
+2023-04-02 05:16:40,474 Updates 4500, num timesteps 22505
+selfsup attention loss 5.54174
+
+2023-04-02 05:17:05,883 Updates 4750, num timesteps 23755
+selfsup attention loss 5.39861
+
+2023-04-02 05:17:31,687 Updates 5000, num timesteps 25005
+selfsup attention loss 5.45128
+
+2023-04-02 05:17:57,220 Updates 5250, num timesteps 26255
+selfsup attention loss 5.35775
+
+2023-04-02 05:18:22,725 Updates 5500, num timesteps 27505
+selfsup attention loss 5.49460
+
+2023-04-02 05:18:48,290 Updates 5750, num timesteps 28755
+selfsup attention loss 5.35349
+
+2023-04-02 05:19:13,748 Updates 6000, num timesteps 30005
+selfsup attention loss 5.57113
+
+2023-04-02 05:19:39,234 Updates 6250, num timesteps 31255
+selfsup attention loss 5.36914
+
+2023-04-02 05:20:04,710 Updates 6500, num timesteps 32505
+selfsup attention loss 5.45031
+
+2023-04-02 05:20:30,183 Updates 6750, num timesteps 33755
+selfsup attention loss 5.21199
+
+2023-04-02 05:20:55,685 Updates 7000, num timesteps 35005
+selfsup attention loss 5.32800
+
+2023-04-02 05:21:21,376 Updates 7250, num timesteps 36255
+selfsup attention loss 5.18186
+
+2023-04-02 05:21:46,852 Updates 7500, num timesteps 37505
+selfsup attention loss 5.31511
+
+2023-04-02 05:22:12,675 Updates 7750, num timesteps 38755
+selfsup attention loss 5.03578
+
+2023-04-02 05:22:38,001 Updates 8000, num timesteps 40005
+selfsup attention loss 5.07472
+
+2023-04-02 05:23:03,306 Updates 8250, num timesteps 41255
+selfsup attention loss 5.15647
+
+2023-04-02 05:23:28,637 Updates 8500, num timesteps 42505
+selfsup attention loss 5.15927
+
+2023-04-02 05:23:53,952 Updates 8750, num timesteps 43755
+selfsup attention loss 5.17597
+
+2023-04-02 05:24:19,217 Updates 9000, num timesteps 45005
+selfsup attention loss 5.11661
+
+2023-04-02 05:24:44,209 Updates 9250, num timesteps 46255
+selfsup attention loss 5.20670
+
+2023-04-02 05:25:09,236 Updates 9500, num timesteps 47505
+selfsup attention loss 5.06415
+
+2023-04-02 05:25:34,238 Updates 9750, num timesteps 48755
+selfsup attention loss 4.94010
+
+2023-04-02 05:25:59,264 Updates 10000, num timesteps 50005
+selfsup attention loss 5.13796
+
+2023-04-02 05:26:23,030 Updates 10250, num timesteps 51255
+selfsup attention loss 5.03370
+
+2023-04-02 05:26:46,748 Updates 10500, num timesteps 52505
+selfsup attention loss 5.06348
+
+2023-04-02 05:27:10,469 Updates 10750, num timesteps 53755
+selfsup attention loss 5.24225
+
+2023-04-02 05:27:34,206 Updates 11000, num timesteps 55005
+selfsup attention loss 5.06589
+
+2023-04-02 05:27:57,931 Updates 11250, num timesteps 56255
+selfsup attention loss 4.96595
+
+2023-04-02 05:28:21,640 Updates 11500, num timesteps 57505
+selfsup attention loss 4.99780
+
+2023-04-02 05:28:45,361 Updates 11750, num timesteps 58755
+selfsup attention loss 5.07487
+
+2023-04-02 05:29:09,088 Updates 12000, num timesteps 60005
+selfsup attention loss 4.96891
+
+2023-04-02 05:29:32,816 Updates 12250, num timesteps 61255
+selfsup attention loss 5.04726
+
+2023-04-02 05:29:56,540 Updates 12500, num timesteps 62505
+selfsup attention loss 5.04669
+
+2023-04-02 05:30:20,494 Updates 12750, num timesteps 63755
+selfsup attention loss 5.01204
+
+2023-04-02 05:30:44,529 Updates 13000, num timesteps 65005
+selfsup attention loss 5.09191
+
+2023-04-02 05:31:08,580 Updates 13250, num timesteps 66255
+selfsup attention loss 4.95265
+
+2023-04-02 05:31:32,630 Updates 13500, num timesteps 67505
+selfsup attention loss 4.93657
+
+2023-04-02 05:31:57,108 Updates 13750, num timesteps 68755
+selfsup attention loss 4.88306
+
+2023-04-02 05:32:21,226 Updates 14000, num timesteps 70005
+selfsup attention loss 4.92792
+
+2023-04-02 05:32:45,329 Updates 14250, num timesteps 71255
+selfsup attention loss 4.96324
+
+2023-04-02 05:33:09,442 Updates 14500, num timesteps 72505
+selfsup attention loss 4.88311
+
+2023-04-02 05:33:33,700 Updates 14750, num timesteps 73755
+selfsup attention loss 4.84353
+
+2023-04-02 05:33:57,857 Updates 15000, num timesteps 75005
+selfsup attention loss 5.11073
+
+2023-04-02 05:34:22,028 Updates 15250, num timesteps 76255
+selfsup attention loss 4.87130
+
+2023-04-02 05:34:46,194 Updates 15500, num timesteps 77505
+selfsup attention loss 4.89756
+
+2023-04-02 05:35:10,346 Updates 15750, num timesteps 78755
+selfsup attention loss 4.91982
+
+2023-04-02 05:35:34,482 Updates 16000, num timesteps 80005
+selfsup attention loss 4.97780
+
+2023-04-02 05:35:58,588 Updates 16250, num timesteps 81255
+selfsup attention loss 4.96719
+
+2023-04-02 05:36:22,736 Updates 16500, num timesteps 82505
+selfsup attention loss 4.88773
+
+2023-04-02 05:36:46,894 Updates 16750, num timesteps 83755
+selfsup attention loss 4.95470
+
+2023-04-02 05:37:11,064 Updates 17000, num timesteps 85005
+selfsup attention loss 4.77209
+
+2023-04-02 05:37:35,231 Updates 17250, num timesteps 86255
+selfsup attention loss 4.73764
+
+2023-04-02 05:37:59,394 Updates 17500, num timesteps 87505
+selfsup attention loss 4.90602
+
+2023-04-02 05:38:23,548 Updates 17750, num timesteps 88755
+selfsup attention loss 4.84494
+
+2023-04-02 05:38:47,708 Updates 18000, num timesteps 90005
+selfsup attention loss 4.82566
+
+2023-04-02 05:39:11,867 Updates 18250, num timesteps 91255
+selfsup attention loss 4.78293
+
+2023-04-02 05:39:36,020 Updates 18500, num timesteps 92505
+selfsup attention loss 4.92847
+
+2023-04-02 05:40:00,181 Updates 18750, num timesteps 93755
+selfsup attention loss 4.86684
+
+2023-04-02 05:40:24,327 Updates 19000, num timesteps 95005
+selfsup attention loss 4.71322
+
+2023-04-02 05:40:48,463 Updates 19250, num timesteps 96255
+selfsup attention loss 4.77798
+
+2023-04-02 05:41:12,597 Updates 19500, num timesteps 97505
+selfsup attention loss 4.72134
+
+2023-04-02 05:41:36,767 Updates 19750, num timesteps 98755
+selfsup attention loss 4.76761
+
+2023-04-02 05:42:00,907 Updates 20000, num timesteps 100005
+selfsup attention loss 4.71816
+
+2023-04-02 05:42:25,039 Updates 20250, num timesteps 101255
+selfsup attention loss 4.77585
+
+2023-04-02 05:42:49,171 Updates 20500, num timesteps 102505
+selfsup attention loss 4.72392
+
+2023-04-02 05:43:13,285 Updates 20750, num timesteps 103755
+selfsup attention loss 4.82164
+
+2023-04-02 05:43:37,396 Updates 21000, num timesteps 105005
+selfsup attention loss 4.65565
+
+2023-04-02 05:44:01,511 Updates 21250, num timesteps 106255
+selfsup attention loss 4.86076
+
+2023-04-02 05:44:25,634 Updates 21500, num timesteps 107505
+selfsup attention loss 4.59717
+
+2023-04-02 05:44:49,769 Updates 21750, num timesteps 108755
+selfsup attention loss 4.75746
+
+2023-04-02 05:45:13,899 Updates 22000, num timesteps 110005
+selfsup attention loss 4.74305
+
+2023-04-02 05:45:38,026 Updates 22250, num timesteps 111255
+selfsup attention loss 4.63167
+
+2023-04-02 05:46:02,160 Updates 22500, num timesteps 112505
+selfsup attention loss 4.82949
+
+2023-04-02 05:46:26,302 Updates 22750, num timesteps 113755
+selfsup attention loss 4.61665
+
+2023-04-02 05:46:50,414 Updates 23000, num timesteps 115005
+selfsup attention loss 4.55639
+
+2023-04-02 05:47:14,538 Updates 23250, num timesteps 116255
+selfsup attention loss 4.92182
+
+2023-04-02 05:47:38,656 Updates 23500, num timesteps 117505
+selfsup attention loss 4.57442
+
+2023-04-02 05:48:02,787 Updates 23750, num timesteps 118755
+selfsup attention loss 4.48818
+
+2023-04-02 05:48:26,896 Updates 24000, num timesteps 120005
+selfsup attention loss 4.77784
+
+2023-04-02 05:48:51,020 Updates 24250, num timesteps 121255
+selfsup attention loss 4.53707
+
+2023-04-02 05:49:15,116 Updates 24500, num timesteps 122505
+selfsup attention loss 4.66243
+
+2023-04-02 05:49:39,229 Updates 24750, num timesteps 123755
+selfsup attention loss 4.69387
+
+2023-04-02 05:50:03,343 Updates 25000, num timesteps 125005
+selfsup attention loss 4.76352
+
+2023-04-02 05:50:27,460 Updates 25250, num timesteps 126255
+selfsup attention loss 4.53843
+
+2023-04-02 05:50:51,570 Updates 25500, num timesteps 127505
+selfsup attention loss 4.81389
+
+2023-04-02 05:51:15,672 Updates 25750, num timesteps 128755
+selfsup attention loss 4.81159
+
+2023-04-02 05:51:39,705 Updates 26000, num timesteps 130005
+selfsup attention loss 4.75545
+
+2023-04-02 05:52:03,806 Updates 26250, num timesteps 131255
+selfsup attention loss 4.54147
+
+2023-04-02 05:52:27,925 Updates 26500, num timesteps 132505
+selfsup attention loss 4.58510
+
+2023-04-02 05:52:52,024 Updates 26750, num timesteps 133755
+selfsup attention loss 4.66815
+
+2023-04-02 05:53:16,128 Updates 27000, num timesteps 135005
+selfsup attention loss 4.69446
+
+2023-04-02 05:53:40,435 Updates 27250, num timesteps 136255
+selfsup attention loss 4.79879
+
+2023-04-02 05:54:05,043 Updates 27500, num timesteps 137505
+selfsup attention loss 4.75336
+
+2023-04-02 05:54:29,734 Updates 27750, num timesteps 138755
+selfsup attention loss 4.71239
+
+2023-04-02 05:54:54,284 Updates 28000, num timesteps 140005
+selfsup attention loss 4.58197
+
+2023-04-02 05:55:18,827 Updates 28250, num timesteps 141255
+selfsup attention loss 4.80285
+
+2023-04-02 05:55:42,948 Updates 28500, num timesteps 142505
+selfsup attention loss 4.64519
+
+2023-04-02 05:56:07,427 Updates 28750, num timesteps 143755
+selfsup attention loss 4.61274
+
+2023-04-02 05:56:39,430 Updates 29000, num timesteps 145005
+selfsup attention loss 4.69054
+
+2023-04-02 05:57:12,709 Updates 29250, num timesteps 146255
+selfsup attention loss 4.79347
+
+2023-04-02 05:57:45,074 Updates 29500, num timesteps 147505
+selfsup attention loss 4.56110
+
+2023-04-02 05:58:17,176 Updates 29750, num timesteps 148755
+selfsup attention loss 4.65027
+
+2023-04-02 05:58:49,093 Updates 30000, num timesteps 150005
+selfsup attention loss 4.70979
+
+2023-04-02 05:59:22,872 Updates 30250, num timesteps 151255
+selfsup attention loss 4.40758
+
+2023-04-02 05:59:57,884 Updates 30500, num timesteps 152505
+selfsup attention loss 4.55807
+
+2023-04-02 06:00:31,973 Updates 30750, num timesteps 153755
+selfsup attention loss 4.57869
+
+2023-04-02 06:01:07,951 Updates 31000, num timesteps 155005
+selfsup attention loss 4.60334
+
+2023-04-02 06:01:44,035 Updates 31250, num timesteps 156255
+selfsup attention loss 4.63219
+
+2023-04-02 06:02:20,503 Updates 31500, num timesteps 157505
+selfsup attention loss 4.62003
+
+2023-04-02 06:02:56,557 Updates 31750, num timesteps 158755
+selfsup attention loss 4.74375
+
+2023-04-02 06:03:25,418 Updates 32000, num timesteps 160005
+selfsup attention loss 4.59296
+
+2023-04-02 06:03:49,466 Updates 32250, num timesteps 161255
+selfsup attention loss 4.69675
+
+2023-04-02 06:04:13,570 Updates 32500, num timesteps 162505
+selfsup attention loss 4.50341
+
+2023-04-02 06:04:38,158 Updates 32750, num timesteps 163755
+selfsup attention loss 4.55873
+
+2023-04-02 06:05:02,744 Updates 33000, num timesteps 165005
+selfsup attention loss 4.42724
+
+2023-04-02 06:05:27,321 Updates 33250, num timesteps 166255
+selfsup attention loss 4.63652
+
+2023-04-02 06:05:51,783 Updates 33500, num timesteps 167505
+selfsup attention loss 4.65016
+
+2023-04-02 06:06:22,569 Updates 33750, num timesteps 168755
+selfsup attention loss 4.56441
+
+2023-04-02 06:06:58,773 Updates 34000, num timesteps 170005
+selfsup attention loss 4.37702
+
+2023-04-02 06:07:35,968 Updates 34250, num timesteps 171255
+selfsup attention loss 4.56858
+
+2023-04-02 06:08:12,783 Updates 34500, num timesteps 172505
+selfsup attention loss 4.52255
+
+2023-04-02 06:08:48,503 Updates 34750, num timesteps 173755
+selfsup attention loss 4.61358
+
+2023-04-02 06:09:24,763 Updates 35000, num timesteps 175005
+selfsup attention loss 4.59644
+
+2023-04-02 06:10:00,853 Updates 35250, num timesteps 176255
+selfsup attention loss 4.72300
+
+2023-04-02 06:10:37,290 Updates 35500, num timesteps 177505
+selfsup attention loss 4.48643
+
+2023-04-02 06:11:13,285 Updates 35750, num timesteps 178755
+selfsup attention loss 4.57941
+
+2023-04-02 06:11:49,280 Updates 36000, num timesteps 180005
+selfsup attention loss 4.38871
+
+2023-04-02 06:12:26,263 Updates 36250, num timesteps 181255
+selfsup attention loss 4.58098
+
+2023-04-02 06:13:02,333 Updates 36500, num timesteps 182505
+selfsup attention loss 4.57544
+
+2023-04-02 06:13:36,164 Updates 36750, num timesteps 183755
+selfsup attention loss 4.55036
+
+2023-04-02 06:14:01,128 Updates 37000, num timesteps 185005
+selfsup attention loss 4.42246
+
+2023-04-02 06:14:25,244 Updates 37250, num timesteps 186255
+selfsup attention loss 4.50405
+
+2023-04-02 06:14:49,831 Updates 37500, num timesteps 187505
+selfsup attention loss 4.26782
+
+2023-04-02 06:15:14,797 Updates 37750, num timesteps 188755
+selfsup attention loss 4.61230
+
+2023-04-02 06:15:39,743 Updates 38000, num timesteps 190005
+selfsup attention loss 4.67396
+
+2023-04-02 06:16:04,625 Updates 38250, num timesteps 191255
+selfsup attention loss 4.45389
+
+2023-04-02 06:16:29,538 Updates 38500, num timesteps 192505
+selfsup attention loss 4.36317
+
+2023-04-02 06:17:02,830 Updates 38750, num timesteps 193755
+selfsup attention loss 4.57181
+
+2023-04-02 06:17:36,449 Updates 39000, num timesteps 195005
+selfsup attention loss 4.33869
+
+2023-04-02 06:18:09,620 Updates 39250, num timesteps 196255
+selfsup attention loss 4.32147
+
+2023-04-02 06:18:42,314 Updates 39500, num timesteps 197505
+selfsup attention loss 4.35963
+
+2023-04-02 06:19:16,238 Updates 39750, num timesteps 198755
+selfsup attention loss 4.49024
+
+2023-04-02 06:19:48,972 Updates 40000, num timesteps 200005
+selfsup attention loss 4.44692
+
+2023-04-02 06:20:21,307 Updates 40250, num timesteps 201255
+selfsup attention loss 4.45944
+
+2023-04-02 06:20:53,975 Updates 40500, num timesteps 202505
+selfsup attention loss 4.56421
+
+2023-04-02 06:21:26,110 Updates 40750, num timesteps 203755
+selfsup attention loss 4.67066
+
+2023-04-02 06:21:58,160 Updates 41000, num timesteps 205005
+selfsup attention loss 4.38692
+
+2023-04-02 06:22:30,480 Updates 41250, num timesteps 206255
+selfsup attention loss 4.31605
+
+2023-04-02 06:23:03,329 Updates 41500, num timesteps 207505
+selfsup attention loss 4.53577
+
+2023-04-02 06:23:28,991 Updates 41750, num timesteps 208755
+selfsup attention loss 4.43868
+
+2023-04-02 06:23:53,170 Updates 42000, num timesteps 210005
+selfsup attention loss 4.45415
+
+2023-04-02 06:24:17,321 Updates 42250, num timesteps 211255
+selfsup attention loss 4.59496
+
+2023-04-02 06:24:41,470 Updates 42500, num timesteps 212505
+selfsup attention loss 4.36677
+
+2023-04-02 06:25:05,631 Updates 42750, num timesteps 213755
+selfsup attention loss 4.35350
+
+2023-04-02 06:25:29,794 Updates 43000, num timesteps 215005
+selfsup attention loss 4.40539
+
+2023-04-02 06:25:53,944 Updates 43250, num timesteps 216255
+selfsup attention loss 4.39490
+
+2023-04-02 06:26:18,116 Updates 43500, num timesteps 217505
+selfsup attention loss 4.37342
+
+2023-04-02 06:26:42,266 Updates 43750, num timesteps 218755
+selfsup attention loss 4.51694
+
+2023-04-02 06:27:06,425 Updates 44000, num timesteps 220005
+selfsup attention loss 4.38359
+
+2023-04-02 06:27:30,582 Updates 44250, num timesteps 221255
+selfsup attention loss 4.39495
+
+2023-04-02 06:27:54,734 Updates 44500, num timesteps 222505
+selfsup attention loss 4.38358
+
+2023-04-02 06:28:18,883 Updates 44750, num timesteps 223755
+selfsup attention loss 4.30403
+
+2023-04-02 06:28:43,028 Updates 45000, num timesteps 225005
+selfsup attention loss 4.39133
+
+2023-04-02 06:29:07,185 Updates 45250, num timesteps 226255
+selfsup attention loss 4.43853
+
+2023-04-02 06:29:31,338 Updates 45500, num timesteps 227505
+selfsup attention loss 4.33691
+
+2023-04-02 06:29:55,500 Updates 45750, num timesteps 228755
+selfsup attention loss 4.45650
+
+2023-04-02 06:30:19,687 Updates 46000, num timesteps 230005
+selfsup attention loss 4.40759
+
+2023-04-02 06:30:43,829 Updates 46250, num timesteps 231255
+selfsup attention loss 4.60754
+
+2023-04-02 06:31:08,845 Updates 46500, num timesteps 232505
+selfsup attention loss 4.51473
+
+2023-04-02 06:31:33,071 Updates 46750, num timesteps 233755
+selfsup attention loss 4.27999
+
+2023-04-02 06:31:57,800 Updates 47000, num timesteps 235005
+selfsup attention loss 4.43968
+
+2023-04-02 06:32:21,842 Updates 47250, num timesteps 236255
+selfsup attention loss 4.53769
+
+2023-04-02 06:32:45,999 Updates 47500, num timesteps 237505
+selfsup attention loss 4.31474
+
+2023-04-02 06:33:10,063 Updates 47750, num timesteps 238755
+selfsup attention loss 4.36794
+
+2023-04-02 06:33:34,208 Updates 48000, num timesteps 240005
+selfsup attention loss 4.38708
+
+2023-04-02 06:33:58,301 Updates 48250, num timesteps 241255
+selfsup attention loss 4.42725
+
+2023-04-02 06:34:22,425 Updates 48500, num timesteps 242505
+selfsup attention loss 4.43405
+
+2023-04-02 06:34:46,537 Updates 48750, num timesteps 243755
+selfsup attention loss 4.45644
+
+2023-04-02 06:35:10,620 Updates 49000, num timesteps 245005
+selfsup attention loss 4.50948
+
+2023-04-02 06:35:34,717 Updates 49250, num timesteps 246255
+selfsup attention loss 4.38265
+
+2023-04-02 06:35:58,809 Updates 49500, num timesteps 247505
+selfsup attention loss 4.33461
+
+2023-04-02 06:36:22,912 Updates 49750, num timesteps 248755
+selfsup attention loss 4.38299
+
+2023-04-02 06:36:46,987 Updates 50000, num timesteps 250005
+selfsup attention loss 4.41873
+
+2023-04-02 06:37:11,086 Updates 50250, num timesteps 251255
+selfsup attention loss 4.53568
+
+2023-04-02 06:37:35,183 Updates 50500, num timesteps 252505
+selfsup attention loss 4.33786
+
+2023-04-02 06:37:59,786 Updates 50750, num timesteps 253755
+selfsup attention loss 4.36673
+
+2023-04-02 06:38:24,090 Updates 51000, num timesteps 255005
+selfsup attention loss 4.36818
+
+2023-04-02 06:38:48,188 Updates 51250, num timesteps 256255
+selfsup attention loss 4.40460
+
+2023-04-02 06:39:12,284 Updates 51500, num timesteps 257505
+selfsup attention loss 4.43433
+
+2023-04-02 06:39:36,372 Updates 51750, num timesteps 258755
+selfsup attention loss 4.31036
+
+2023-04-02 06:40:00,474 Updates 52000, num timesteps 260005
+selfsup attention loss 4.46986
+
+2023-04-02 06:40:24,557 Updates 52250, num timesteps 261255
+selfsup attention loss 4.30505
+
+2023-04-02 06:40:48,663 Updates 52500, num timesteps 262505
+selfsup attention loss 4.23660
+
+2023-04-02 06:41:12,764 Updates 52750, num timesteps 263755
+selfsup attention loss 4.23958
+
+2023-04-02 06:41:36,861 Updates 53000, num timesteps 265005
+selfsup attention loss 4.34558
+
+2023-04-02 06:42:00,950 Updates 53250, num timesteps 266255
+selfsup attention loss 4.38139
+
+2023-04-02 06:42:25,041 Updates 53500, num timesteps 267505
+selfsup attention loss 4.33369
+
+2023-04-02 06:42:49,132 Updates 53750, num timesteps 268755
+selfsup attention loss 4.27710
+
+2023-04-02 06:43:13,247 Updates 54000, num timesteps 270005
+selfsup attention loss 4.53717
+
+2023-04-02 06:43:37,344 Updates 54250, num timesteps 271255
+selfsup attention loss 4.22657
+
+2023-04-02 06:44:01,437 Updates 54500, num timesteps 272505
+selfsup attention loss 4.39940
+
+2023-04-02 06:44:25,531 Updates 54750, num timesteps 273755
+selfsup attention loss 4.31103
+
+2023-04-02 06:44:49,629 Updates 55000, num timesteps 275005
+selfsup attention loss 4.28790
+
+2023-04-02 06:45:13,738 Updates 55250, num timesteps 276255
+selfsup attention loss 4.29280
+
+2023-04-02 06:45:37,827 Updates 55500, num timesteps 277505
+selfsup attention loss 4.44152
+
+2023-04-02 06:46:02,085 Updates 55750, num timesteps 278755
+selfsup attention loss 4.60730
+
+2023-04-02 06:46:26,186 Updates 56000, num timesteps 280005
+selfsup attention loss 4.39030
+
+2023-04-02 06:46:50,376 Updates 56250, num timesteps 281255
+selfsup attention loss 4.36171
+
+2023-04-02 06:47:14,464 Updates 56500, num timesteps 282505
+selfsup attention loss 4.33880
+
+2023-04-02 06:47:38,545 Updates 56750, num timesteps 283755
+selfsup attention loss 4.53755
+
+2023-04-02 06:48:02,632 Updates 57000, num timesteps 285005
+selfsup attention loss 4.27338
+
+2023-04-02 06:48:26,718 Updates 57250, num timesteps 286255
+selfsup attention loss 4.62804
+
+2023-04-02 06:48:50,818 Updates 57500, num timesteps 287505
+selfsup attention loss 4.48613
+
+2023-04-02 06:49:14,889 Updates 57750, num timesteps 288755
+selfsup attention loss 4.33436
+
+2023-04-02 06:49:38,983 Updates 58000, num timesteps 290005
+selfsup attention loss 4.36018
+
+2023-04-02 06:50:03,072 Updates 58250, num timesteps 291255
+selfsup attention loss 4.33563
+
+2023-04-02 06:50:27,156 Updates 58500, num timesteps 292505
+selfsup attention loss 4.29765
+
+2023-04-02 06:50:51,241 Updates 58750, num timesteps 293755
+selfsup attention loss 4.34766
+
+2023-04-02 06:51:15,606 Updates 59000, num timesteps 295005
+selfsup attention loss 4.19365
+
+2023-04-02 06:51:39,137 Updates 59250, num timesteps 296255
+selfsup attention loss 4.42225
+
+2023-04-02 06:52:02,646 Updates 59500, num timesteps 297505
+selfsup attention loss 4.18477
+
+2023-04-02 06:52:26,618 Updates 59750, num timesteps 298755
+selfsup attention loss 4.44774
+
+2023-04-02 06:52:50,712 Updates 60000, num timesteps 300005
+selfsup attention loss 4.53599
+
+2023-04-02 06:53:14,984 Updates 60250, num timesteps 301255
+selfsup attention loss 4.36583
+
+2023-04-02 06:53:39,091 Updates 60500, num timesteps 302505
+selfsup attention loss 4.27070
+
+2023-04-02 06:54:03,211 Updates 60750, num timesteps 303755
+selfsup attention loss 4.34721
+
+2023-04-02 06:54:27,320 Updates 61000, num timesteps 305005
+selfsup attention loss 4.23282
+
+2023-04-02 06:54:51,437 Updates 61250, num timesteps 306255
+selfsup attention loss 4.35614
+
+2023-04-02 06:55:15,556 Updates 61500, num timesteps 307505
+selfsup attention loss 4.34620
+
+2023-04-02 06:55:39,764 Updates 61750, num timesteps 308755
+selfsup attention loss 4.25643
+
+2023-04-02 06:56:03,874 Updates 62000, num timesteps 310005
+selfsup attention loss 4.22074
+
+2023-04-02 06:56:27,981 Updates 62250, num timesteps 311255
+selfsup attention loss 4.35163
+
+2023-04-02 06:56:52,085 Updates 62500, num timesteps 312505
+selfsup attention loss 4.34479
+
+2023-04-02 06:57:16,180 Updates 62750, num timesteps 313755
+selfsup attention loss 4.37128
+
+2023-04-02 06:57:40,272 Updates 63000, num timesteps 315005
+selfsup attention loss 4.37951
+
+2023-04-02 06:58:04,374 Updates 63250, num timesteps 316255
+selfsup attention loss 4.45321
+
+2023-04-02 06:58:28,754 Updates 63500, num timesteps 317505
+selfsup attention loss 4.25976
+
+2023-04-02 06:58:52,952 Updates 63750, num timesteps 318755
+selfsup attention loss 4.36002
+
+2023-04-02 06:59:17,211 Updates 64000, num timesteps 320005
+selfsup attention loss 4.21160
+
+2023-04-02 06:59:41,376 Updates 64250, num timesteps 321255
+selfsup attention loss 4.38925
+
+2023-04-02 07:00:05,541 Updates 64500, num timesteps 322505
+selfsup attention loss 4.19579
+
+2023-04-02 07:00:29,714 Updates 64750, num timesteps 323755
+selfsup attention loss 4.36558
+
+2023-04-02 07:00:54,008 Updates 65000, num timesteps 325005
+selfsup attention loss 4.39437
+
+2023-04-02 07:01:17,830 Updates 65250, num timesteps 326255
+selfsup attention loss 4.44830
+
+2023-04-02 07:01:41,644 Updates 65500, num timesteps 327505
+selfsup attention loss 4.19428
+
+2023-04-02 07:02:05,445 Updates 65750, num timesteps 328755
+selfsup attention loss 4.32157
+
+2023-04-02 07:02:29,251 Updates 66000, num timesteps 330005
+selfsup attention loss 4.36278
+
+2023-04-02 07:02:53,040 Updates 66250, num timesteps 331255
+selfsup attention loss 4.34793
+
+2023-04-02 07:03:17,365 Updates 66500, num timesteps 332505
+selfsup attention loss 4.17850
+
+2023-04-02 07:03:41,712 Updates 66750, num timesteps 333755
+selfsup attention loss 4.26970
+
+2023-04-02 07:04:05,975 Updates 67000, num timesteps 335005
+selfsup attention loss 4.17680
+
+2023-04-02 07:04:30,145 Updates 67250, num timesteps 336255
+selfsup attention loss 4.22437
+
+2023-04-02 07:04:54,317 Updates 67500, num timesteps 337505
+selfsup attention loss 4.67474
+
+2023-04-02 07:05:18,504 Updates 67750, num timesteps 338755
+selfsup attention loss 4.12667
+
+2023-04-02 07:05:42,690 Updates 68000, num timesteps 340005
+selfsup attention loss 4.26346
+
+2023-04-02 07:06:06,870 Updates 68250, num timesteps 341255
+selfsup attention loss 4.39998
+
+2023-04-02 07:06:31,055 Updates 68500, num timesteps 342505
+selfsup attention loss 4.06777
+
+2023-04-02 07:06:55,219 Updates 68750, num timesteps 343755
+selfsup attention loss 4.13899
+
+2023-04-02 07:07:19,398 Updates 69000, num timesteps 345005
+selfsup attention loss 4.37766
+
+2023-04-02 07:07:43,572 Updates 69250, num timesteps 346255
+selfsup attention loss 4.23784
+
+2023-04-02 07:08:07,747 Updates 69500, num timesteps 347505
+selfsup attention loss 4.40968
+
+2023-04-02 07:08:31,929 Updates 69750, num timesteps 348755
+selfsup attention loss 4.19415
+
+2023-04-02 07:08:56,244 Updates 70000, num timesteps 350005
+selfsup attention loss 4.27551
+
+2023-04-02 07:09:20,417 Updates 70250, num timesteps 351255
+selfsup attention loss 4.37338
+
+2023-04-02 07:09:44,609 Updates 70500, num timesteps 352505
+selfsup attention loss 4.31414
+
+2023-04-02 07:10:08,767 Updates 70750, num timesteps 353755
+selfsup attention loss 4.25162
+
+2023-04-02 07:10:32,929 Updates 71000, num timesteps 355005
+selfsup attention loss 4.27412
+
+2023-04-02 07:10:57,118 Updates 71250, num timesteps 356255
+selfsup attention loss 4.23913
+
+2023-04-02 07:11:21,325 Updates 71500, num timesteps 357505
+selfsup attention loss 4.41612
+
+2023-04-02 07:11:45,511 Updates 71750, num timesteps 358755
+selfsup attention loss 4.23706
+
+2023-04-02 07:12:09,711 Updates 72000, num timesteps 360005
+selfsup attention loss 4.09616
+
+2023-04-02 07:12:33,901 Updates 72250, num timesteps 361255
+selfsup attention loss 4.49297
+
+2023-04-02 07:12:58,079 Updates 72500, num timesteps 362505
+selfsup attention loss 4.03519
+
+2023-04-02 07:13:22,269 Updates 72750, num timesteps 363755
+selfsup attention loss 4.24021
+
+2023-04-02 07:13:46,458 Updates 73000, num timesteps 365005
+selfsup attention loss 4.33852
+
+2023-04-02 07:14:10,654 Updates 73250, num timesteps 366255
+selfsup attention loss 3.98851
+
+2023-04-02 07:14:34,843 Updates 73500, num timesteps 367505
+selfsup attention loss 4.36577
+
+2023-04-02 07:14:59,051 Updates 73750, num timesteps 368755
+selfsup attention loss 4.35890
+
+2023-04-02 07:15:23,229 Updates 74000, num timesteps 370005
+selfsup attention loss 4.04810
+
+2023-04-02 07:15:47,422 Updates 74250, num timesteps 371255
+selfsup attention loss 4.22438
+
+2023-04-02 07:16:11,728 Updates 74500, num timesteps 372505
+selfsup attention loss 4.30211
+
+2023-04-02 07:16:35,912 Updates 74750, num timesteps 373755
+selfsup attention loss 4.32568
+
+2023-04-02 07:17:00,705 Updates 75000, num timesteps 375005
+selfsup attention loss 4.18294
+
+2023-04-02 07:17:24,876 Updates 75250, num timesteps 376255
+selfsup attention loss 4.21202
+
+2023-04-02 07:17:49,028 Updates 75500, num timesteps 377505
+selfsup attention loss 4.11916
+
+2023-04-02 07:18:13,191 Updates 75750, num timesteps 378755
+selfsup attention loss 4.36825
+
+2023-04-02 07:18:37,351 Updates 76000, num timesteps 380005
+selfsup attention loss 4.11486
+
+2023-04-02 07:19:01,516 Updates 76250, num timesteps 381255
+selfsup attention loss 4.22228
+
+2023-04-02 07:19:25,662 Updates 76500, num timesteps 382505
+selfsup attention loss 4.23200
+
+2023-04-02 07:19:49,809 Updates 76750, num timesteps 383755
+selfsup attention loss 4.28520
+
+2023-04-02 07:20:14,496 Updates 77000, num timesteps 385005
+selfsup attention loss 4.19882
+
+2023-04-02 07:20:38,605 Updates 77250, num timesteps 386255
+selfsup attention loss 4.40567
+
+2023-04-02 07:21:03,669 Updates 77500, num timesteps 387505
+selfsup attention loss 4.29716
+
+2023-04-02 07:21:27,759 Updates 77750, num timesteps 388755
+selfsup attention loss 4.21307
+
+2023-04-02 07:21:51,820 Updates 78000, num timesteps 390005
+selfsup attention loss 4.20749
+
+2023-04-02 07:22:15,878 Updates 78250, num timesteps 391255
+selfsup attention loss 4.08350
+
+2023-04-02 07:22:39,953 Updates 78500, num timesteps 392505
+selfsup attention loss 3.93895
+
+2023-04-02 07:23:04,238 Updates 78750, num timesteps 393755
+selfsup attention loss 4.11454
+
+2023-04-02 07:23:28,410 Updates 79000, num timesteps 395005
+selfsup attention loss 4.11493
+
+2023-04-02 07:23:52,452 Updates 79250, num timesteps 396255
+selfsup attention loss 4.15921
+
+2023-04-02 07:24:16,497 Updates 79500, num timesteps 397505
+selfsup attention loss 4.25597
+
+2023-04-02 07:24:40,543 Updates 79750, num timesteps 398755
+selfsup attention loss 4.17572
+
+2023-04-02 07:25:04,590 Updates 80000, num timesteps 400005
+selfsup attention loss 4.20848
+
+2023-04-02 07:25:28,634 Updates 80250, num timesteps 401255
+selfsup attention loss 4.47865
+
+2023-04-02 07:25:52,668 Updates 80500, num timesteps 402505
+selfsup attention loss 4.20004
+
+2023-04-02 07:26:16,717 Updates 80750, num timesteps 403755
+selfsup attention loss 4.21180
+
+2023-04-02 07:26:40,749 Updates 81000, num timesteps 405005
+selfsup attention loss 4.08247
+
+2023-04-02 07:27:04,800 Updates 81250, num timesteps 406255
+selfsup attention loss 4.19852
+
+2023-04-02 07:27:28,839 Updates 81500, num timesteps 407505
+selfsup attention loss 4.30015
+
+2023-04-02 07:27:52,883 Updates 81750, num timesteps 408755
+selfsup attention loss 4.21006
+
+2023-04-02 07:28:16,924 Updates 82000, num timesteps 410005
+selfsup attention loss 4.16065
+
+2023-04-02 07:28:40,979 Updates 82250, num timesteps 411255
+selfsup attention loss 4.34032
+
+2023-04-02 07:29:04,996 Updates 82500, num timesteps 412505
+selfsup attention loss 4.02067
+
+2023-04-02 07:29:29,026 Updates 82750, num timesteps 413755
+selfsup attention loss 4.37321
+
+2023-04-02 07:29:53,072 Updates 83000, num timesteps 415005
+selfsup attention loss 3.98440
+
+2023-04-02 07:30:17,116 Updates 83250, num timesteps 416255
+selfsup attention loss 4.11554
+
+2023-04-02 07:30:41,166 Updates 83500, num timesteps 417505
+selfsup attention loss 4.40905
+
+2023-04-02 07:31:05,203 Updates 83750, num timesteps 418755
+selfsup attention loss 4.22066
+
+2023-04-02 07:31:29,261 Updates 84000, num timesteps 420005
+selfsup attention loss 3.97588
+
+2023-04-02 07:31:53,311 Updates 84250, num timesteps 421255
+selfsup attention loss 3.93773
+
+2023-04-02 07:32:17,361 Updates 84500, num timesteps 422505
+selfsup attention loss 4.42898
+
+2023-04-02 07:32:41,410 Updates 84750, num timesteps 423755
+selfsup attention loss 4.11467
+
+2023-04-02 07:33:05,478 Updates 85000, num timesteps 425005
+selfsup attention loss 4.13169
+
+2023-04-02 07:33:29,528 Updates 85250, num timesteps 426255
+selfsup attention loss 4.18256
+
+2023-04-02 07:33:53,574 Updates 85500, num timesteps 427505
+selfsup attention loss 4.14686
+
+2023-04-02 07:34:17,626 Updates 85750, num timesteps 428755
+selfsup attention loss 4.31872
+
+2023-04-02 07:34:41,684 Updates 86000, num timesteps 430005
+selfsup attention loss 4.07685
+
+2023-04-02 07:35:05,799 Updates 86250, num timesteps 431255
+selfsup attention loss 4.23550
+
+2023-04-02 07:35:29,865 Updates 86500, num timesteps 432505
+selfsup attention loss 3.99298
+
+2023-04-02 07:35:53,922 Updates 86750, num timesteps 433755
+selfsup attention loss 4.06347
+
+2023-04-02 07:36:17,975 Updates 87000, num timesteps 435005
+selfsup attention loss 4.23466
+
+2023-04-02 07:36:42,042 Updates 87250, num timesteps 436255
+selfsup attention loss 3.91794
+
+2023-04-02 07:37:06,091 Updates 87500, num timesteps 437505
+selfsup attention loss 4.55060
+
+2023-04-02 07:37:30,147 Updates 87750, num timesteps 438755
+selfsup attention loss 3.91706
+
+2023-04-02 07:37:54,195 Updates 88000, num timesteps 440005
+selfsup attention loss 4.24552
+
+2023-04-02 07:38:18,251 Updates 88250, num timesteps 441255
+selfsup attention loss 4.18894
+
+2023-04-02 07:38:42,325 Updates 88500, num timesteps 442505
+selfsup attention loss 4.27309
+
+2023-04-02 07:39:06,395 Updates 88750, num timesteps 443755
+selfsup attention loss 4.18190
+
+2023-04-02 07:39:30,450 Updates 89000, num timesteps 445005
+selfsup attention loss 4.28980
+
+2023-04-02 07:39:54,539 Updates 89250, num timesteps 446255
+selfsup attention loss 4.17648
+
+2023-04-02 07:40:18,621 Updates 89500, num timesteps 447505
+selfsup attention loss 4.17348
+
+2023-04-02 07:40:42,693 Updates 89750, num timesteps 448755
+selfsup attention loss 4.04828
+
+2023-04-02 07:41:06,755 Updates 90000, num timesteps 450005
+selfsup attention loss 4.12507
+
+2023-04-02 07:41:30,812 Updates 90250, num timesteps 451255
+selfsup attention loss 4.02005
+
+2023-04-02 07:41:54,873 Updates 90500, num timesteps 452505
+selfsup attention loss 4.02473
+
+2023-04-02 07:42:18,942 Updates 90750, num timesteps 453755
+selfsup attention loss 4.10137
+
+2023-04-02 07:42:43,018 Updates 91000, num timesteps 455005
+selfsup attention loss 4.15184
+
+2023-04-02 07:43:07,070 Updates 91250, num timesteps 456255
+selfsup attention loss 4.25275
+
+2023-04-02 07:43:31,130 Updates 91500, num timesteps 457505
+selfsup attention loss 4.27943
+
+2023-04-02 07:43:55,204 Updates 91750, num timesteps 458755
+selfsup attention loss 4.05379
+
+2023-04-02 07:44:19,253 Updates 92000, num timesteps 460005
+selfsup attention loss 4.23217
+
+2023-04-02 07:44:43,331 Updates 92250, num timesteps 461255
+selfsup attention loss 3.93366
+
+2023-04-02 07:45:07,378 Updates 92500, num timesteps 462505
+selfsup attention loss 4.25279
+
+2023-04-02 07:45:31,455 Updates 92750, num timesteps 463755
+selfsup attention loss 4.13266
+
+2023-04-02 07:45:55,521 Updates 93000, num timesteps 465005
+selfsup attention loss 4.26832
+
+2023-04-02 07:46:19,597 Updates 93250, num timesteps 466255
+selfsup attention loss 4.06804
+
+2023-04-02 07:46:43,647 Updates 93500, num timesteps 467505
+selfsup attention loss 4.23662
+
+2023-04-02 07:47:07,729 Updates 93750, num timesteps 468755
+selfsup attention loss 4.16072
+
+2023-04-02 07:47:31,807 Updates 94000, num timesteps 470005
+selfsup attention loss 4.41657
+
+2023-04-02 07:47:55,852 Updates 94250, num timesteps 471255
+selfsup attention loss 4.20085
+
+2023-04-02 07:48:19,898 Updates 94500, num timesteps 472505
+selfsup attention loss 4.11653
+
+2023-04-02 07:48:43,948 Updates 94750, num timesteps 473755
+selfsup attention loss 4.19753
+
+2023-04-02 07:49:08,011 Updates 95000, num timesteps 475005
+selfsup attention loss 4.34202
+
+2023-04-02 07:49:32,068 Updates 95250, num timesteps 476255
+selfsup attention loss 4.22269
+
+2023-04-02 07:49:56,128 Updates 95500, num timesteps 477505
+selfsup attention loss 4.21523
+
+2023-04-02 07:50:20,200 Updates 95750, num timesteps 478755
+selfsup attention loss 4.26726
+
+2023-04-02 07:50:44,284 Updates 96000, num timesteps 480005
+selfsup attention loss 4.25501
+
+2023-04-02 07:51:08,331 Updates 96250, num timesteps 481255
+selfsup attention loss 4.12374
+
+2023-04-02 07:51:32,400 Updates 96500, num timesteps 482505
+selfsup attention loss 4.14780
+
+2023-04-02 07:51:56,454 Updates 96750, num timesteps 483755
+selfsup attention loss 3.96120
+
+2023-04-02 07:52:20,507 Updates 97000, num timesteps 485005
+selfsup attention loss 4.38918
+
+2023-04-02 07:52:44,573 Updates 97250, num timesteps 486255
+selfsup attention loss 3.99888
+
+2023-04-02 07:53:08,627 Updates 97500, num timesteps 487505
+selfsup attention loss 4.20536
+
+2023-04-02 07:53:32,675 Updates 97750, num timesteps 488755
+selfsup attention loss 4.08927
+
+2023-04-02 07:53:56,722 Updates 98000, num timesteps 490005
+selfsup attention loss 4.12012
+
+2023-04-02 07:54:20,777 Updates 98250, num timesteps 491255
+selfsup attention loss 4.30297
+
+2023-04-02 07:54:44,822 Updates 98500, num timesteps 492505
+selfsup attention loss 4.34125
+
+2023-04-02 07:55:08,873 Updates 98750, num timesteps 493755
+selfsup attention loss 4.26917
+
+2023-04-02 07:55:32,921 Updates 99000, num timesteps 495005
+selfsup attention loss 3.96260
+
+2023-04-02 07:55:56,953 Updates 99250, num timesteps 496255
+selfsup attention loss 4.31730
+
+2023-04-02 07:56:21,608 Updates 99500, num timesteps 497505
+selfsup attention loss 4.05386
+
+2023-04-02 07:56:46,942 Updates 99750, num timesteps 498755
+selfsup attention loss 4.28207
+
+2023-04-02 07:57:12,251 Updates 100000, num timesteps 500005
+selfsup attention loss 4.21909
+
+2023-04-02 07:57:36,489 Updates 100250, num timesteps 501255
+selfsup attention loss 4.11806
+
+2023-04-02 07:58:00,583 Updates 100500, num timesteps 502505
+selfsup attention loss 4.09284
+
+2023-04-02 07:58:24,659 Updates 100750, num timesteps 503755
+selfsup attention loss 4.34332
+
+2023-04-02 07:58:48,736 Updates 101000, num timesteps 505005
+selfsup attention loss 4.09247
+
+2023-04-02 07:59:12,802 Updates 101250, num timesteps 506255
+selfsup attention loss 4.09234
+
+2023-04-02 07:59:36,882 Updates 101500, num timesteps 507505
+selfsup attention loss 4.23131
+
+2023-04-02 08:00:00,940 Updates 101750, num timesteps 508755
+selfsup attention loss 4.05659
+
+2023-04-02 08:00:25,007 Updates 102000, num timesteps 510005
+selfsup attention loss 3.93988
+
+2023-04-02 08:00:49,046 Updates 102250, num timesteps 511255
+selfsup attention loss 4.03240
+
+2023-04-02 08:01:13,101 Updates 102500, num timesteps 512505
+selfsup attention loss 4.01407
+
+2023-04-02 08:01:37,162 Updates 102750, num timesteps 513755
+selfsup attention loss 4.02226
+
+2023-04-02 08:02:01,232 Updates 103000, num timesteps 515005
+selfsup attention loss 4.28837
+
+2023-04-02 08:02:25,298 Updates 103250, num timesteps 516255
+selfsup attention loss 4.02399
+
+2023-04-02 08:02:49,359 Updates 103500, num timesteps 517505
+selfsup attention loss 4.07185
+
+2023-04-02 08:03:13,400 Updates 103750, num timesteps 518755
+selfsup attention loss 4.07188
+
+2023-04-02 08:03:37,474 Updates 104000, num timesteps 520005
+selfsup attention loss 4.08058
+
+2023-04-02 08:04:01,523 Updates 104250, num timesteps 521255
+selfsup attention loss 4.37411
+
+2023-04-02 08:04:25,574 Updates 104500, num timesteps 522505
+selfsup attention loss 4.16003
+
+2023-04-02 08:04:49,651 Updates 104750, num timesteps 523755
+selfsup attention loss 4.15494
+
+2023-04-02 08:05:15,023 Updates 105000, num timesteps 525005
+selfsup attention loss 4.16906
+
+2023-04-02 08:05:43,488 Updates 105250, num timesteps 526255
+selfsup attention loss 4.01597
+
+2023-04-02 08:06:11,932 Updates 105500, num timesteps 527505
+selfsup attention loss 3.87102
+
+2023-04-02 08:06:37,507 Updates 105750, num timesteps 528755
+selfsup attention loss 3.97295
+
+2023-04-02 08:07:01,566 Updates 106000, num timesteps 530005
+selfsup attention loss 4.00957
+
+2023-04-02 08:07:25,611 Updates 106250, num timesteps 531255
+selfsup attention loss 4.24983
+
+2023-04-02 08:07:49,820 Updates 106500, num timesteps 532505
+selfsup attention loss 4.07438
+
+2023-04-02 08:08:13,866 Updates 106750, num timesteps 533755
+selfsup attention loss 4.11501
+
+2023-04-02 08:08:38,189 Updates 107000, num timesteps 535005
+selfsup attention loss 4.28369
+
+2023-04-02 08:09:02,402 Updates 107250, num timesteps 536255
+selfsup attention loss 4.26754
+
+2023-04-02 08:09:27,246 Updates 107500, num timesteps 537505
+selfsup attention loss 4.17425
+
+2023-04-02 08:09:52,277 Updates 107750, num timesteps 538755
+selfsup attention loss 4.07628
+
+2023-04-02 08:10:22,551 Updates 108000, num timesteps 540005
+selfsup attention loss 3.88176
+
+2023-04-02 08:10:50,038 Updates 108250, num timesteps 541255
+selfsup attention loss 3.95658
+
+2023-04-02 08:11:14,165 Updates 108500, num timesteps 542505
+selfsup attention loss 4.03486
+
+2023-04-02 08:11:38,376 Updates 108750, num timesteps 543755
+selfsup attention loss 3.94423
+
+2023-04-02 08:12:02,461 Updates 109000, num timesteps 545005
+selfsup attention loss 3.86877
+
+2023-04-02 08:12:26,847 Updates 109250, num timesteps 546255
+selfsup attention loss 4.21530
+
+2023-04-02 08:12:51,014 Updates 109500, num timesteps 547505
+selfsup attention loss 4.11641
+
+2023-04-02 08:13:15,186 Updates 109750, num timesteps 548755
+selfsup attention loss 4.05823
+
+2023-04-02 08:13:39,464 Updates 110000, num timesteps 550005
+selfsup attention loss 4.04528
+
+2023-04-02 08:14:04,289 Updates 110250, num timesteps 551255
+selfsup attention loss 4.02686
+
+2023-04-02 08:14:28,758 Updates 110500, num timesteps 552505
+selfsup attention loss 4.00148
+
+2023-04-02 08:14:54,722 Updates 110750, num timesteps 553755
+selfsup attention loss 4.24029
+
+2023-04-02 08:15:20,889 Updates 111000, num timesteps 555005
+selfsup attention loss 4.00058
+
+2023-04-02 08:15:46,563 Updates 111250, num timesteps 556255
+selfsup attention loss 3.86354
+
+2023-04-02 08:16:11,044 Updates 111500, num timesteps 557505
+selfsup attention loss 4.11974
+
+2023-04-02 08:16:35,536 Updates 111750, num timesteps 558755
+selfsup attention loss 4.19206
+
+2023-04-02 08:16:59,996 Updates 112000, num timesteps 560005
+selfsup attention loss 4.08959
+
+2023-04-02 08:17:24,493 Updates 112250, num timesteps 561255
+selfsup attention loss 4.23824
+
+2023-04-02 08:17:48,958 Updates 112500, num timesteps 562505
+selfsup attention loss 3.89735
+
+2023-04-02 08:18:13,448 Updates 112750, num timesteps 563755
+selfsup attention loss 4.01670
+
+2023-04-02 08:18:37,935 Updates 113000, num timesteps 565005
+selfsup attention loss 3.85402
+
+2023-04-02 08:19:02,474 Updates 113250, num timesteps 566255
+selfsup attention loss 3.97866
+
+2023-04-02 08:19:26,965 Updates 113500, num timesteps 567505
+selfsup attention loss 4.08357
+
+2023-04-02 08:19:51,480 Updates 113750, num timesteps 568755
+selfsup attention loss 4.15112
+
+2023-04-02 08:20:15,970 Updates 114000, num timesteps 570005
+selfsup attention loss 3.95406
+
+2023-04-02 08:20:40,455 Updates 114250, num timesteps 571255
+selfsup attention loss 4.11407
+
+2023-04-02 08:21:04,949 Updates 114500, num timesteps 572505
+selfsup attention loss 4.19878
+
+2023-04-02 08:21:30,156 Updates 114750, num timesteps 573755
+selfsup attention loss 4.00032
+
+2023-04-02 08:21:54,628 Updates 115000, num timesteps 575005
+selfsup attention loss 4.14709
+
+2023-04-02 08:22:19,098 Updates 115250, num timesteps 576255
+selfsup attention loss 4.18095
+
+2023-04-02 08:22:43,557 Updates 115500, num timesteps 577505
+selfsup attention loss 4.03008
+
+2023-04-02 08:23:08,011 Updates 115750, num timesteps 578755
+selfsup attention loss 3.91270
+
+2023-04-02 08:23:32,451 Updates 116000, num timesteps 580005
+selfsup attention loss 3.86074
+
+2023-04-02 08:23:56,926 Updates 116250, num timesteps 581255
+selfsup attention loss 4.37785
+
+2023-04-02 08:24:21,438 Updates 116500, num timesteps 582505
+selfsup attention loss 3.98395
+
+2023-04-02 08:24:45,900 Updates 116750, num timesteps 583755
+selfsup attention loss 4.05117
+
+2023-04-02 08:25:10,356 Updates 117000, num timesteps 585005
+selfsup attention loss 4.19155
+
+2023-04-02 08:25:34,771 Updates 117250, num timesteps 586255
+selfsup attention loss 3.96240
+
+2023-04-02 08:25:59,220 Updates 117500, num timesteps 587505
+selfsup attention loss 4.21342
+
+2023-04-02 08:26:23,709 Updates 117750, num timesteps 588755
+selfsup attention loss 4.02258
+
+2023-04-02 08:26:48,163 Updates 118000, num timesteps 590005
+selfsup attention loss 3.90591
+
+2023-04-02 08:27:12,622 Updates 118250, num timesteps 591255
+selfsup attention loss 3.92456
+
+2023-04-02 08:27:37,103 Updates 118500, num timesteps 592505
+selfsup attention loss 3.99011
+
+2023-04-02 08:28:01,567 Updates 118750, num timesteps 593755
+selfsup attention loss 4.28647
+
+2023-04-02 08:28:26,023 Updates 119000, num timesteps 595005
+selfsup attention loss 3.82745
+
+2023-04-02 08:28:50,465 Updates 119250, num timesteps 596255
+selfsup attention loss 4.30179
+
+2023-04-02 08:29:14,891 Updates 119500, num timesteps 597505
+selfsup attention loss 4.16506
+
+2023-04-02 08:29:39,316 Updates 119750, num timesteps 598755
+selfsup attention loss 3.90496
+
+2023-04-02 08:30:03,436 Updates 120000, num timesteps 600005
+selfsup attention loss 4.14070
+
+2023-04-02 08:30:27,540 Updates 120250, num timesteps 601255
+selfsup attention loss 3.99947
+
+2023-04-02 08:30:51,660 Updates 120500, num timesteps 602505
+selfsup attention loss 4.07559
+
+2023-04-02 08:31:15,789 Updates 120750, num timesteps 603755
+selfsup attention loss 3.99083
+
+2023-04-02 08:31:39,918 Updates 121000, num timesteps 605005
+selfsup attention loss 4.10874
+
+2023-04-02 08:32:04,029 Updates 121250, num timesteps 606255
+selfsup attention loss 4.16460
+
+2023-04-02 08:32:28,134 Updates 121500, num timesteps 607505
+selfsup attention loss 3.99030
+
+2023-04-02 08:32:52,254 Updates 121750, num timesteps 608755
+selfsup attention loss 4.16363
+
+2023-04-02 08:33:16,364 Updates 122000, num timesteps 610005
+selfsup attention loss 3.97672
+
+2023-04-02 08:33:40,464 Updates 122250, num timesteps 611255
+selfsup attention loss 4.10981
+
+2023-04-02 08:34:04,568 Updates 122500, num timesteps 612505
+selfsup attention loss 3.99320
+
+2023-04-02 08:34:28,663 Updates 122750, num timesteps 613755
+selfsup attention loss 4.11922
+
+2023-04-02 08:34:52,779 Updates 123000, num timesteps 615005
+selfsup attention loss 4.18251
+
+2023-04-02 08:35:16,881 Updates 123250, num timesteps 616255
+selfsup attention loss 4.04738
+
+2023-04-02 08:35:40,995 Updates 123500, num timesteps 617505
+selfsup attention loss 4.05677
+
+2023-04-02 08:36:05,155 Updates 123750, num timesteps 618755
+selfsup attention loss 3.86653
+
+2023-04-02 08:36:29,407 Updates 124000, num timesteps 620005
+selfsup attention loss 4.10589
+
+2023-04-02 08:36:54,405 Updates 124250, num timesteps 621255
+selfsup attention loss 4.00681
+
+2023-04-02 08:37:18,811 Updates 124500, num timesteps 622505
+selfsup attention loss 4.28692
+
+2023-04-02 08:37:43,398 Updates 124750, num timesteps 623755
+selfsup attention loss 3.90927
+
+2023-04-02 08:38:07,722 Updates 125000, num timesteps 625005
+selfsup attention loss 3.95533
+
+2023-04-02 08:38:32,038 Updates 125250, num timesteps 626255
+selfsup attention loss 3.84604
+
+2023-04-02 08:38:56,347 Updates 125500, num timesteps 627505
+selfsup attention loss 3.95099
+
+2023-04-02 08:39:20,670 Updates 125750, num timesteps 628755
+selfsup attention loss 4.29633
+
+2023-04-02 08:39:44,982 Updates 126000, num timesteps 630005
+selfsup attention loss 3.98526
+
+2023-04-02 08:40:12,968 Updates 126250, num timesteps 631255
+selfsup attention loss 4.22314
+
+2023-04-02 08:40:38,116 Updates 126500, num timesteps 632505
+selfsup attention loss 3.92103
+
+2023-04-02 08:41:09,779 Updates 126750, num timesteps 633755
+selfsup attention loss 4.01553
+
+2023-04-02 08:41:34,517 Updates 127000, num timesteps 635005
+selfsup attention loss 4.22054
+
+2023-04-02 08:41:59,190 Updates 127250, num timesteps 636255
+selfsup attention loss 4.06706
+
+2023-04-02 08:42:24,061 Updates 127500, num timesteps 637505
+selfsup attention loss 4.17201
+
+2023-04-02 08:42:48,620 Updates 127750, num timesteps 638755
+selfsup attention loss 4.26692
+
+2023-04-02 08:43:13,195 Updates 128000, num timesteps 640005
+selfsup attention loss 4.20727
+
+2023-04-02 08:43:37,801 Updates 128250, num timesteps 641255
+selfsup attention loss 4.02325
+
+2023-04-02 08:44:02,565 Updates 128500, num timesteps 642505
+selfsup attention loss 4.04442
+
+2023-04-02 08:44:28,149 Updates 128750, num timesteps 643755
+selfsup attention loss 3.99480
+
+2023-04-02 08:44:53,019 Updates 129000, num timesteps 645005
+selfsup attention loss 4.02162
+
+2023-04-02 08:45:17,841 Updates 129250, num timesteps 646255
+selfsup attention loss 3.94545
+
+2023-04-02 08:45:42,655 Updates 129500, num timesteps 647505
+selfsup attention loss 4.04387
+
+2023-04-02 08:46:07,442 Updates 129750, num timesteps 648755
+selfsup attention loss 3.88549
+
+2023-04-02 08:46:32,124 Updates 130000, num timesteps 650005
+selfsup attention loss 4.09102
+
+2023-04-02 08:46:56,880 Updates 130250, num timesteps 651255
+selfsup attention loss 3.91516
+
+2023-04-02 08:47:21,555 Updates 130500, num timesteps 652505
+selfsup attention loss 3.90870
+
+2023-04-02 08:47:46,329 Updates 130750, num timesteps 653755
+selfsup attention loss 4.00446
+
+2023-04-02 08:48:11,074 Updates 131000, num timesteps 655005
+selfsup attention loss 4.06464
+
+2023-04-02 08:48:35,901 Updates 131250, num timesteps 656255
+selfsup attention loss 3.77074
+
+2023-04-02 08:49:00,744 Updates 131500, num timesteps 657505
+selfsup attention loss 4.03267
+
+2023-04-02 08:49:25,642 Updates 131750, num timesteps 658755
+selfsup attention loss 3.97317
+
+2023-04-02 08:49:50,454 Updates 132000, num timesteps 660005
+selfsup attention loss 4.16754
+
+2023-04-02 08:50:15,316 Updates 132250, num timesteps 661255
+selfsup attention loss 3.94451
+
+2023-04-02 08:50:40,714 Updates 132500, num timesteps 662505
+selfsup attention loss 3.97113
+
+2023-04-02 08:51:06,736 Updates 132750, num timesteps 663755
+selfsup attention loss 4.19790
+
+2023-04-02 08:51:31,546 Updates 133000, num timesteps 665005
+selfsup attention loss 4.06029
+
+2023-04-02 08:51:56,288 Updates 133250, num timesteps 666255
+selfsup attention loss 3.91337
+
+2023-04-02 08:52:21,673 Updates 133500, num timesteps 667505
+selfsup attention loss 3.92837
+
+2023-04-02 08:52:46,480 Updates 133750, num timesteps 668755
+selfsup attention loss 3.89578
+
+2023-04-02 08:53:12,111 Updates 134000, num timesteps 670005
+selfsup attention loss 4.15137
+
+2023-04-02 08:53:37,475 Updates 134250, num timesteps 671255
+selfsup attention loss 3.80061
+
+2023-04-02 08:54:02,119 Updates 134500, num timesteps 672505
+selfsup attention loss 3.94900
+
+2023-04-02 08:54:28,556 Updates 134750, num timesteps 673755
+selfsup attention loss 3.80052
+
+2023-04-02 08:54:55,138 Updates 135000, num timesteps 675005
+selfsup attention loss 3.92438
+
+2023-04-02 08:55:19,408 Updates 135250, num timesteps 676255
+selfsup attention loss 4.13428
+
+2023-04-02 08:55:43,638 Updates 135500, num timesteps 677505
+selfsup attention loss 3.94195
+
+2023-04-02 08:56:07,825 Updates 135750, num timesteps 678755
+selfsup attention loss 4.00475
+
+2023-04-02 08:56:31,998 Updates 136000, num timesteps 680005
+selfsup attention loss 3.93483
+
+2023-04-02 08:56:56,336 Updates 136250, num timesteps 681255
+selfsup attention loss 3.96160
+
+2023-04-02 08:57:20,979 Updates 136500, num timesteps 682505
+selfsup attention loss 3.92897
+
+2023-04-02 08:57:45,507 Updates 136750, num timesteps 683755
+selfsup attention loss 3.98261
+
+2023-04-02 08:58:10,011 Updates 137000, num timesteps 685005
+selfsup attention loss 4.11175
+
+2023-04-02 08:58:34,718 Updates 137250, num timesteps 686255
+selfsup attention loss 4.15495
+
+2023-04-02 08:58:59,170 Updates 137500, num timesteps 687505
+selfsup attention loss 3.99243
+
+2023-04-02 08:59:24,316 Updates 137750, num timesteps 688755
+selfsup attention loss 4.11982
+
+2023-04-02 08:59:50,395 Updates 138000, num timesteps 690005
+selfsup attention loss 4.00461
+
+2023-04-02 09:00:15,211 Updates 138250, num timesteps 691255
+selfsup attention loss 3.92471
+
+2023-04-02 09:00:39,538 Updates 138500, num timesteps 692505
+selfsup attention loss 3.58952
+
+2023-04-02 09:01:03,750 Updates 138750, num timesteps 693755
+selfsup attention loss 4.07553
+
+2023-04-02 09:01:27,942 Updates 139000, num timesteps 695005
+selfsup attention loss 4.05318
+
+2023-04-02 09:01:52,425 Updates 139250, num timesteps 696255
+selfsup attention loss 4.04876
+
+2023-04-02 09:02:17,054 Updates 139500, num timesteps 697505
+selfsup attention loss 3.77987
+
+2023-04-02 09:02:41,754 Updates 139750, num timesteps 698755
+selfsup attention loss 4.02373
+
+2023-04-02 09:03:06,482 Updates 140000, num timesteps 700005
+selfsup attention loss 3.95674
+
+2023-04-02 09:03:31,332 Updates 140250, num timesteps 701255
+selfsup attention loss 4.03375
+
+2023-04-02 09:03:56,187 Updates 140500, num timesteps 702505
+selfsup attention loss 3.98762
+
+2023-04-02 09:04:20,938 Updates 140750, num timesteps 703755
+selfsup attention loss 3.84250
+
+2023-04-02 09:04:45,326 Updates 141000, num timesteps 705005
+selfsup attention loss 3.94255
+
+2023-04-02 09:05:09,624 Updates 141250, num timesteps 706255
+selfsup attention loss 4.04333
+
+2023-04-02 09:05:34,219 Updates 141500, num timesteps 707505
+selfsup attention loss 3.89504
+
+2023-04-02 09:05:58,955 Updates 141750, num timesteps 708755
+selfsup attention loss 3.99919
+
+2023-04-02 09:06:23,291 Updates 142000, num timesteps 710005
+selfsup attention loss 3.78459
+
+2023-04-02 09:06:47,452 Updates 142250, num timesteps 711255
+selfsup attention loss 4.04912
+
+2023-04-02 09:07:12,243 Updates 142500, num timesteps 712505
+selfsup attention loss 3.83687
+
+2023-04-02 09:07:36,573 Updates 142750, num timesteps 713755
+selfsup attention loss 4.02638
+
+2023-04-02 09:08:01,258 Updates 143000, num timesteps 715005
+selfsup attention loss 3.79153
+
+2023-04-02 09:08:25,694 Updates 143250, num timesteps 716255
+selfsup attention loss 3.90445
+
+2023-04-02 09:08:51,234 Updates 143500, num timesteps 717505
+selfsup attention loss 3.92736
+
+2023-04-02 09:09:15,921 Updates 143750, num timesteps 718755
+selfsup attention loss 3.79885
+
+2023-04-02 09:09:40,138 Updates 144000, num timesteps 720005
+selfsup attention loss 4.18299
+
+2023-04-02 09:10:04,459 Updates 144250, num timesteps 721255
+selfsup attention loss 4.04215
+
+2023-04-02 09:10:28,984 Updates 144500, num timesteps 722505
+selfsup attention loss 3.85698
+
+2023-04-02 09:10:53,361 Updates 144750, num timesteps 723755
+selfsup attention loss 3.85106
+
+2023-04-02 09:11:17,889 Updates 145000, num timesteps 725005
+selfsup attention loss 3.74039
+
+2023-04-02 09:11:42,028 Updates 145250, num timesteps 726255
+selfsup attention loss 3.97972
+
+2023-04-02 09:12:06,582 Updates 145500, num timesteps 727505
+selfsup attention loss 4.00009
+
+2023-04-02 09:12:30,846 Updates 145750, num timesteps 728755
+selfsup attention loss 4.20261
+
+2023-04-02 09:12:55,363 Updates 146000, num timesteps 730005
+selfsup attention loss 3.99627
+
+2023-04-02 09:13:19,404 Updates 146250, num timesteps 731255
+selfsup attention loss 3.98231
+
+2023-04-02 09:13:43,427 Updates 146500, num timesteps 732505
+selfsup attention loss 4.22778
+
+2023-04-02 09:14:07,466 Updates 146750, num timesteps 733755
+selfsup attention loss 4.15450
+
+2023-04-02 09:14:31,610 Updates 147000, num timesteps 735005
+selfsup attention loss 3.93345
+
+2023-04-02 09:14:55,871 Updates 147250, num timesteps 736255
+selfsup attention loss 3.91701
+
+2023-04-02 09:15:20,071 Updates 147500, num timesteps 737505
+selfsup attention loss 4.07055
+
+2023-04-02 09:15:44,279 Updates 147750, num timesteps 738755
+selfsup attention loss 4.08828
+
+2023-04-02 09:16:08,485 Updates 148000, num timesteps 740005
+selfsup attention loss 4.15715
+
+2023-04-02 09:16:32,835 Updates 148250, num timesteps 741255
+selfsup attention loss 3.87605
+
+2023-04-02 09:16:57,045 Updates 148500, num timesteps 742505
+selfsup attention loss 3.81501
+
+2023-04-02 09:17:21,529 Updates 148750, num timesteps 743755
+selfsup attention loss 4.04490
+
+2023-04-02 09:17:45,772 Updates 149000, num timesteps 745005
+selfsup attention loss 3.94813
+
+2023-04-02 09:18:10,029 Updates 149250, num timesteps 746255
+selfsup attention loss 3.91022
+
+2023-04-02 09:18:34,272 Updates 149500, num timesteps 747505
+selfsup attention loss 4.09946
+
+2023-04-02 09:18:58,553 Updates 149750, num timesteps 748755
+selfsup attention loss 4.14927
+
+2023-04-02 09:19:22,675 Updates 150000, num timesteps 750005
+selfsup attention loss 4.03252
+
+2023-04-02 09:19:46,615 Updates 150250, num timesteps 751255
+selfsup attention loss 3.85328
+
+2023-04-02 09:20:10,688 Updates 150500, num timesteps 752505
+selfsup attention loss 3.84314
+
+2023-04-02 09:20:34,746 Updates 150750, num timesteps 753755
+selfsup attention loss 3.95711
+
+2023-04-02 09:20:58,807 Updates 151000, num timesteps 755005
+selfsup attention loss 3.97495
+
+2023-04-02 09:21:22,861 Updates 151250, num timesteps 756255
+selfsup attention loss 3.94792
+
+2023-04-02 09:21:46,931 Updates 151500, num timesteps 757505
+selfsup attention loss 3.67072
+
+2023-04-02 09:22:11,005 Updates 151750, num timesteps 758755
+selfsup attention loss 4.18324
+
+2023-04-02 09:22:35,167 Updates 152000, num timesteps 760005
+selfsup attention loss 3.62999
+
+2023-04-02 09:22:59,497 Updates 152250, num timesteps 761255
+selfsup attention loss 3.95956
+
+2023-04-02 09:23:24,289 Updates 152500, num timesteps 762505
+selfsup attention loss 3.94553
+
+2023-04-02 09:23:48,951 Updates 152750, num timesteps 763755
+selfsup attention loss 3.99268
+
+2023-04-02 09:24:13,628 Updates 153000, num timesteps 765005
+selfsup attention loss 4.08566
+
+2023-04-02 09:24:37,959 Updates 153250, num timesteps 766255
+selfsup attention loss 4.08040
+
+2023-04-02 09:25:02,258 Updates 153500, num timesteps 767505
+selfsup attention loss 4.11363
+
+2023-04-02 09:25:26,562 Updates 153750, num timesteps 768755
+selfsup attention loss 4.00536
+
+2023-04-02 09:25:50,855 Updates 154000, num timesteps 770005
+selfsup attention loss 3.91830
+
+2023-04-02 09:26:15,175 Updates 154250, num timesteps 771255
+selfsup attention loss 3.91221
+
+2023-04-02 09:26:39,565 Updates 154500, num timesteps 772505
+selfsup attention loss 3.87979
+
+2023-04-02 09:27:03,842 Updates 154750, num timesteps 773755
+selfsup attention loss 4.17246
+
+2023-04-02 09:27:28,142 Updates 155000, num timesteps 775005
+selfsup attention loss 4.12453
+
+2023-04-02 09:27:52,445 Updates 155250, num timesteps 776255
+selfsup attention loss 4.13488
+
+2023-04-02 09:28:16,709 Updates 155500, num timesteps 777505
+selfsup attention loss 3.96989
+
+2023-04-02 09:28:40,992 Updates 155750, num timesteps 778755
+selfsup attention loss 4.00479
+
+2023-04-02 09:29:05,298 Updates 156000, num timesteps 780005
+selfsup attention loss 4.01070
+
+2023-04-02 09:29:29,559 Updates 156250, num timesteps 781255
+selfsup attention loss 3.80780
+
+2023-04-02 09:29:53,877 Updates 156500, num timesteps 782505
+selfsup attention loss 3.89586
+
+2023-04-02 09:30:18,150 Updates 156750, num timesteps 783755
+selfsup attention loss 4.33241
+
+2023-04-02 09:30:42,516 Updates 157000, num timesteps 785005
+selfsup attention loss 3.98870
+
+2023-04-02 09:31:06,786 Updates 157250, num timesteps 786255
+selfsup attention loss 3.96141
+
+2023-04-02 09:31:31,062 Updates 157500, num timesteps 787505
+selfsup attention loss 4.12177
+
+2023-04-02 09:31:55,335 Updates 157750, num timesteps 788755
+selfsup attention loss 4.04831
+
+2023-04-02 09:32:19,480 Updates 158000, num timesteps 790005
+selfsup attention loss 4.03675
+
+2023-04-02 09:32:43,532 Updates 158250, num timesteps 791255
+selfsup attention loss 3.99290
+
+2023-04-02 09:33:07,605 Updates 158500, num timesteps 792505
+selfsup attention loss 3.57088
+
+2023-04-02 09:33:31,677 Updates 158750, num timesteps 793755
+selfsup attention loss 3.80949
+
+2023-04-02 09:33:56,062 Updates 159000, num timesteps 795005
+selfsup attention loss 3.83567
+
+2023-04-02 09:34:20,611 Updates 159250, num timesteps 796255
+selfsup attention loss 3.89204
+
+2023-04-02 09:34:44,973 Updates 159500, num timesteps 797505
+selfsup attention loss 3.79170
+
+2023-04-02 09:35:09,299 Updates 159750, num timesteps 798755
+selfsup attention loss 3.95577
+
+2023-04-02 09:35:33,620 Updates 160000, num timesteps 800005
+selfsup attention loss 3.91572
+
+2023-04-02 09:35:57,936 Updates 160250, num timesteps 801255
+selfsup attention loss 4.03614
+
+2023-04-02 09:36:22,251 Updates 160500, num timesteps 802505
+selfsup attention loss 3.87172
+
+2023-04-02 09:36:46,507 Updates 160750, num timesteps 803755
+selfsup attention loss 4.08185
+
+2023-04-02 09:37:10,836 Updates 161000, num timesteps 805005
+selfsup attention loss 3.98415
+
+2023-04-02 09:37:35,128 Updates 161250, num timesteps 806255
+selfsup attention loss 3.74914
+
+2023-04-02 09:37:59,405 Updates 161500, num timesteps 807505
+selfsup attention loss 3.79732
+
+2023-04-02 09:38:23,682 Updates 161750, num timesteps 808755
+selfsup attention loss 3.96239
+
+2023-04-02 09:38:47,954 Updates 162000, num timesteps 810005
+selfsup attention loss 3.96894
+
+2023-04-02 09:39:12,230 Updates 162250, num timesteps 811255
+selfsup attention loss 3.91226
+
+2023-04-02 09:39:36,512 Updates 162500, num timesteps 812505
+selfsup attention loss 3.99188
+
+2023-04-02 09:40:00,790 Updates 162750, num timesteps 813755
+selfsup attention loss 4.07931
+
+2023-04-02 09:40:25,078 Updates 163000, num timesteps 815005
+selfsup attention loss 3.87961
+
+2023-04-02 09:40:49,365 Updates 163250, num timesteps 816255
+selfsup attention loss 3.93999
+
+2023-04-02 09:41:13,660 Updates 163500, num timesteps 817505
+selfsup attention loss 4.07189
+
+2023-04-02 09:41:37,981 Updates 163750, num timesteps 818755
+selfsup attention loss 3.83504
+
+2023-04-02 09:42:02,306 Updates 164000, num timesteps 820005
+selfsup attention loss 4.10730
+
+2023-04-02 09:42:26,877 Updates 164250, num timesteps 821255
+selfsup attention loss 3.93482
+
+2023-04-02 09:42:51,101 Updates 164500, num timesteps 822505
+selfsup attention loss 4.21478
+
+2023-04-02 09:43:15,733 Updates 164750, num timesteps 823755
+selfsup attention loss 4.09448
+
+2023-04-02 09:43:40,305 Updates 165000, num timesteps 825005
+selfsup attention loss 3.85423
+
+2023-04-02 09:44:04,627 Updates 165250, num timesteps 826255
+selfsup attention loss 3.79888
+
+2023-04-02 09:44:28,980 Updates 165500, num timesteps 827505
+selfsup attention loss 4.06577
+
+2023-04-02 09:44:53,550 Updates 165750, num timesteps 828755
+selfsup attention loss 4.20691
+
+2023-04-02 09:45:17,924 Updates 166000, num timesteps 830005
+selfsup attention loss 3.76880
+
+2023-04-02 09:45:42,278 Updates 166250, num timesteps 831255
+selfsup attention loss 3.94222
+
+2023-04-02 09:46:06,641 Updates 166500, num timesteps 832505
+selfsup attention loss 3.93833
+
+2023-04-02 09:46:30,985 Updates 166750, num timesteps 833755
+selfsup attention loss 3.65907
+
+2023-04-02 09:46:55,359 Updates 167000, num timesteps 835005
+selfsup attention loss 4.11303
+
+2023-04-02 09:47:19,787 Updates 167250, num timesteps 836255
+selfsup attention loss 3.93111
+
+2023-04-02 09:47:44,145 Updates 167500, num timesteps 837505
+selfsup attention loss 3.92570
+
+2023-04-02 09:48:08,505 Updates 167750, num timesteps 838755
+selfsup attention loss 4.08876
+
+2023-04-02 09:48:32,875 Updates 168000, num timesteps 840005
+selfsup attention loss 3.89723
+
+2023-04-02 09:48:57,223 Updates 168250, num timesteps 841255
+selfsup attention loss 4.01645
+
+2023-04-02 09:49:21,574 Updates 168500, num timesteps 842505
+selfsup attention loss 3.85844
+
+2023-04-02 09:49:45,961 Updates 168750, num timesteps 843755
+selfsup attention loss 3.82474
+
+2023-04-02 09:50:10,408 Updates 169000, num timesteps 845005
+selfsup attention loss 3.73784
+
+2023-04-02 09:50:34,977 Updates 169250, num timesteps 846255
+selfsup attention loss 3.69652
+
+2023-04-02 09:50:59,396 Updates 169500, num timesteps 847505
+selfsup attention loss 4.02815
+
+2023-04-02 09:51:23,698 Updates 169750, num timesteps 848755
+selfsup attention loss 4.04634
+
+2023-04-02 09:51:47,984 Updates 170000, num timesteps 850005
+selfsup attention loss 4.01676
+
+2023-04-02 09:52:12,277 Updates 170250, num timesteps 851255
+selfsup attention loss 4.00775
+
+2023-04-02 09:52:36,531 Updates 170500, num timesteps 852505
+selfsup attention loss 3.90866
+
+2023-04-02 09:53:00,772 Updates 170750, num timesteps 853755
+selfsup attention loss 3.98064
+
+2023-04-02 09:53:25,010 Updates 171000, num timesteps 855005
+selfsup attention loss 3.87122
+
+2023-04-02 09:53:49,283 Updates 171250, num timesteps 856255
+selfsup attention loss 3.78065
+
+2023-04-02 09:54:13,551 Updates 171500, num timesteps 857505
+selfsup attention loss 3.98212
+
+2023-04-02 09:54:37,831 Updates 171750, num timesteps 858755
+selfsup attention loss 3.73714
+
+2023-04-02 09:55:02,109 Updates 172000, num timesteps 860005
+selfsup attention loss 3.89358
+
+2023-04-02 09:55:26,379 Updates 172250, num timesteps 861255
+selfsup attention loss 3.89093
+
+2023-04-02 09:55:50,643 Updates 172500, num timesteps 862505
+selfsup attention loss 4.13250
+
+2023-04-02 09:56:14,843 Updates 172750, num timesteps 863755
+selfsup attention loss 3.84500
+
+2023-04-02 09:56:39,137 Updates 173000, num timesteps 865005
+selfsup attention loss 3.80735
+
+2023-04-02 09:57:03,365 Updates 173250, num timesteps 866255
+selfsup attention loss 3.83938
+
+2023-04-02 09:57:27,601 Updates 173500, num timesteps 867505
+selfsup attention loss 3.88190
+
+2023-04-02 09:57:51,862 Updates 173750, num timesteps 868755
+selfsup attention loss 3.87182
+
+2023-04-02 09:58:16,142 Updates 174000, num timesteps 870005
+selfsup attention loss 3.70473
+
+2023-04-02 09:58:40,442 Updates 174250, num timesteps 871255
+selfsup attention loss 3.73966
+
+2023-04-02 09:59:04,731 Updates 174500, num timesteps 872505
+selfsup attention loss 3.73014
+
+2023-04-02 09:59:29,259 Updates 174750, num timesteps 873755
+selfsup attention loss 3.80006
+
+2023-04-02 09:59:53,581 Updates 175000, num timesteps 875005
+selfsup attention loss 3.85430
+
+2023-04-02 10:00:17,895 Updates 175250, num timesteps 876255
+selfsup attention loss 3.94069
+
+2023-04-02 10:00:42,196 Updates 175500, num timesteps 877505
+selfsup attention loss 3.84541
+
+2023-04-02 10:01:06,533 Updates 175750, num timesteps 878755
+selfsup attention loss 3.74755
+
+2023-04-02 10:01:30,878 Updates 176000, num timesteps 880005
+selfsup attention loss 4.21457
+
+2023-04-02 10:01:55,005 Updates 176250, num timesteps 881255
+selfsup attention loss 3.81691
+
+2023-04-02 10:02:18,894 Updates 176500, num timesteps 882505
+selfsup attention loss 3.82604
+
+2023-04-02 10:02:42,921 Updates 176750, num timesteps 883755
+selfsup attention loss 3.74798
+
+2023-04-02 10:03:07,328 Updates 177000, num timesteps 885005
+selfsup attention loss 3.83460
+
+2023-04-02 10:03:31,703 Updates 177250, num timesteps 886255
+selfsup attention loss 3.87702
+
+2023-04-02 10:03:56,063 Updates 177500, num timesteps 887505
+selfsup attention loss 3.74203
+
+2023-04-02 10:04:20,424 Updates 177750, num timesteps 888755
+selfsup attention loss 3.69120
+
+2023-04-02 10:04:44,803 Updates 178000, num timesteps 890005
+selfsup attention loss 3.97175
+
+2023-04-02 10:05:09,086 Updates 178250, num timesteps 891255
+selfsup attention loss 3.92094
+
+2023-04-02 10:05:33,250 Updates 178500, num timesteps 892505
+selfsup attention loss 3.84225
+
+2023-04-02 10:05:57,422 Updates 178750, num timesteps 893755
+selfsup attention loss 4.06934
+
+2023-04-02 10:06:21,584 Updates 179000, num timesteps 895005
+selfsup attention loss 4.11636
+
+2023-04-02 10:06:45,875 Updates 179250, num timesteps 896255
+selfsup attention loss 3.91544
+
+2023-04-02 10:07:10,035 Updates 179500, num timesteps 897505
+selfsup attention loss 3.76904
+
+2023-04-02 10:07:34,208 Updates 179750, num timesteps 898755
+selfsup attention loss 3.64355
+
+2023-04-02 10:07:58,592 Updates 180000, num timesteps 900005
+selfsup attention loss 3.90407
+
+2023-04-02 10:08:22,984 Updates 180250, num timesteps 901255
+selfsup attention loss 3.76201
+
+2023-04-02 10:08:47,314 Updates 180500, num timesteps 902505
+selfsup attention loss 3.70163
+
+2023-04-02 10:09:11,711 Updates 180750, num timesteps 903755
+selfsup attention loss 3.82221
+
+2023-04-02 10:09:36,093 Updates 181000, num timesteps 905005
+selfsup attention loss 4.10586
+
+2023-04-02 10:10:00,453 Updates 181250, num timesteps 906255
+selfsup attention loss 3.81261
+
+2023-04-02 10:10:24,801 Updates 181500, num timesteps 907505
+selfsup attention loss 3.75879
+
+2023-04-02 10:10:49,104 Updates 181750, num timesteps 908755
+selfsup attention loss 4.14387
+
+2023-04-02 10:11:13,257 Updates 182000, num timesteps 910005
+selfsup attention loss 4.00635
+
+2023-04-02 10:11:37,412 Updates 182250, num timesteps 911255
+selfsup attention loss 4.05086
+
+2023-04-02 10:12:01,548 Updates 182500, num timesteps 912505
+selfsup attention loss 4.11269
+
+2023-04-02 10:12:25,691 Updates 182750, num timesteps 913755
+selfsup attention loss 3.90079
+
+2023-04-02 10:12:49,846 Updates 183000, num timesteps 915005
+selfsup attention loss 3.78214
+
+2023-04-02 10:13:14,000 Updates 183250, num timesteps 916255
+selfsup attention loss 3.82130
+
+2023-04-02 10:13:38,150 Updates 183500, num timesteps 917505
+selfsup attention loss 3.98366
+
+2023-04-02 10:14:02,447 Updates 183750, num timesteps 918755
+selfsup attention loss 3.81652
+
+2023-04-02 10:14:26,814 Updates 184000, num timesteps 920005
+selfsup attention loss 3.94647
+
+2023-04-02 10:14:51,167 Updates 184250, num timesteps 921255
+selfsup attention loss 3.80685
+
+2023-04-02 10:15:15,488 Updates 184500, num timesteps 922505
+selfsup attention loss 3.82019
+
+2023-04-02 10:15:39,814 Updates 184750, num timesteps 923755
+selfsup attention loss 3.92209
+
+2023-04-02 10:16:04,171 Updates 185000, num timesteps 925005
+selfsup attention loss 4.07353
+
+2023-04-02 10:16:28,704 Updates 185250, num timesteps 926255
+selfsup attention loss 3.77165
+
+2023-04-02 10:16:53,063 Updates 185500, num timesteps 927505
+selfsup attention loss 3.80623
+
+2023-04-02 10:17:17,415 Updates 185750, num timesteps 928755
+selfsup attention loss 3.59851
+
+2023-04-02 10:17:41,872 Updates 186000, num timesteps 930005
+selfsup attention loss 3.88133
+
+2023-04-02 10:18:06,212 Updates 186250, num timesteps 931255
+selfsup attention loss 3.92076
+
+2023-04-02 10:18:30,579 Updates 186500, num timesteps 932505
+selfsup attention loss 4.04684
+
+2023-04-02 10:18:54,960 Updates 186750, num timesteps 933755
+selfsup attention loss 3.93125
+
+2023-04-02 10:19:19,327 Updates 187000, num timesteps 935005
+selfsup attention loss 3.81471
+
+2023-04-02 10:19:43,738 Updates 187250, num timesteps 936255
+selfsup attention loss 3.84431
+
+2023-04-02 10:20:08,084 Updates 187500, num timesteps 937505
+selfsup attention loss 3.92268
+
+2023-04-02 10:20:32,330 Updates 187750, num timesteps 938755
+selfsup attention loss 3.86451
+
+2023-04-02 10:20:56,635 Updates 188000, num timesteps 940005
+selfsup attention loss 3.81029
+
+2023-04-02 10:21:20,836 Updates 188250, num timesteps 941255
+selfsup attention loss 4.05716
+
+2023-04-02 10:21:45,067 Updates 188500, num timesteps 942505
+selfsup attention loss 3.94994
+
+2023-04-02 10:22:09,378 Updates 188750, num timesteps 943755
+selfsup attention loss 3.78018
+
+2023-04-02 10:22:34,192 Updates 189000, num timesteps 945005
+selfsup attention loss 3.63054
+
+2023-04-02 10:22:58,444 Updates 189250, num timesteps 946255
+selfsup attention loss 3.87364
+
+2023-04-02 10:23:22,663 Updates 189500, num timesteps 947505
+selfsup attention loss 3.83962
+
+2023-04-02 10:23:46,906 Updates 189750, num timesteps 948755
+selfsup attention loss 3.90079
+
+2023-04-02 10:24:11,232 Updates 190000, num timesteps 950005
+selfsup attention loss 3.81328
+
+2023-04-02 10:24:35,611 Updates 190250, num timesteps 951255
+selfsup attention loss 4.26657
+
+2023-04-02 10:24:59,717 Updates 190500, num timesteps 952505
+selfsup attention loss 3.99912
+
+2023-04-02 10:25:23,810 Updates 190750, num timesteps 953755
+selfsup attention loss 3.74014
+
+2023-04-02 10:25:47,943 Updates 191000, num timesteps 955005
+selfsup attention loss 3.87169
+
+2023-04-02 10:26:12,116 Updates 191250, num timesteps 956255
+selfsup attention loss 3.75900
+
+2023-04-02 10:26:36,286 Updates 191500, num timesteps 957505
+selfsup attention loss 3.58536
+
+2023-04-02 10:27:00,441 Updates 191750, num timesteps 958755
+selfsup attention loss 4.02931
+
+2023-04-02 10:27:24,687 Updates 192000, num timesteps 960005
+selfsup attention loss 4.03860
+
+2023-04-02 10:27:48,916 Updates 192250, num timesteps 961255
+selfsup attention loss 3.84928
+
+2023-04-02 10:28:13,057 Updates 192500, num timesteps 962505
+selfsup attention loss 4.06335
+
+2023-04-02 10:28:37,321 Updates 192750, num timesteps 963755
+selfsup attention loss 3.70722
+
+2023-04-02 10:29:01,641 Updates 193000, num timesteps 965005
+selfsup attention loss 3.68792
+
+2023-04-02 10:29:26,169 Updates 193250, num timesteps 966255
+selfsup attention loss 3.78323
+
+2023-04-02 10:29:50,497 Updates 193500, num timesteps 967505
+selfsup attention loss 3.80524
+
+2023-04-02 10:30:14,795 Updates 193750, num timesteps 968755
+selfsup attention loss 3.95208
+
+2023-04-02 10:30:39,105 Updates 194000, num timesteps 970005
+selfsup attention loss 3.94595
+
+2023-04-02 10:31:03,422 Updates 194250, num timesteps 971255
+selfsup attention loss 3.92059
+
+2023-04-02 10:31:27,777 Updates 194500, num timesteps 972505
+selfsup attention loss 3.72709
+
+2023-04-02 10:31:52,090 Updates 194750, num timesteps 973755
+selfsup attention loss 3.86272
+
+2023-04-02 10:32:16,419 Updates 195000, num timesteps 975005
+selfsup attention loss 3.93447
+
+2023-04-02 10:32:40,760 Updates 195250, num timesteps 976255
+selfsup attention loss 3.99966
+
+2023-04-02 10:33:05,081 Updates 195500, num timesteps 977505
+selfsup attention loss 3.95698
+
+2023-04-02 10:33:29,506 Updates 195750, num timesteps 978755
+selfsup attention loss 4.12168
+
+2023-04-02 10:33:53,860 Updates 196000, num timesteps 980005
+selfsup attention loss 3.81971
+
+2023-04-02 10:34:18,301 Updates 196250, num timesteps 981255
+selfsup attention loss 3.72908
+
+2023-04-02 10:34:42,997 Updates 196500, num timesteps 982505
+selfsup attention loss 3.96066
+
+2023-04-02 10:35:07,323 Updates 196750, num timesteps 983755
+selfsup attention loss 3.71338
+
+2023-04-02 10:35:31,673 Updates 197000, num timesteps 985005
+selfsup attention loss 3.92419
+
+2023-04-02 10:35:55,940 Updates 197250, num timesteps 986255
+selfsup attention loss 3.84751
+
+2023-04-02 10:36:20,230 Updates 197500, num timesteps 987505
+selfsup attention loss 3.92989
+
+2023-04-02 10:36:44,495 Updates 197750, num timesteps 988755
+selfsup attention loss 3.88283
+
+2023-04-02 10:37:08,768 Updates 198000, num timesteps 990005
+selfsup attention loss 3.82790
+
+2023-04-02 10:37:33,063 Updates 198250, num timesteps 991255
+selfsup attention loss 4.09356
+
+2023-04-02 10:37:57,360 Updates 198500, num timesteps 992505
+selfsup attention loss 3.86522
+
+2023-04-02 10:38:21,730 Updates 198750, num timesteps 993755
+selfsup attention loss 3.78084
+
+2023-04-02 10:38:46,192 Updates 199000, num timesteps 995005
+selfsup attention loss 3.93795
+
+2023-04-02 10:39:10,738 Updates 199250, num timesteps 996255
+selfsup attention loss 3.74556
+
+2023-04-02 10:39:35,023 Updates 199500, num timesteps 997505
+selfsup attention loss 3.80143
+
+2023-04-02 10:39:59,312 Updates 199750, num timesteps 998755
+selfsup attention loss 3.73911
+
+2023-04-02 10:40:23,744 Updates 200000, num timesteps 1000005
+selfsup attention loss 3.82413
+
+2023-04-02 10:40:48,111 Updates 200250, num timesteps 1001255
+selfsup attention loss 3.84939
+
+2023-04-02 10:41:12,469 Updates 200500, num timesteps 1002505
+selfsup attention loss 3.93471
+
+2023-04-02 10:41:36,830 Updates 200750, num timesteps 1003755
+selfsup attention loss 3.95347
+
+2023-04-02 10:42:01,334 Updates 201000, num timesteps 1005005
+selfsup attention loss 3.71424
+
+2023-04-02 10:42:25,569 Updates 201250, num timesteps 1006255
+selfsup attention loss 3.72973
+
+2023-04-02 10:42:49,766 Updates 201500, num timesteps 1007505
+selfsup attention loss 3.86217
+
+2023-04-02 10:43:14,001 Updates 201750, num timesteps 1008755
+selfsup attention loss 3.93724
+
+2023-04-02 10:43:38,206 Updates 202000, num timesteps 1010005
+selfsup attention loss 3.74804
+
+2023-04-02 10:44:02,421 Updates 202250, num timesteps 1011255
+selfsup attention loss 3.68684
+
+2023-04-02 10:44:26,627 Updates 202500, num timesteps 1012505
+selfsup attention loss 3.86266
+
+2023-04-02 10:44:50,833 Updates 202750, num timesteps 1013755
+selfsup attention loss 4.15166
+
+2023-04-02 10:45:15,051 Updates 203000, num timesteps 1015005
+selfsup attention loss 3.89408
+
+2023-04-02 10:45:39,308 Updates 203250, num timesteps 1016255
+selfsup attention loss 3.92969
+
+2023-04-02 10:46:03,535 Updates 203500, num timesteps 1017505
+selfsup attention loss 3.88988
+
+2023-04-02 10:46:27,753 Updates 203750, num timesteps 1018755
+selfsup attention loss 4.03625
+
+2023-04-02 10:46:51,979 Updates 204000, num timesteps 1020005
+selfsup attention loss 4.10445
+
+2023-04-02 10:47:16,200 Updates 204250, num timesteps 1021255
+selfsup attention loss 4.00017
+
+2023-04-02 10:47:40,427 Updates 204500, num timesteps 1022505
+selfsup attention loss 3.80993
+
+2023-04-02 10:48:04,664 Updates 204750, num timesteps 1023755
+selfsup attention loss 3.79610
+
+2023-04-02 10:48:28,938 Updates 205000, num timesteps 1025005
+selfsup attention loss 3.91683
+
+2023-04-02 10:48:53,181 Updates 205250, num timesteps 1026255
+selfsup attention loss 4.15091
+
+2023-04-02 10:49:17,568 Updates 205500, num timesteps 1027505
+selfsup attention loss 3.93720
+
+2023-04-02 10:49:41,879 Updates 205750, num timesteps 1028755
+selfsup attention loss 3.97091
+
+2023-04-02 10:50:06,140 Updates 206000, num timesteps 1030005
+selfsup attention loss 3.79399
+
+2023-04-02 10:50:30,419 Updates 206250, num timesteps 1031255
+selfsup attention loss 3.86378
+
+2023-04-02 10:50:54,705 Updates 206500, num timesteps 1032505
+selfsup attention loss 3.79752
+
+2023-04-02 10:51:18,971 Updates 206750, num timesteps 1033755
+selfsup attention loss 3.69865
+
+2023-04-02 10:51:43,244 Updates 207000, num timesteps 1035005
+selfsup attention loss 3.79045
+
+2023-04-02 10:52:07,538 Updates 207250, num timesteps 1036255
+selfsup attention loss 3.89943
+
+2023-04-02 10:52:31,818 Updates 207500, num timesteps 1037505
+selfsup attention loss 3.82580
+
+2023-04-02 10:52:56,108 Updates 207750, num timesteps 1038755
+selfsup attention loss 4.17732
+
+2023-04-02 10:53:20,515 Updates 208000, num timesteps 1040005
+selfsup attention loss 3.52159
+
+2023-04-02 10:53:44,752 Updates 208250, num timesteps 1041255
+selfsup attention loss 3.87666
+
+2023-04-02 10:54:09,001 Updates 208500, num timesteps 1042505
+selfsup attention loss 4.08672
+
+2023-04-02 10:54:33,264 Updates 208750, num timesteps 1043755
+selfsup attention loss 3.74441
+
+2023-04-02 10:54:57,522 Updates 209000, num timesteps 1045005
+selfsup attention loss 3.62609
+
+2023-04-02 10:55:22,082 Updates 209250, num timesteps 1046255
+selfsup attention loss 3.55209
+
+2023-04-02 10:55:46,257 Updates 209500, num timesteps 1047505
+selfsup attention loss 3.85373
+
+2023-04-02 10:56:10,441 Updates 209750, num timesteps 1048755
+selfsup attention loss 3.88742
+
+2023-04-02 10:56:34,625 Updates 210000, num timesteps 1050005
+selfsup attention loss 3.75453
+
+2023-04-02 10:56:58,687 Updates 210250, num timesteps 1051255
+selfsup attention loss 4.01807
+
+2023-04-02 10:57:22,697 Updates 210500, num timesteps 1052505
+selfsup attention loss 3.89119
+

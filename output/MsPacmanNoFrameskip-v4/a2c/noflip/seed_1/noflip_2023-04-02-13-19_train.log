@@ -1,0 +1,1815 @@
+2023-04-02 13:19:00,891 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/noflip.yaml', eval_only=False, render=False, seed=1)
+2023-04-02 13:19:00,893 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '0',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'MsPacmanNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 500000,
+ 'num_processes': 1,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 1,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': False,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': True,
+ 'train_selfsup_attention_batch_size': 256,
+ 'train_selfsup_attention_buffer_size': 10000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-02 13:19:19,273 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/noflip.yaml', eval_only=False, render=False, seed=1)
+2023-04-02 13:19:19,275 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '0',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'MsPacmanNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 500000,
+ 'num_processes': 1,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 1,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': False,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': True,
+ 'train_selfsup_attention_batch_size': 256,
+ 'train_selfsup_attention_buffer_size': 10000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-02 13:19:56,846 Updates 2250, num timesteps 11255
+selfsup attention loss 6.23620
+image_b_keypoints_maps 0.09925
+
+2023-04-02 13:20:16,937 Updates 2500, num timesteps 12505
+selfsup attention loss 6.23686
+image_b_keypoints_maps 0.10329
+
+2023-04-02 13:20:37,017 Updates 2750, num timesteps 13755
+selfsup attention loss 6.03874
+image_b_keypoints_maps 0.06085
+
+2023-04-02 13:20:58,245 Updates 3000, num timesteps 15005
+selfsup attention loss 5.69257
+image_b_keypoints_maps 0.08269
+
+2023-04-02 13:21:22,014 Updates 3250, num timesteps 16255
+selfsup attention loss 5.57668
+image_b_keypoints_maps 0.10046
+
+2023-04-02 13:21:45,660 Updates 3500, num timesteps 17505
+selfsup attention loss 5.52364
+image_b_keypoints_maps 0.09488
+
+2023-04-02 13:22:08,538 Updates 3750, num timesteps 18755
+selfsup attention loss 5.49111
+image_b_keypoints_maps 0.10011
+
+2023-04-02 13:22:31,248 Updates 4000, num timesteps 20005
+selfsup attention loss 5.33898
+image_b_keypoints_maps 0.08684
+
+2023-04-02 13:22:51,296 Updates 4250, num timesteps 21255
+selfsup attention loss 5.18666
+image_b_keypoints_maps 0.09307
+
+2023-04-02 13:23:11,382 Updates 4500, num timesteps 22505
+selfsup attention loss 5.30722
+image_b_keypoints_maps 0.09913
+
+2023-04-02 13:23:31,279 Updates 4750, num timesteps 23755
+selfsup attention loss 5.32839
+image_b_keypoints_maps 0.09489
+
+2023-04-02 13:23:51,691 Updates 5000, num timesteps 25005
+selfsup attention loss 5.32898
+image_b_keypoints_maps 0.09941
+
+2023-04-02 13:24:15,285 Updates 5250, num timesteps 26255
+selfsup attention loss 5.15201
+image_b_keypoints_maps 0.08600
+
+2023-04-02 13:24:36,420 Updates 5500, num timesteps 27505
+selfsup attention loss 5.10443
+image_b_keypoints_maps 0.09538
+
+2023-04-02 13:24:56,630 Updates 5750, num timesteps 28755
+selfsup attention loss 5.18155
+image_b_keypoints_maps 0.09750
+
+2023-04-02 13:25:17,402 Updates 6000, num timesteps 30005
+selfsup attention loss 4.87688
+image_b_keypoints_maps 0.08867
+
+2023-04-02 13:25:39,777 Updates 6250, num timesteps 31255
+selfsup attention loss 4.90553
+image_b_keypoints_maps 0.08519
+
+2023-04-02 13:26:03,300 Updates 6500, num timesteps 32505
+selfsup attention loss 5.10275
+image_b_keypoints_maps 0.09585
+
+2023-04-02 13:26:24,562 Updates 6750, num timesteps 33755
+selfsup attention loss 5.08302
+image_b_keypoints_maps 0.09147
+
+2023-04-02 13:26:45,442 Updates 7000, num timesteps 35005
+selfsup attention loss 5.19278
+image_b_keypoints_maps 0.09500
+
+2023-04-02 13:27:05,507 Updates 7250, num timesteps 36255
+selfsup attention loss 4.92870
+image_b_keypoints_maps 0.09119
+
+2023-04-02 13:27:27,998 Updates 7500, num timesteps 37505
+selfsup attention loss 4.97158
+image_b_keypoints_maps 0.10462
+
+2023-04-02 13:27:50,660 Updates 7750, num timesteps 38755
+selfsup attention loss 4.91130
+image_b_keypoints_maps 0.09327
+
+2023-04-02 13:28:11,739 Updates 8000, num timesteps 40005
+selfsup attention loss 4.83417
+image_b_keypoints_maps 0.10362
+
+2023-04-02 13:28:32,842 Updates 8250, num timesteps 41255
+selfsup attention loss 4.80464
+image_b_keypoints_maps 0.08879
+
+2023-04-02 13:28:52,933 Updates 8500, num timesteps 42505
+selfsup attention loss 4.82465
+image_b_keypoints_maps 0.09167
+
+2023-04-02 13:29:13,009 Updates 8750, num timesteps 43755
+selfsup attention loss 4.83938
+image_b_keypoints_maps 0.09387
+
+2023-04-02 13:29:36,084 Updates 9000, num timesteps 45005
+selfsup attention loss 4.73199
+image_b_keypoints_maps 0.09517
+
+2023-04-02 13:29:56,280 Updates 9250, num timesteps 46255
+selfsup attention loss 4.67017
+image_b_keypoints_maps 0.09278
+
+2023-04-02 13:30:16,548 Updates 9500, num timesteps 47505
+selfsup attention loss 4.75750
+image_b_keypoints_maps 0.08954
+
+2023-04-02 13:30:37,959 Updates 9750, num timesteps 48755
+selfsup attention loss 4.62751
+image_b_keypoints_maps 0.09097
+
+2023-04-02 13:30:58,682 Updates 10000, num timesteps 50005
+selfsup attention loss 4.74074
+image_b_keypoints_maps 0.09023
+
+2023-04-02 13:31:21,239 Updates 10250, num timesteps 51255
+selfsup attention loss 4.56068
+image_b_keypoints_maps 0.08251
+
+2023-04-02 13:31:43,192 Updates 10500, num timesteps 52505
+selfsup attention loss 4.62033
+image_b_keypoints_maps 0.08767
+
+2023-04-02 13:32:04,343 Updates 10750, num timesteps 53755
+selfsup attention loss 4.68686
+image_b_keypoints_maps 0.09336
+
+2023-04-02 13:32:26,596 Updates 11000, num timesteps 55005
+selfsup attention loss 4.66739
+image_b_keypoints_maps 0.09268
+
+2023-04-02 13:32:46,695 Updates 11250, num timesteps 56255
+selfsup attention loss 4.68072
+image_b_keypoints_maps 0.09204
+
+2023-04-02 13:33:09,685 Updates 11500, num timesteps 57505
+selfsup attention loss 4.44184
+image_b_keypoints_maps 0.08854
+
+2023-04-02 13:33:32,026 Updates 11750, num timesteps 58755
+selfsup attention loss 4.60381
+image_b_keypoints_maps 0.08524
+
+2023-04-02 13:33:52,484 Updates 12000, num timesteps 60005
+selfsup attention loss 4.58729
+image_b_keypoints_maps 0.09100
+
+2023-04-02 13:34:12,686 Updates 12250, num timesteps 61255
+selfsup attention loss 4.60953
+image_b_keypoints_maps 0.08745
+
+2023-04-02 13:34:32,804 Updates 12500, num timesteps 62505
+selfsup attention loss 4.58199
+image_b_keypoints_maps 0.09069
+
+2023-04-02 13:34:52,982 Updates 12750, num timesteps 63755
+selfsup attention loss 4.63366
+image_b_keypoints_maps 0.09136
+
+2023-04-02 13:35:13,168 Updates 13000, num timesteps 65005
+selfsup attention loss 4.49316
+image_b_keypoints_maps 0.08552
+
+2023-04-02 13:35:33,352 Updates 13250, num timesteps 66255
+selfsup attention loss 4.47565
+image_b_keypoints_maps 0.08879
+
+2023-04-02 13:35:53,520 Updates 13500, num timesteps 67505
+selfsup attention loss 4.47622
+image_b_keypoints_maps 0.08628
+
+2023-04-02 13:36:13,758 Updates 13750, num timesteps 68755
+selfsup attention loss 4.44841
+image_b_keypoints_maps 0.08962
+
+2023-04-02 13:36:33,877 Updates 14000, num timesteps 70005
+selfsup attention loss 4.37572
+image_b_keypoints_maps 0.09159
+
+2023-04-02 13:36:55,981 Updates 14250, num timesteps 71255
+selfsup attention loss 4.46817
+image_b_keypoints_maps 0.09017
+
+2023-04-02 13:37:18,835 Updates 14500, num timesteps 72505
+selfsup attention loss 4.43247
+image_b_keypoints_maps 0.08829
+
+2023-04-02 13:37:38,987 Updates 14750, num timesteps 73755
+selfsup attention loss 4.61184
+image_b_keypoints_maps 0.09307
+
+2023-04-02 13:38:00,457 Updates 15000, num timesteps 75005
+selfsup attention loss 4.47436
+image_b_keypoints_maps 0.09255
+
+2023-04-02 13:38:22,485 Updates 15250, num timesteps 76255
+selfsup attention loss 4.37815
+image_b_keypoints_maps 0.08789
+
+2023-04-02 13:38:42,650 Updates 15500, num timesteps 77505
+selfsup attention loss 4.36694
+image_b_keypoints_maps 0.09171
+
+2023-04-02 13:39:02,837 Updates 15750, num timesteps 78755
+selfsup attention loss 4.49037
+image_b_keypoints_maps 0.09035
+
+2023-04-02 13:39:22,993 Updates 16000, num timesteps 80005
+selfsup attention loss 4.36135
+image_b_keypoints_maps 0.08621
+
+2023-04-02 13:39:43,149 Updates 16250, num timesteps 81255
+selfsup attention loss 4.39351
+image_b_keypoints_maps 0.09102
+
+2023-04-02 13:40:03,370 Updates 16500, num timesteps 82505
+selfsup attention loss 4.50804
+image_b_keypoints_maps 0.09316
+
+2023-04-02 13:40:23,553 Updates 16750, num timesteps 83755
+selfsup attention loss 4.39473
+image_b_keypoints_maps 0.08379
+
+2023-04-02 13:40:45,156 Updates 17000, num timesteps 85005
+selfsup attention loss 4.20766
+image_b_keypoints_maps 0.08700
+
+2023-04-02 13:41:06,876 Updates 17250, num timesteps 86255
+selfsup attention loss 4.51534
+image_b_keypoints_maps 0.08786
+
+2023-04-02 13:41:26,898 Updates 17500, num timesteps 87505
+selfsup attention loss 4.55956
+image_b_keypoints_maps 0.08551
+
+2023-04-02 13:41:48,087 Updates 17750, num timesteps 88755
+selfsup attention loss 4.26990
+image_b_keypoints_maps 0.08688
+
+2023-04-02 13:42:07,942 Updates 18000, num timesteps 90005
+selfsup attention loss 4.22433
+image_b_keypoints_maps 0.08838
+
+2023-04-02 13:42:28,055 Updates 18250, num timesteps 91255
+selfsup attention loss 4.62834
+image_b_keypoints_maps 0.08934
+
+2023-04-02 13:42:48,271 Updates 18500, num timesteps 92505
+selfsup attention loss 4.42357
+image_b_keypoints_maps 0.08383
+
+2023-04-02 13:43:08,494 Updates 18750, num timesteps 93755
+selfsup attention loss 4.30603
+image_b_keypoints_maps 0.08862
+
+2023-04-02 13:43:28,544 Updates 19000, num timesteps 95005
+selfsup attention loss 4.35612
+image_b_keypoints_maps 0.09257
+
+2023-04-02 13:43:48,488 Updates 19250, num timesteps 96255
+selfsup attention loss 4.28068
+image_b_keypoints_maps 0.08696
+
+2023-04-02 13:44:08,458 Updates 19500, num timesteps 97505
+selfsup attention loss 4.21080
+image_b_keypoints_maps 0.08423
+
+2023-04-02 13:44:28,470 Updates 19750, num timesteps 98755
+selfsup attention loss 4.16365
+image_b_keypoints_maps 0.08717
+
+2023-04-02 13:44:48,546 Updates 20000, num timesteps 100005
+selfsup attention loss 4.34461
+image_b_keypoints_maps 0.08950
+
+2023-04-02 13:45:08,581 Updates 20250, num timesteps 101255
+selfsup attention loss 4.18601
+image_b_keypoints_maps 0.09133
+
+2023-04-02 13:45:29,167 Updates 20500, num timesteps 102505
+selfsup attention loss 4.48053
+image_b_keypoints_maps 0.08667
+
+2023-04-02 13:45:49,122 Updates 20750, num timesteps 103755
+selfsup attention loss 4.50307
+image_b_keypoints_maps 0.09312
+
+2023-04-02 13:46:09,014 Updates 21000, num timesteps 105005
+selfsup attention loss 4.30955
+image_b_keypoints_maps 0.08816
+
+2023-04-02 13:46:28,840 Updates 21250, num timesteps 106255
+selfsup attention loss 4.41845
+image_b_keypoints_maps 0.09082
+
+2023-04-02 13:46:48,726 Updates 21500, num timesteps 107505
+selfsup attention loss 4.64734
+image_b_keypoints_maps 0.08484
+
+2023-04-02 13:47:08,918 Updates 21750, num timesteps 108755
+selfsup attention loss 4.64332
+image_b_keypoints_maps 0.08961
+
+2023-04-02 13:47:29,086 Updates 22000, num timesteps 110005
+selfsup attention loss 4.24810
+image_b_keypoints_maps 0.08607
+
+2023-04-02 13:47:49,177 Updates 22250, num timesteps 111255
+selfsup attention loss 4.39280
+image_b_keypoints_maps 0.09295
+
+2023-04-02 13:48:09,046 Updates 22500, num timesteps 112505
+selfsup attention loss 4.17467
+image_b_keypoints_maps 0.09197
+
+2023-04-02 13:48:31,444 Updates 22750, num timesteps 113755
+selfsup attention loss 4.11737
+image_b_keypoints_maps 0.08927
+
+2023-04-02 13:48:55,208 Updates 23000, num timesteps 115005
+selfsup attention loss 4.26286
+image_b_keypoints_maps 0.09112
+
+2023-04-02 13:49:15,412 Updates 23250, num timesteps 116255
+selfsup attention loss 4.27056
+image_b_keypoints_maps 0.08942
+
+2023-04-02 13:49:36,023 Updates 23500, num timesteps 117505
+selfsup attention loss 4.23836
+image_b_keypoints_maps 0.09128
+
+2023-04-02 13:49:56,342 Updates 23750, num timesteps 118755
+selfsup attention loss 4.17017
+image_b_keypoints_maps 0.08747
+
+2023-04-02 13:50:16,429 Updates 24000, num timesteps 120005
+selfsup attention loss 4.38546
+image_b_keypoints_maps 0.09607
+
+2023-04-02 13:50:37,664 Updates 24250, num timesteps 121255
+selfsup attention loss 4.36766
+image_b_keypoints_maps 0.09026
+
+2023-04-02 13:50:59,841 Updates 24500, num timesteps 122505
+selfsup attention loss 4.19483
+image_b_keypoints_maps 0.09402
+
+2023-04-02 13:51:19,549 Updates 24750, num timesteps 123755
+selfsup attention loss 4.25171
+image_b_keypoints_maps 0.09033
+
+2023-04-02 13:51:39,384 Updates 25000, num timesteps 125005
+selfsup attention loss 4.18404
+image_b_keypoints_maps 0.08873
+
+2023-04-02 13:51:59,456 Updates 25250, num timesteps 126255
+selfsup attention loss 4.23664
+image_b_keypoints_maps 0.09692
+
+2023-04-02 13:52:19,354 Updates 25500, num timesteps 127505
+selfsup attention loss 4.19114
+image_b_keypoints_maps 0.09361
+
+2023-04-02 13:52:39,284 Updates 25750, num timesteps 128755
+selfsup attention loss 4.05581
+image_b_keypoints_maps 0.09155
+
+2023-04-02 13:52:59,226 Updates 26000, num timesteps 130005
+selfsup attention loss 4.45584
+image_b_keypoints_maps 0.09591
+
+2023-04-02 13:53:19,324 Updates 26250, num timesteps 131255
+selfsup attention loss 4.13214
+image_b_keypoints_maps 0.09686
+
+2023-04-02 13:53:39,388 Updates 26500, num timesteps 132505
+selfsup attention loss 4.34193
+image_b_keypoints_maps 0.09414
+
+2023-04-02 13:54:00,270 Updates 26750, num timesteps 133755
+selfsup attention loss 4.09415
+image_b_keypoints_maps 0.09099
+
+2023-04-02 13:54:20,362 Updates 27000, num timesteps 135005
+selfsup attention loss 4.13160
+image_b_keypoints_maps 0.09196
+
+2023-04-02 13:54:40,530 Updates 27250, num timesteps 136255
+selfsup attention loss 4.38115
+image_b_keypoints_maps 0.09467
+
+2023-04-02 13:55:00,669 Updates 27500, num timesteps 137505
+selfsup attention loss 4.03983
+image_b_keypoints_maps 0.09268
+
+2023-04-02 13:55:20,824 Updates 27750, num timesteps 138755
+selfsup attention loss 4.24719
+image_b_keypoints_maps 0.09612
+
+2023-04-02 13:55:41,215 Updates 28000, num timesteps 140005
+selfsup attention loss 4.14788
+image_b_keypoints_maps 0.08979
+
+2023-04-02 13:56:01,605 Updates 28250, num timesteps 141255
+selfsup attention loss 3.99457
+image_b_keypoints_maps 0.09161
+
+2023-04-02 13:56:21,665 Updates 28500, num timesteps 142505
+selfsup attention loss 4.28179
+image_b_keypoints_maps 0.09891
+
+2023-04-02 13:56:43,134 Updates 28750, num timesteps 143755
+selfsup attention loss 4.20696
+image_b_keypoints_maps 0.09632
+
+2023-04-02 13:57:06,924 Updates 29000, num timesteps 145005
+selfsup attention loss 4.02747
+image_b_keypoints_maps 0.09719
+
+2023-04-02 13:57:28,419 Updates 29250, num timesteps 146255
+selfsup attention loss 4.27680
+image_b_keypoints_maps 0.09571
+
+2023-04-02 13:57:48,431 Updates 29500, num timesteps 147505
+selfsup attention loss 4.21879
+image_b_keypoints_maps 0.09162
+
+2023-04-02 13:58:08,479 Updates 29750, num timesteps 148755
+selfsup attention loss 4.28049
+image_b_keypoints_maps 0.09660
+
+2023-04-02 13:58:28,456 Updates 30000, num timesteps 150005
+selfsup attention loss 4.30793
+image_b_keypoints_maps 0.09382
+
+2023-04-02 13:58:49,397 Updates 30250, num timesteps 151255
+selfsup attention loss 4.18610
+image_b_keypoints_maps 0.08864
+
+2023-04-02 13:59:09,513 Updates 30500, num timesteps 152505
+selfsup attention loss 4.17140
+image_b_keypoints_maps 0.09479
+
+2023-04-02 13:59:30,632 Updates 30750, num timesteps 153755
+selfsup attention loss 4.13580
+image_b_keypoints_maps 0.09264
+
+2023-04-02 13:59:53,824 Updates 31000, num timesteps 155005
+selfsup attention loss 4.11878
+image_b_keypoints_maps 0.09490
+
+2023-04-02 14:00:16,948 Updates 31250, num timesteps 156255
+selfsup attention loss 4.31324
+image_b_keypoints_maps 0.09201
+
+2023-04-02 14:00:40,061 Updates 31500, num timesteps 157505
+selfsup attention loss 4.27638
+image_b_keypoints_maps 0.09512
+
+2023-04-02 14:01:02,641 Updates 31750, num timesteps 158755
+selfsup attention loss 3.96940
+image_b_keypoints_maps 0.09687
+
+2023-04-02 14:01:23,842 Updates 32000, num timesteps 160005
+selfsup attention loss 4.21768
+image_b_keypoints_maps 0.09641
+
+2023-04-02 14:01:43,830 Updates 32250, num timesteps 161255
+selfsup attention loss 4.29110
+image_b_keypoints_maps 0.09737
+
+2023-04-02 14:02:03,874 Updates 32500, num timesteps 162505
+selfsup attention loss 4.07987
+image_b_keypoints_maps 0.09716
+
+2023-04-02 14:02:24,005 Updates 32750, num timesteps 163755
+selfsup attention loss 4.24261
+image_b_keypoints_maps 0.09432
+
+2023-04-02 14:02:43,931 Updates 33000, num timesteps 165005
+selfsup attention loss 3.99046
+image_b_keypoints_maps 0.09520
+
+2023-04-02 14:03:03,945 Updates 33250, num timesteps 166255
+selfsup attention loss 4.11077
+image_b_keypoints_maps 0.09823
+
+2023-04-02 14:03:24,118 Updates 33500, num timesteps 167505
+selfsup attention loss 4.17999
+image_b_keypoints_maps 0.09636
+
+2023-04-02 14:03:45,121 Updates 33750, num timesteps 168755
+selfsup attention loss 4.42740
+image_b_keypoints_maps 0.09785
+
+2023-04-02 14:04:06,942 Updates 34000, num timesteps 170005
+selfsup attention loss 4.18328
+image_b_keypoints_maps 0.09602
+
+2023-04-02 14:04:29,163 Updates 34250, num timesteps 171255
+selfsup attention loss 4.10291
+image_b_keypoints_maps 0.10174
+
+2023-04-02 14:04:49,399 Updates 34500, num timesteps 172505
+selfsup attention loss 4.02138
+image_b_keypoints_maps 0.09744
+
+2023-04-02 14:05:10,792 Updates 34750, num timesteps 173755
+selfsup attention loss 4.22729
+image_b_keypoints_maps 0.09608
+
+2023-04-02 14:05:34,245 Updates 35000, num timesteps 175005
+selfsup attention loss 4.33465
+image_b_keypoints_maps 0.09491
+
+2023-04-02 14:05:55,890 Updates 35250, num timesteps 176255
+selfsup attention loss 4.20893
+image_b_keypoints_maps 0.10109
+
+2023-04-02 14:06:16,063 Updates 35500, num timesteps 177505
+selfsup attention loss 4.34940
+image_b_keypoints_maps 0.09971
+
+2023-04-02 14:06:37,440 Updates 35750, num timesteps 178755
+selfsup attention loss 4.12222
+image_b_keypoints_maps 0.09770
+
+2023-04-02 14:07:01,080 Updates 36000, num timesteps 180005
+selfsup attention loss 4.21555
+image_b_keypoints_maps 0.09896
+
+2023-04-02 14:07:24,249 Updates 36250, num timesteps 181255
+selfsup attention loss 4.00012
+image_b_keypoints_maps 0.09756
+
+2023-04-02 14:07:46,313 Updates 36500, num timesteps 182505
+selfsup attention loss 4.02407
+image_b_keypoints_maps 0.10175
+
+2023-04-02 14:08:08,307 Updates 36750, num timesteps 183755
+selfsup attention loss 4.00406
+image_b_keypoints_maps 0.09940
+
+2023-04-02 14:08:28,410 Updates 37000, num timesteps 185005
+selfsup attention loss 4.09310
+image_b_keypoints_maps 0.09621
+
+2023-04-02 14:08:48,494 Updates 37250, num timesteps 186255
+selfsup attention loss 4.06679
+image_b_keypoints_maps 0.09971
+
+2023-04-02 14:09:08,521 Updates 37500, num timesteps 187505
+selfsup attention loss 4.04205
+image_b_keypoints_maps 0.09940
+
+2023-04-02 14:09:28,653 Updates 37750, num timesteps 188755
+selfsup attention loss 4.14789
+image_b_keypoints_maps 0.09930
+
+2023-04-02 14:09:48,885 Updates 38000, num timesteps 190005
+selfsup attention loss 4.18800
+image_b_keypoints_maps 0.10615
+
+2023-04-02 14:10:09,039 Updates 38250, num timesteps 191255
+selfsup attention loss 4.21873
+image_b_keypoints_maps 0.09717
+
+2023-04-02 14:10:30,578 Updates 38500, num timesteps 192505
+selfsup attention loss 4.07065
+image_b_keypoints_maps 0.10005
+
+2023-04-02 14:10:50,599 Updates 38750, num timesteps 193755
+selfsup attention loss 4.18971
+image_b_keypoints_maps 0.10573
+
+2023-04-02 14:11:10,461 Updates 39000, num timesteps 195005
+selfsup attention loss 4.26699
+image_b_keypoints_maps 0.09740
+
+2023-04-02 14:11:30,654 Updates 39250, num timesteps 196255
+selfsup attention loss 4.22119
+image_b_keypoints_maps 0.10067
+
+2023-04-02 14:11:54,438 Updates 39500, num timesteps 197505
+selfsup attention loss 3.99248
+image_b_keypoints_maps 0.10215
+
+2023-04-02 14:12:15,994 Updates 39750, num timesteps 198755
+selfsup attention loss 3.96738
+image_b_keypoints_maps 0.10273
+
+2023-04-02 14:12:37,505 Updates 40000, num timesteps 200005
+selfsup attention loss 4.10026
+image_b_keypoints_maps 0.10519
+
+2023-04-02 14:12:58,012 Updates 40250, num timesteps 201255
+selfsup attention loss 4.05682
+image_b_keypoints_maps 0.10139
+
+2023-04-02 14:13:18,002 Updates 40500, num timesteps 202505
+selfsup attention loss 4.19898
+image_b_keypoints_maps 0.10297
+
+2023-04-02 14:13:37,794 Updates 40750, num timesteps 203755
+selfsup attention loss 4.12808
+image_b_keypoints_maps 0.10138
+
+2023-04-02 14:13:59,696 Updates 41000, num timesteps 205005
+selfsup attention loss 4.17665
+image_b_keypoints_maps 0.10427
+
+2023-04-02 14:14:23,126 Updates 41250, num timesteps 206255
+selfsup attention loss 4.28962
+image_b_keypoints_maps 0.10134
+
+2023-04-02 14:14:45,916 Updates 41500, num timesteps 207505
+selfsup attention loss 3.86435
+image_b_keypoints_maps 0.10281
+
+2023-04-02 14:15:08,477 Updates 41750, num timesteps 208755
+selfsup attention loss 4.05760
+image_b_keypoints_maps 0.10066
+
+2023-04-02 14:15:29,824 Updates 42000, num timesteps 210005
+selfsup attention loss 3.89729
+image_b_keypoints_maps 0.10055
+
+2023-04-02 14:15:50,970 Updates 42250, num timesteps 211255
+selfsup attention loss 4.03342
+image_b_keypoints_maps 0.10547
+
+2023-04-02 14:16:14,809 Updates 42500, num timesteps 212505
+selfsup attention loss 3.87117
+image_b_keypoints_maps 0.10615
+
+2023-04-02 14:16:36,516 Updates 42750, num timesteps 213755
+selfsup attention loss 3.96339
+image_b_keypoints_maps 0.09962
+
+2023-04-02 14:16:56,814 Updates 43000, num timesteps 215005
+selfsup attention loss 3.87673
+image_b_keypoints_maps 0.10394
+
+2023-04-02 14:17:19,763 Updates 43250, num timesteps 216255
+selfsup attention loss 3.94540
+image_b_keypoints_maps 0.10297
+
+2023-04-02 14:17:42,606 Updates 43500, num timesteps 217505
+selfsup attention loss 4.04661
+image_b_keypoints_maps 0.10047
+
+2023-04-02 14:18:03,188 Updates 43750, num timesteps 218755
+selfsup attention loss 3.89146
+image_b_keypoints_maps 0.10353
+
+2023-04-02 14:18:24,357 Updates 44000, num timesteps 220005
+selfsup attention loss 4.03738
+image_b_keypoints_maps 0.10126
+
+2023-04-02 14:18:45,170 Updates 44250, num timesteps 221255
+selfsup attention loss 4.09356
+image_b_keypoints_maps 0.10464
+
+2023-04-02 14:19:08,689 Updates 44500, num timesteps 222505
+selfsup attention loss 3.99060
+image_b_keypoints_maps 0.10357
+
+2023-04-02 14:19:29,101 Updates 44750, num timesteps 223755
+selfsup attention loss 3.82029
+image_b_keypoints_maps 0.10138
+
+2023-04-02 14:19:49,394 Updates 45000, num timesteps 225005
+selfsup attention loss 4.22483
+image_b_keypoints_maps 0.10583
+
+2023-04-02 14:20:09,605 Updates 45250, num timesteps 226255
+selfsup attention loss 4.01216
+image_b_keypoints_maps 0.10465
+
+2023-04-02 14:20:29,764 Updates 45500, num timesteps 227505
+selfsup attention loss 4.04047
+image_b_keypoints_maps 0.10230
+
+2023-04-02 14:20:49,827 Updates 45750, num timesteps 228755
+selfsup attention loss 4.06636
+image_b_keypoints_maps 0.10552
+
+2023-04-02 14:21:09,929 Updates 46000, num timesteps 230005
+selfsup attention loss 3.86294
+image_b_keypoints_maps 0.10623
+
+2023-04-02 14:21:29,933 Updates 46250, num timesteps 231255
+selfsup attention loss 4.04549
+image_b_keypoints_maps 0.10511
+
+2023-04-02 14:21:50,010 Updates 46500, num timesteps 232505
+selfsup attention loss 3.98788
+image_b_keypoints_maps 0.09946
+
+2023-04-02 14:22:11,813 Updates 46750, num timesteps 233755
+selfsup attention loss 4.03371
+image_b_keypoints_maps 0.10323
+
+2023-04-02 14:22:32,739 Updates 47000, num timesteps 235005
+selfsup attention loss 4.05655
+image_b_keypoints_maps 0.10389
+
+2023-04-02 14:22:52,678 Updates 47250, num timesteps 236255
+selfsup attention loss 3.96961
+image_b_keypoints_maps 0.10641
+
+2023-04-02 14:23:15,895 Updates 47500, num timesteps 237505
+selfsup attention loss 3.79988
+image_b_keypoints_maps 0.10191
+
+2023-04-02 14:23:37,122 Updates 47750, num timesteps 238755
+selfsup attention loss 3.95376
+image_b_keypoints_maps 0.10444
+
+2023-04-02 14:23:57,395 Updates 48000, num timesteps 240005
+selfsup attention loss 3.86947
+image_b_keypoints_maps 0.10555
+
+2023-04-02 14:24:17,648 Updates 48250, num timesteps 241255
+selfsup attention loss 4.33540
+image_b_keypoints_maps 0.10600
+
+2023-04-02 14:24:38,050 Updates 48500, num timesteps 242505
+selfsup attention loss 4.05631
+image_b_keypoints_maps 0.10166
+
+2023-04-02 14:24:58,212 Updates 48750, num timesteps 243755
+selfsup attention loss 4.01698
+image_b_keypoints_maps 0.10573
+
+2023-04-02 14:25:18,288 Updates 49000, num timesteps 245005
+selfsup attention loss 3.96564
+image_b_keypoints_maps 0.10431
+
+2023-04-02 14:25:38,389 Updates 49250, num timesteps 246255
+selfsup attention loss 3.87128
+image_b_keypoints_maps 0.10774
+
+2023-04-02 14:25:58,505 Updates 49500, num timesteps 247505
+selfsup attention loss 3.80187
+image_b_keypoints_maps 0.10244
+
+2023-04-02 14:26:18,637 Updates 49750, num timesteps 248755
+selfsup attention loss 4.15116
+image_b_keypoints_maps 0.10636
+
+2023-04-02 14:26:38,754 Updates 50000, num timesteps 250005
+selfsup attention loss 3.94265
+image_b_keypoints_maps 0.10531
+
+2023-04-02 14:26:58,841 Updates 50250, num timesteps 251255
+selfsup attention loss 4.08856
+image_b_keypoints_maps 0.10143
+
+2023-04-02 14:27:18,945 Updates 50500, num timesteps 252505
+selfsup attention loss 4.16605
+image_b_keypoints_maps 0.10109
+
+2023-04-02 14:27:39,346 Updates 50750, num timesteps 253755
+selfsup attention loss 4.00952
+image_b_keypoints_maps 0.10343
+
+2023-04-02 14:27:59,411 Updates 51000, num timesteps 255005
+selfsup attention loss 4.07444
+image_b_keypoints_maps 0.10752
+
+2023-04-02 14:28:20,350 Updates 51250, num timesteps 256255
+selfsup attention loss 3.83854
+image_b_keypoints_maps 0.10681
+
+2023-04-02 14:28:40,933 Updates 51500, num timesteps 257505
+selfsup attention loss 3.81016
+image_b_keypoints_maps 0.10529
+
+2023-04-02 14:29:01,676 Updates 51750, num timesteps 258755
+selfsup attention loss 3.93809
+image_b_keypoints_maps 0.10733
+
+2023-04-02 14:29:21,737 Updates 52000, num timesteps 260005
+selfsup attention loss 4.06448
+image_b_keypoints_maps 0.10458
+
+2023-04-02 14:29:43,311 Updates 52250, num timesteps 261255
+selfsup attention loss 3.98074
+image_b_keypoints_maps 0.10343
+
+2023-04-02 14:30:07,156 Updates 52500, num timesteps 262505
+selfsup attention loss 3.79570
+image_b_keypoints_maps 0.10326
+
+2023-04-02 14:30:28,530 Updates 52750, num timesteps 263755
+selfsup attention loss 3.90292
+image_b_keypoints_maps 0.10506
+
+2023-04-02 14:30:52,133 Updates 53000, num timesteps 265005
+selfsup attention loss 4.03453
+image_b_keypoints_maps 0.10693
+
+2023-04-02 14:31:15,613 Updates 53250, num timesteps 266255
+selfsup attention loss 4.00222
+image_b_keypoints_maps 0.10642
+
+2023-04-02 14:31:37,025 Updates 53500, num timesteps 267505
+selfsup attention loss 4.23554
+image_b_keypoints_maps 0.10579
+
+2023-04-02 14:31:57,031 Updates 53750, num timesteps 268755
+selfsup attention loss 3.79851
+image_b_keypoints_maps 0.10693
+
+2023-04-02 14:32:17,069 Updates 54000, num timesteps 270005
+selfsup attention loss 4.16278
+image_b_keypoints_maps 0.10756
+
+2023-04-02 14:32:37,125 Updates 54250, num timesteps 271255
+selfsup attention loss 3.87853
+image_b_keypoints_maps 0.10513
+
+2023-04-02 14:32:57,137 Updates 54500, num timesteps 272505
+selfsup attention loss 3.94661
+image_b_keypoints_maps 0.10313
+
+2023-04-02 14:33:17,179 Updates 54750, num timesteps 273755
+selfsup attention loss 4.00135
+image_b_keypoints_maps 0.10336
+
+2023-04-02 14:33:37,236 Updates 55000, num timesteps 275005
+selfsup attention loss 3.97052
+image_b_keypoints_maps 0.10663
+
+2023-04-02 14:33:57,296 Updates 55250, num timesteps 276255
+selfsup attention loss 3.88554
+image_b_keypoints_maps 0.10865
+
+2023-04-02 14:34:17,349 Updates 55500, num timesteps 277505
+selfsup attention loss 3.86212
+image_b_keypoints_maps 0.10552
+
+2023-04-02 14:34:37,399 Updates 55750, num timesteps 278755
+selfsup attention loss 3.87956
+image_b_keypoints_maps 0.10495
+
+2023-04-02 14:34:57,443 Updates 56000, num timesteps 280005
+selfsup attention loss 3.75598
+image_b_keypoints_maps 0.10449
+
+2023-04-02 14:35:17,489 Updates 56250, num timesteps 281255
+selfsup attention loss 3.91434
+image_b_keypoints_maps 0.10782
+
+2023-04-02 14:35:37,538 Updates 56500, num timesteps 282505
+selfsup attention loss 3.76037
+image_b_keypoints_maps 0.10139
+
+2023-04-02 14:35:57,589 Updates 56750, num timesteps 283755
+selfsup attention loss 3.87310
+image_b_keypoints_maps 0.10313
+
+2023-04-02 14:36:20,946 Updates 57000, num timesteps 285005
+selfsup attention loss 4.07142
+image_b_keypoints_maps 0.10630
+
+2023-04-02 14:36:41,701 Updates 57250, num timesteps 286255
+selfsup attention loss 3.84280
+image_b_keypoints_maps 0.10759
+
+2023-04-02 14:37:01,641 Updates 57500, num timesteps 287505
+selfsup attention loss 4.15288
+image_b_keypoints_maps 0.10257
+
+2023-04-02 14:37:21,651 Updates 57750, num timesteps 288755
+selfsup attention loss 3.99763
+image_b_keypoints_maps 0.10178
+
+2023-04-02 14:37:41,861 Updates 58000, num timesteps 290005
+selfsup attention loss 3.79016
+image_b_keypoints_maps 0.10701
+
+2023-04-02 14:38:02,058 Updates 58250, num timesteps 291255
+selfsup attention loss 3.85420
+image_b_keypoints_maps 0.10679
+
+2023-04-02 14:38:23,699 Updates 58500, num timesteps 292505
+selfsup attention loss 4.08992
+image_b_keypoints_maps 0.10264
+
+2023-04-02 14:38:46,130 Updates 58750, num timesteps 293755
+selfsup attention loss 4.00481
+image_b_keypoints_maps 0.10405
+
+2023-04-02 14:39:06,281 Updates 59000, num timesteps 295005
+selfsup attention loss 4.01927
+image_b_keypoints_maps 0.10343
+
+2023-04-02 14:39:26,476 Updates 59250, num timesteps 296255
+selfsup attention loss 3.99673
+image_b_keypoints_maps 0.10155
+
+2023-04-02 14:39:46,830 Updates 59500, num timesteps 297505
+selfsup attention loss 3.83338
+image_b_keypoints_maps 0.10572
+
+2023-04-02 14:40:06,772 Updates 59750, num timesteps 298755
+selfsup attention loss 4.16305
+image_b_keypoints_maps 0.10497
+
+2023-04-02 14:40:26,814 Updates 60000, num timesteps 300005
+selfsup attention loss 3.93182
+image_b_keypoints_maps 0.10850
+
+2023-04-02 14:40:46,763 Updates 60250, num timesteps 301255
+selfsup attention loss 3.69332
+image_b_keypoints_maps 0.10506
+
+2023-04-02 14:41:07,052 Updates 60500, num timesteps 302505
+selfsup attention loss 4.01689
+image_b_keypoints_maps 0.10431
+
+2023-04-02 14:41:27,626 Updates 60750, num timesteps 303755
+selfsup attention loss 4.01770
+image_b_keypoints_maps 0.10739
+
+2023-04-02 14:41:47,941 Updates 61000, num timesteps 305005
+selfsup attention loss 3.87174
+image_b_keypoints_maps 0.10863
+
+2023-04-02 14:42:08,807 Updates 61250, num timesteps 306255
+selfsup attention loss 4.03973
+image_b_keypoints_maps 0.10700
+
+2023-04-02 14:42:31,586 Updates 61500, num timesteps 307505
+selfsup attention loss 3.59184
+image_b_keypoints_maps 0.10402
+
+2023-04-02 14:42:51,751 Updates 61750, num timesteps 308755
+selfsup attention loss 3.89386
+image_b_keypoints_maps 0.10590
+
+2023-04-02 14:43:11,946 Updates 62000, num timesteps 310005
+selfsup attention loss 4.01421
+image_b_keypoints_maps 0.10290
+
+2023-04-02 14:43:32,102 Updates 62250, num timesteps 311255
+selfsup attention loss 3.76807
+image_b_keypoints_maps 0.10164
+
+2023-04-02 14:43:53,678 Updates 62500, num timesteps 312505
+selfsup attention loss 3.79415
+image_b_keypoints_maps 0.10708
+
+2023-04-02 14:44:14,473 Updates 62750, num timesteps 313755
+selfsup attention loss 4.03786
+image_b_keypoints_maps 0.10419
+
+2023-04-02 14:44:35,481 Updates 63000, num timesteps 315005
+selfsup attention loss 3.96574
+image_b_keypoints_maps 0.10881
+
+2023-04-02 14:44:56,550 Updates 63250, num timesteps 316255
+selfsup attention loss 3.86973
+image_b_keypoints_maps 0.10673
+
+2023-04-02 14:45:16,502 Updates 63500, num timesteps 317505
+selfsup attention loss 4.07166
+image_b_keypoints_maps 0.11032
+
+2023-04-02 14:45:36,608 Updates 63750, num timesteps 318755
+selfsup attention loss 4.18357
+image_b_keypoints_maps 0.10739
+
+2023-04-02 14:45:56,541 Updates 64000, num timesteps 320005
+selfsup attention loss 3.80109
+image_b_keypoints_maps 0.10753
+
+2023-04-02 14:46:16,483 Updates 64250, num timesteps 321255
+selfsup attention loss 3.89210
+image_b_keypoints_maps 0.10406
+
+2023-04-02 14:46:36,580 Updates 64500, num timesteps 322505
+selfsup attention loss 3.85314
+image_b_keypoints_maps 0.10035
+
+2023-04-02 14:46:56,545 Updates 64750, num timesteps 323755
+selfsup attention loss 3.85071
+image_b_keypoints_maps 0.10912
+
+2023-04-02 14:47:16,571 Updates 65000, num timesteps 325005
+selfsup attention loss 3.99701
+image_b_keypoints_maps 0.10382
+
+2023-04-02 14:47:36,467 Updates 65250, num timesteps 326255
+selfsup attention loss 3.87953
+image_b_keypoints_maps 0.10586
+
+2023-04-02 14:47:56,419 Updates 65500, num timesteps 327505
+selfsup attention loss 3.64474
+image_b_keypoints_maps 0.10796
+
+2023-04-02 14:48:16,590 Updates 65750, num timesteps 328755
+selfsup attention loss 3.86508
+image_b_keypoints_maps 0.10444
+
+2023-04-02 14:48:36,819 Updates 66000, num timesteps 330005
+selfsup attention loss 3.92057
+image_b_keypoints_maps 0.10677
+
+2023-04-02 14:48:57,096 Updates 66250, num timesteps 331255
+selfsup attention loss 4.02820
+image_b_keypoints_maps 0.10710
+
+2023-04-02 14:49:17,251 Updates 66500, num timesteps 332505
+selfsup attention loss 4.05195
+image_b_keypoints_maps 0.10474
+
+2023-04-02 14:49:38,628 Updates 66750, num timesteps 333755
+selfsup attention loss 3.95129
+image_b_keypoints_maps 0.10866
+
+2023-04-02 14:49:59,248 Updates 67000, num timesteps 335005
+selfsup attention loss 3.87608
+image_b_keypoints_maps 0.10741
+
+2023-04-02 14:50:19,391 Updates 67250, num timesteps 336255
+selfsup attention loss 3.73996
+image_b_keypoints_maps 0.10289
+
+2023-04-02 14:50:40,378 Updates 67500, num timesteps 337505
+selfsup attention loss 3.79173
+image_b_keypoints_maps 0.10735
+
+2023-04-02 14:51:00,514 Updates 67750, num timesteps 338755
+selfsup attention loss 3.82564
+image_b_keypoints_maps 0.10444
+
+2023-04-02 14:51:20,635 Updates 68000, num timesteps 340005
+selfsup attention loss 3.75480
+image_b_keypoints_maps 0.10621
+
+2023-04-02 14:51:40,748 Updates 68250, num timesteps 341255
+selfsup attention loss 4.30861
+image_b_keypoints_maps 0.10653
+
+2023-04-02 14:52:00,724 Updates 68500, num timesteps 342505
+selfsup attention loss 3.94646
+image_b_keypoints_maps 0.10615
+
+2023-04-02 14:52:20,715 Updates 68750, num timesteps 343755
+selfsup attention loss 3.94528
+image_b_keypoints_maps 0.10931
+
+2023-04-02 14:52:40,673 Updates 69000, num timesteps 345005
+selfsup attention loss 3.93276
+image_b_keypoints_maps 0.10809
+
+2023-04-02 14:53:00,642 Updates 69250, num timesteps 346255
+selfsup attention loss 3.89741
+image_b_keypoints_maps 0.10701
+
+2023-04-02 14:53:20,630 Updates 69500, num timesteps 347505
+selfsup attention loss 3.98004
+image_b_keypoints_maps 0.10535
+
+2023-04-02 14:53:40,944 Updates 69750, num timesteps 348755
+selfsup attention loss 3.86830
+image_b_keypoints_maps 0.10343
+
+2023-04-02 14:54:01,091 Updates 70000, num timesteps 350005
+selfsup attention loss 3.81005
+image_b_keypoints_maps 0.10617
+
+2023-04-02 14:54:21,256 Updates 70250, num timesteps 351255
+selfsup attention loss 3.65220
+image_b_keypoints_maps 0.10471
+
+2023-04-02 14:54:41,407 Updates 70500, num timesteps 352505
+selfsup attention loss 3.89080
+image_b_keypoints_maps 0.10694
+
+2023-04-02 14:55:01,550 Updates 70750, num timesteps 353755
+selfsup attention loss 4.02213
+image_b_keypoints_maps 0.10965
+
+2023-04-02 14:55:21,694 Updates 71000, num timesteps 355005
+selfsup attention loss 3.77620
+image_b_keypoints_maps 0.10520
+
+2023-04-02 14:55:41,848 Updates 71250, num timesteps 356255
+selfsup attention loss 3.70050
+image_b_keypoints_maps 0.10774
+
+2023-04-02 14:56:02,282 Updates 71500, num timesteps 357505
+selfsup attention loss 3.81963
+image_b_keypoints_maps 0.10828
+
+2023-04-02 14:56:22,461 Updates 71750, num timesteps 358755
+selfsup attention loss 3.98833
+image_b_keypoints_maps 0.10464
+
+2023-04-02 14:56:42,666 Updates 72000, num timesteps 360005
+selfsup attention loss 3.87395
+image_b_keypoints_maps 0.10755
+
+2023-04-02 14:57:02,815 Updates 72250, num timesteps 361255
+selfsup attention loss 3.84521
+image_b_keypoints_maps 0.10821
+
+2023-04-02 14:57:22,968 Updates 72500, num timesteps 362505
+selfsup attention loss 4.02546
+image_b_keypoints_maps 0.10806
+
+2023-04-02 14:57:43,119 Updates 72750, num timesteps 363755
+selfsup attention loss 4.00194
+image_b_keypoints_maps 0.10885
+
+2023-04-02 14:58:03,269 Updates 73000, num timesteps 365005
+selfsup attention loss 3.64327
+image_b_keypoints_maps 0.10705
+
+2023-04-02 14:58:23,406 Updates 73250, num timesteps 366255
+selfsup attention loss 3.75505
+image_b_keypoints_maps 0.10949
+
+2023-04-02 14:58:43,550 Updates 73500, num timesteps 367505
+selfsup attention loss 4.09108
+image_b_keypoints_maps 0.10516
+
+2023-04-02 14:59:03,772 Updates 73750, num timesteps 368755
+selfsup attention loss 3.99626
+image_b_keypoints_maps 0.10522
+
+2023-04-02 14:59:23,918 Updates 74000, num timesteps 370005
+selfsup attention loss 3.74975
+image_b_keypoints_maps 0.10781
+
+2023-04-02 14:59:44,062 Updates 74250, num timesteps 371255
+selfsup attention loss 3.86404
+image_b_keypoints_maps 0.10714
+
+2023-04-02 15:00:04,202 Updates 74500, num timesteps 372505
+selfsup attention loss 3.95926
+image_b_keypoints_maps 0.10399
+
+2023-04-02 15:00:24,344 Updates 74750, num timesteps 373755
+selfsup attention loss 4.24303
+image_b_keypoints_maps 0.10737
+
+2023-04-02 15:00:44,472 Updates 75000, num timesteps 375005
+selfsup attention loss 3.96636
+image_b_keypoints_maps 0.10646
+
+2023-04-02 15:01:04,603 Updates 75250, num timesteps 376255
+selfsup attention loss 3.99192
+image_b_keypoints_maps 0.10657
+
+2023-04-02 15:01:24,743 Updates 75500, num timesteps 377505
+selfsup attention loss 3.78727
+image_b_keypoints_maps 0.09910
+
+2023-04-02 15:01:44,694 Updates 75750, num timesteps 378755
+selfsup attention loss 3.73346
+image_b_keypoints_maps 0.10735
+
+2023-04-02 15:02:04,599 Updates 76000, num timesteps 380005
+selfsup attention loss 3.87058
+image_b_keypoints_maps 0.10742
+
+2023-04-02 15:02:24,461 Updates 76250, num timesteps 381255
+selfsup attention loss 3.91469
+image_b_keypoints_maps 0.10514
+
+2023-04-02 15:02:44,475 Updates 76500, num timesteps 382505
+selfsup attention loss 3.83582
+image_b_keypoints_maps 0.10751
+
+2023-04-02 15:03:04,545 Updates 76750, num timesteps 383755
+selfsup attention loss 3.57748
+image_b_keypoints_maps 0.10566
+
+2023-04-02 15:03:24,609 Updates 77000, num timesteps 385005
+selfsup attention loss 3.94897
+image_b_keypoints_maps 0.10715
+
+2023-04-02 15:03:44,655 Updates 77250, num timesteps 386255
+selfsup attention loss 4.00885
+image_b_keypoints_maps 0.10637
+
+2023-04-02 15:04:04,739 Updates 77500, num timesteps 387505
+selfsup attention loss 3.75353
+image_b_keypoints_maps 0.10793
+
+2023-04-02 15:04:24,828 Updates 77750, num timesteps 388755
+selfsup attention loss 3.91229
+image_b_keypoints_maps 0.11213
+
+2023-04-02 15:04:44,929 Updates 78000, num timesteps 390005
+selfsup attention loss 3.96830
+image_b_keypoints_maps 0.10811
+
+2023-04-02 15:05:05,027 Updates 78250, num timesteps 391255
+selfsup attention loss 3.71026
+image_b_keypoints_maps 0.10626
+
+2023-04-02 15:05:25,206 Updates 78500, num timesteps 392505
+selfsup attention loss 3.99728
+image_b_keypoints_maps 0.10765
+
+2023-04-02 15:05:45,210 Updates 78750, num timesteps 393755
+selfsup attention loss 3.85084
+image_b_keypoints_maps 0.10538
+
+2023-04-02 15:06:05,267 Updates 79000, num timesteps 395005
+selfsup attention loss 3.75917
+image_b_keypoints_maps 0.10465
+
+2023-04-02 15:06:25,408 Updates 79250, num timesteps 396255
+selfsup attention loss 3.72809
+image_b_keypoints_maps 0.10451
+
+2023-04-02 15:06:45,579 Updates 79500, num timesteps 397505
+selfsup attention loss 3.82071
+image_b_keypoints_maps 0.10625
+
+2023-04-02 15:07:05,747 Updates 79750, num timesteps 398755
+selfsup attention loss 4.00080
+image_b_keypoints_maps 0.10651
+
+2023-04-02 15:07:25,903 Updates 80000, num timesteps 400005
+selfsup attention loss 4.05106
+image_b_keypoints_maps 0.10585
+
+2023-04-02 15:07:46,034 Updates 80250, num timesteps 401255
+selfsup attention loss 3.75517
+image_b_keypoints_maps 0.10515
+
+2023-04-02 15:08:06,100 Updates 80500, num timesteps 402505
+selfsup attention loss 3.90161
+image_b_keypoints_maps 0.10757
+
+2023-04-02 15:08:26,195 Updates 80750, num timesteps 403755
+selfsup attention loss 3.71179
+image_b_keypoints_maps 0.10727
+
+2023-04-02 15:08:46,296 Updates 81000, num timesteps 405005
+selfsup attention loss 4.17706
+image_b_keypoints_maps 0.10838
+
+2023-04-02 15:09:06,402 Updates 81250, num timesteps 406255
+selfsup attention loss 3.84513
+image_b_keypoints_maps 0.10534
+
+2023-04-02 15:09:26,554 Updates 81500, num timesteps 407505
+selfsup attention loss 3.94739
+image_b_keypoints_maps 0.10874
+
+2023-04-02 15:09:46,666 Updates 81750, num timesteps 408755
+selfsup attention loss 3.90969
+image_b_keypoints_maps 0.10932
+
+2023-04-02 15:10:06,729 Updates 82000, num timesteps 410005
+selfsup attention loss 3.96283
+image_b_keypoints_maps 0.11416
+
+2023-04-02 15:10:26,775 Updates 82250, num timesteps 411255
+selfsup attention loss 3.77635
+image_b_keypoints_maps 0.10715
+
+2023-04-02 15:10:46,841 Updates 82500, num timesteps 412505
+selfsup attention loss 3.71160
+image_b_keypoints_maps 0.10777
+
+2023-04-02 15:11:06,909 Updates 82750, num timesteps 413755
+selfsup attention loss 4.13219
+image_b_keypoints_maps 0.10634
+
+2023-04-02 15:11:26,973 Updates 83000, num timesteps 415005
+selfsup attention loss 3.83505
+image_b_keypoints_maps 0.11004
+
+2023-04-02 15:11:47,069 Updates 83250, num timesteps 416255
+selfsup attention loss 3.58800
+image_b_keypoints_maps 0.10585
+
+2023-04-02 15:12:07,264 Updates 83500, num timesteps 417505
+selfsup attention loss 3.67049
+image_b_keypoints_maps 0.10993
+
+2023-04-02 15:12:27,338 Updates 83750, num timesteps 418755
+selfsup attention loss 4.04413
+image_b_keypoints_maps 0.10616
+
+2023-04-02 15:12:47,394 Updates 84000, num timesteps 420005
+selfsup attention loss 3.97179
+image_b_keypoints_maps 0.10933
+
+2023-04-02 15:13:07,472 Updates 84250, num timesteps 421255
+selfsup attention loss 3.83178
+image_b_keypoints_maps 0.10517
+
+2023-04-02 15:13:27,560 Updates 84500, num timesteps 422505
+selfsup attention loss 3.68216
+image_b_keypoints_maps 0.10513
+
+2023-04-02 15:13:47,638 Updates 84750, num timesteps 423755
+selfsup attention loss 3.72279
+image_b_keypoints_maps 0.10597
+
+2023-04-02 15:14:07,713 Updates 85000, num timesteps 425005
+selfsup attention loss 3.67497
+image_b_keypoints_maps 0.10919
+
+2023-04-02 15:14:27,772 Updates 85250, num timesteps 426255
+selfsup attention loss 3.85193
+image_b_keypoints_maps 0.10830
+
+2023-04-02 15:14:47,856 Updates 85500, num timesteps 427505
+selfsup attention loss 3.78500
+image_b_keypoints_maps 0.10826
+
+2023-04-02 15:15:07,918 Updates 85750, num timesteps 428755
+selfsup attention loss 3.79746
+image_b_keypoints_maps 0.11131
+
+2023-04-02 15:15:27,992 Updates 86000, num timesteps 430005
+selfsup attention loss 3.80090
+image_b_keypoints_maps 0.10791
+
+2023-04-02 15:15:48,087 Updates 86250, num timesteps 431255
+selfsup attention loss 3.86466
+image_b_keypoints_maps 0.10759
+
+2023-04-02 15:16:08,174 Updates 86500, num timesteps 432505
+selfsup attention loss 3.73962
+image_b_keypoints_maps 0.10563
+
+2023-04-02 15:16:28,232 Updates 86750, num timesteps 433755
+selfsup attention loss 3.91528
+image_b_keypoints_maps 0.10995
+
+2023-04-02 15:16:48,290 Updates 87000, num timesteps 435005
+selfsup attention loss 3.81549
+image_b_keypoints_maps 0.10698
+
+2023-04-02 15:17:08,358 Updates 87250, num timesteps 436255
+selfsup attention loss 4.08144
+image_b_keypoints_maps 0.10564
+
+2023-04-02 15:17:28,412 Updates 87500, num timesteps 437505
+selfsup attention loss 3.63755
+image_b_keypoints_maps 0.10680
+
+2023-04-02 15:17:48,462 Updates 87750, num timesteps 438755
+selfsup attention loss 3.86203
+image_b_keypoints_maps 0.10804
+
+2023-04-02 15:18:08,523 Updates 88000, num timesteps 440005
+selfsup attention loss 3.95307
+image_b_keypoints_maps 0.10826
+
+2023-04-02 15:18:28,682 Updates 88250, num timesteps 441255
+selfsup attention loss 3.84117
+image_b_keypoints_maps 0.11177
+
+2023-04-02 15:18:48,734 Updates 88500, num timesteps 442505
+selfsup attention loss 3.92314
+image_b_keypoints_maps 0.10664
+
+2023-04-02 15:19:08,792 Updates 88750, num timesteps 443755
+selfsup attention loss 3.90792
+image_b_keypoints_maps 0.10972
+
+2023-04-02 15:19:28,863 Updates 89000, num timesteps 445005
+selfsup attention loss 4.01828
+image_b_keypoints_maps 0.10569
+
+2023-04-02 15:19:48,927 Updates 89250, num timesteps 446255
+selfsup attention loss 3.93408
+image_b_keypoints_maps 0.10823
+
+2023-04-02 15:20:08,999 Updates 89500, num timesteps 447505
+selfsup attention loss 3.84882
+image_b_keypoints_maps 0.10873
+
+2023-04-02 15:20:29,091 Updates 89750, num timesteps 448755
+selfsup attention loss 3.75029
+image_b_keypoints_maps 0.11035
+
+2023-04-02 15:20:49,167 Updates 90000, num timesteps 450005
+selfsup attention loss 3.71721
+image_b_keypoints_maps 0.10767
+
+2023-04-02 15:21:09,223 Updates 90250, num timesteps 451255
+selfsup attention loss 3.80363
+image_b_keypoints_maps 0.10628
+
+2023-04-02 15:21:29,344 Updates 90500, num timesteps 452505
+selfsup attention loss 3.85692
+image_b_keypoints_maps 0.10625
+
+2023-04-02 15:21:49,401 Updates 90750, num timesteps 453755
+selfsup attention loss 3.86626
+image_b_keypoints_maps 0.10766
+
+2023-04-02 15:22:09,471 Updates 91000, num timesteps 455005
+selfsup attention loss 3.76981
+image_b_keypoints_maps 0.10620
+
+2023-04-02 15:22:29,667 Updates 91250, num timesteps 456255
+selfsup attention loss 3.99383
+image_b_keypoints_maps 0.11305
+
+2023-04-02 15:22:49,870 Updates 91500, num timesteps 457505
+selfsup attention loss 3.82077
+image_b_keypoints_maps 0.10477
+
+2023-04-02 15:23:09,982 Updates 91750, num timesteps 458755
+selfsup attention loss 3.70605
+image_b_keypoints_maps 0.11221
+
+2023-04-02 15:23:30,093 Updates 92000, num timesteps 460005
+selfsup attention loss 3.77378
+image_b_keypoints_maps 0.10843
+
+2023-04-02 15:23:50,230 Updates 92250, num timesteps 461255
+selfsup attention loss 3.66747
+image_b_keypoints_maps 0.10859
+
+2023-04-02 15:24:10,380 Updates 92500, num timesteps 462505
+selfsup attention loss 3.88128
+image_b_keypoints_maps 0.10744
+
+2023-04-02 15:24:30,512 Updates 92750, num timesteps 463755
+selfsup attention loss 3.97103
+image_b_keypoints_maps 0.10777
+
+2023-04-02 15:24:50,683 Updates 93000, num timesteps 465005
+selfsup attention loss 3.62738
+image_b_keypoints_maps 0.10793
+
+2023-04-02 15:25:10,849 Updates 93250, num timesteps 466255
+selfsup attention loss 3.66977
+image_b_keypoints_maps 0.10534
+
+2023-04-02 15:25:32,786 Updates 93500, num timesteps 467505
+selfsup attention loss 3.82691
+image_b_keypoints_maps 0.10677
+
+2023-04-02 15:25:53,098 Updates 93750, num timesteps 468755
+selfsup attention loss 3.98631
+image_b_keypoints_maps 0.11075
+
+2023-04-02 15:26:13,233 Updates 94000, num timesteps 470005
+selfsup attention loss 3.71761
+image_b_keypoints_maps 0.10997
+
+2023-04-02 15:26:33,315 Updates 94250, num timesteps 471255
+selfsup attention loss 3.59548
+image_b_keypoints_maps 0.10615
+
+2023-04-02 15:26:53,267 Updates 94500, num timesteps 472505
+selfsup attention loss 3.71335
+image_b_keypoints_maps 0.10855
+
+2023-04-02 15:27:13,324 Updates 94750, num timesteps 473755
+selfsup attention loss 3.86903
+image_b_keypoints_maps 0.10645
+
+2023-04-02 15:27:33,282 Updates 95000, num timesteps 475005
+selfsup attention loss 3.73680
+image_b_keypoints_maps 0.10686
+
+2023-04-02 15:27:53,195 Updates 95250, num timesteps 476255
+selfsup attention loss 3.58195
+image_b_keypoints_maps 0.10619
+
+2023-04-02 15:28:13,199 Updates 95500, num timesteps 477505
+selfsup attention loss 3.93927
+image_b_keypoints_maps 0.10671
+
+2023-04-02 15:28:33,341 Updates 95750, num timesteps 478755
+selfsup attention loss 3.65456
+image_b_keypoints_maps 0.10553
+
+2023-04-02 15:28:53,644 Updates 96000, num timesteps 480005
+selfsup attention loss 3.44614
+image_b_keypoints_maps 0.10550
+
+2023-04-02 15:29:13,802 Updates 96250, num timesteps 481255
+selfsup attention loss 3.63423
+image_b_keypoints_maps 0.10813
+
+2023-04-02 15:29:34,104 Updates 96500, num timesteps 482505
+selfsup attention loss 3.77785
+image_b_keypoints_maps 0.10627
+
+2023-04-02 15:29:54,255 Updates 96750, num timesteps 483755
+selfsup attention loss 3.69144
+image_b_keypoints_maps 0.10620
+
+2023-04-02 15:30:14,399 Updates 97000, num timesteps 485005
+selfsup attention loss 3.77495
+image_b_keypoints_maps 0.10765
+
+2023-04-02 15:30:34,567 Updates 97250, num timesteps 486255
+selfsup attention loss 3.95751
+image_b_keypoints_maps 0.10676
+
+2023-04-02 15:30:54,735 Updates 97500, num timesteps 487505
+selfsup attention loss 3.95500
+image_b_keypoints_maps 0.10798
+
+2023-04-02 15:31:14,889 Updates 97750, num timesteps 488755
+selfsup attention loss 3.75934
+image_b_keypoints_maps 0.11188
+
+2023-04-02 15:31:35,141 Updates 98000, num timesteps 490005
+selfsup attention loss 3.83353
+image_b_keypoints_maps 0.11035
+
+2023-04-02 15:31:57,451 Updates 98250, num timesteps 491255
+selfsup attention loss 3.83629
+image_b_keypoints_maps 0.10953
+
+2023-04-02 15:32:17,637 Updates 98500, num timesteps 492505
+selfsup attention loss 3.61801
+image_b_keypoints_maps 0.10922
+
+2023-04-02 15:32:37,544 Updates 98750, num timesteps 493755
+selfsup attention loss 4.03327
+image_b_keypoints_maps 0.10803
+
+2023-04-02 15:32:57,332 Updates 99000, num timesteps 495005
+selfsup attention loss 3.83970
+image_b_keypoints_maps 0.10803
+
+2023-04-02 15:33:17,138 Updates 99250, num timesteps 496255
+selfsup attention loss 3.84385
+image_b_keypoints_maps 0.10936
+
+2023-04-02 15:33:37,171 Updates 99500, num timesteps 497505
+selfsup attention loss 3.72354
+image_b_keypoints_maps 0.11080
+
+2023-04-02 15:33:57,283 Updates 99750, num timesteps 498755
+selfsup attention loss 3.72257
+image_b_keypoints_maps 0.10714
+
+2023-04-02 15:34:17,392 => saving final model state to output/MsPacmanNoFrameskip-v4/a2c/noflip/seed_1/final_state.pth

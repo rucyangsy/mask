@@ -164,7 +164,7 @@ def main():
         if os.path.exists(checkpoint_file):
             agent.optimizer.load_state_dict(checkpoint['optimizer'])
     obs = envs.reset()
-    rollouts.obs[0].copy_(obs)
+    #rollouts.obs[0].copy_(obs)
     rollouts.to(device)
 
     episode_rewards = deque(maxlen=10)
@@ -175,6 +175,7 @@ def main():
     best_perf = 0.0
     best_model = False
     print('num updates', num_updates, 'num steps', config.num_steps)
+    #done = [False]
 
     for j in range(num_updates):
 
@@ -184,34 +185,42 @@ def main():
                 agent.optimizer, j, num_updates,
                 agent.optimizer.lr if config.algo == "acktr" else config.lr)
 
-        if j < 20010:
+        if j < 2010:
             for step in range(config.num_steps):
                 # Sample actions
-                
+                '''if done[0]:
+                    obs, reward, done, infos = envs.step(actions)
+                    print('222',done[0])
+                    obs = envs.reset()
+                    done = [False]'''
                 actions = torch.zeros((config.num_processes, 1), dtype=torch.int32)
                 for action_num in range(config.num_processes):
                     actions[action_num] = int(envs.action_space.sample())
                 # Obser reward and next obs
                 actions.to(device)
                 obs, reward, done, infos = envs.step(actions)
+                #print(done)
                 
                 rollouts.insert(obs)   
+        #print('111',done)
 
         best_loss = 100
-        if config.train_selfsup_attention and j > 20010:
+        if config.train_selfsup_attention and j > 2010:
+            #print(j)
             for _iter in range(config.num_steps // 5):
                 images = rollouts.generate_pair_image(config.resized_size, config.train_selfsup_attention_batch_size)
 
                 selfsup_attention_loss, image_b_keypoints_maps = \
                     agent.update_selfsup_attention(images, config.SELFSUP_ATTENTION)
+                
                 if best_loss > selfsup_attention_loss:
                     best_loss = selfsup_attention_loss
                     torch.save(actor_critic.state_dict(), os.path.join(final_output_dir, 'model_best.pth.tar'))
 
-        if j % config.log_interval == 0 and config.train_selfsup_attention and j > 20010:
+        if j % config.log_interval == 0 and config.train_selfsup_attention and j > 2010:
             total_num_steps = (j + 1) * config.num_processes * config.num_steps
             msg = 'Updates {}, num timesteps {}\n'.format(j, total_num_steps)
-            msg = msg + 'selfsup attention loss {:.5f}\n'.format(selfsup_attention_loss)
+            msg = msg + 'selfsup attention loss {:.5f}\n'.format(selfsup_attention_loss) + 'image_b_keypoints_maps {:.5f}\n'.format(image_b_keypoints_maps.mean())
             logger.info(msg)
 
 

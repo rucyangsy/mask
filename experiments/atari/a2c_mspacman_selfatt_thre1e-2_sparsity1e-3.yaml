@@ -18,12 +18,12 @@ gae_lambda: 0.95
 algo: 'a2c'
 env_name: 'MsPacmanNoFrameskip-v4'
 
-num_processes: 16
+num_processes: 1
 num_steps: 5
 log_interval: 250
 save_interval: 1250
 eval_interval: 1250
-num_env_steps: 10000000
+num_env_steps: 500000
 recurrent_policy: False
 
 RESUME: False

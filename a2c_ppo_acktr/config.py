@@ -61,7 +61,10 @@ config.feat_from_selfsup_attention = False
 config.feat_add_selfsup_attention = False
 config.feat_mul_selfsup_attention_mask = False
 config.selfsup_attention_fix = True
-config.selfsup_attention_pretrain = ''
+#config.selfsup_attention_pretrain = '/media/disk2/yangsy/mask/model_best.pth.tar'
+#config.selfsup_attention_pretrain = '/media/disk2/yangsy/baselines/Self-Sup-Attention-RL/output/MsPacmanNoFrameskip-v4/a2c/a2c_mspacman_selfatt_thre1e-2_sparsity1e-3/seed_2/model_best.pth.tar'
+#config.selfsup_attention_pretrain = '/media/disk2/yangsy/final/DM-homework/output/MsPacmanNoFrameskip-v4/a2c/aug34256/seed_2/model_best.pth.tar'
+config.selfsup_attention_pretrain = '/media/disk2/yangsy/final/DM-homework/output/CarnivalNoFrameskip-v4/a2c/carnival/seed_2/model_best.pth.tar'
 config.selfsup_attention_fix_keypointer = False
 config.selfsup_attention_keyp_maps_pool = False
 config.selfsup_attention_image_feat_only = False
@@ -83,8 +86,8 @@ config.sep_bg_fg_feat = False
 config.mask_threshold = -1.
 config.fix_feature = False
 
-config.train_selfsup_attention_buffer_size = 100000
-config.train_selfsup_attention_batch_size = 512
+config.train_selfsup_attention_buffer_size = 10000
+config.train_selfsup_attention_batch_size = 256
 config.temperature = 0.07
 
 config.RESUME = False
